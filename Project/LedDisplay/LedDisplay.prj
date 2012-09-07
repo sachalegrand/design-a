@@ -1,0 +1,2 @@
+vhdl work "../DisplayDecoder/DisplayDecoder.vhd"
+vhdl work "LedDisplay.vhd"

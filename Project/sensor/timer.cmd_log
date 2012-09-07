@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/timer.xst" -ofn "H:/12s2/COMP3601/Project/sensor/timer.syr" 

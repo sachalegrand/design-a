@@ -1,0 +1,4 @@
+vhdl work "../DisplayDecoder/DisplayDecoder.vhd"
+vhdl work "../LedDisplay/LedDisplay.vhd"
+vhdl work "../clk_div/clk_div.vhd"
+vhdl work "top_level.vhd"

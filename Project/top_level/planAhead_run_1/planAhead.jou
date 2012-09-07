@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# PlanAhead v13.2
+# Build 131561 by hdbuild on Thu Jun 16 17:01:57 PDT 2011
+# Start of session at: Fri Aug 17 06:00:06 2012
+# Process ID: 5756
+# Log file: H:/12s2/COMP3601/Project/top_level/planAhead_run_1/planAhead.log
+# Journal file: H:/12s2/COMP3601/Project/top_level/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source H:/12s2/COMP3601/Project/top_level/pa.fromHdl.tcl
+startgroup
+set_property loc PAD128 [get_ports {mode[0]}]
+endgroup
+startgroup
+set_property loc PAD103 [get_ports {mode[1]}]
+endgroup
+startgroup
+set_property loc PAD104 [get_ports {data[0]}]
+endgroup
+set_property loc "" [get_ports [list  {data[2]}]]
+startgroup
+set_property loc PAD107 [get_ports {data[1]}]
+endgroup
+startgroup
+set_property loc PAD119 [get_ports {data[2]}]
+endgroup
+startgroup
+set_property loc PAD123 [get_ports {data[3]}]
+endgroup
+startgroup
+set_property loc PAD124 [get_ports {data[4]}]
+endgroup
+startgroup
+set_property loc PAD127 [get_ports {data[5]}]
+endgroup
+save_design
+exit
+stop_gui

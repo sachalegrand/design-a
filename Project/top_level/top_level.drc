@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Sat Aug 25 19:18:57 2012
+
+drc -z top_level.ncd top_level.pcf
+
+DRC detected 0 errors and 0 warnings.
