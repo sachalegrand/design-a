@@ -1,0 +1,8 @@
+Release 12.1 Drc M.53d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Mon Aug 13 13:22:26 2012
+
+drc -z dpimref.ncd dpimref.pcf
+
+DRC detected 0 errors and 0 warnings.

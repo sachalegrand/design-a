@@ -1,0 +1,93 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clkT" LOC = A8;
+NET "par_data[0]" LOC = N12;
+NET "par_data[1]" LOC = P12;
+NET "par_data[2]" LOC = N11;
+NET "par_data[3]" LOC = P11;
+NET "par_data[4]" LOC = N10;
+NET "par_data[5]" LOC = P10;
+NET "par_data[6]" LOC = M10;
+NET "par_data[7]" LOC = R10;
+NET "par_dst" LOC = P7;
+NET "par_ast" LOC = N8;
+NET "par_wr" LOC = N7;
+NET "par_wait" LOC = N5;
+NET "switches[0]" LOC = N15;
+NET "switches[1]" LOC = J16;
+NET "switches[2]" LOC = K16;
+NET "switches[3]" LOC = K15;
+NET "switches[4]" LOC = L15;
+NET "switches[5]" LOC = M16;
+NET "switches[6]" LOC = M15;
+NET "switches[7]" LOC = N16;
+NET "pbs[0]" LOC = J13;
+NET "pbs[1]" LOC = K14;
+NET "pbs[2]" LOC = K13;
+NET "pbs[3]" LOC = K12;
+NET "leds[0]" LOC = L14;
+NET "leds[1]" LOC = L13;
+NET "leds[2]" LOC = M14;
+NET "leds[3]" LOC = L12;
+NET "leds[4]" LOC = N14;
+NET "leds[5]" LOC = M13;
+NET "leds[6]" LOC = P14;
+NET "leds[7]" LOC = R16;
+NET "mt_oe"	LOC = K2;
+NET "mt_we"	LOC = T3;
+NET "mt_adv"	LOC = B1;
+NET "mt_clk"	LOC = C2;
+NET "mt_ub"	LOC = J2;
+NET "mt_lb"	LOC = J1;
+NET "mt_cf"	LOC = K1;
+NET "mt_cre"	LOC = L2;
+NET "mt_wait"	LOC = C1;
+NET "mem_data[0]"	LOC = M2;
+NET "mem_data[1]"	LOC = M1;
+NET "mem_data[2]"	LOC = N2;
+NET "mem_data[3]"	LOC = N1;
+NET "mem_data[4]"	LOC = P2;
+NET "mem_data[5]"	LOC = P1;
+NET "mem_data[6]"	LOC = R1;
+NET "mem_data[7]"	LOC = R3;
+NET "mem_data[8]"	LOC = H1;
+NET "mem_data[9]"	LOC = G1;
+NET "mem_data[10]"	LOC = G2;
+NET "mem_data[11]"	LOC = F2;
+NET "mem_data[12]"	LOC = E1;
+NET "mem_data[13]"	LOC = D1;
+NET "mem_data[14]"	LOC = E2;
+NET "mem_data[15]"	LOC = D2;
+NET "mem_addr[0]"	LOC = J3;
+NET "mem_addr[1]"	LOC = K5;
+NET "mem_addr[2]"	LOC = L3;
+NET "mem_addr[3]"	LOC = J4;
+NET "mem_addr[4]"	LOC = K3;
+NET "mem_addr[5]"	LOC = H4;
+NET "mem_addr[6]"	LOC = K4;
+NET "mem_addr[7]"	LOC = G3;
+NET "mem_addr[8]"	LOC = E3;
+NET "mem_addr[9]"	LOC = F4;
+NET "mem_addr[10]"	LOC = F5;
+NET "mem_addr[11]"	LOC = N3;
+NET "mem_addr[12]"	LOC = L5;
+NET "mem_addr[13]"	LOC = M3;
+NET "mem_addr[14]"	LOC = F3;
+NET "mem_addr[15]"	LOC = L4;
+NET "mem_addr[16]"	LOC = G4;
+NET "mem_addr[17]"	LOC = H3;
+NET "mem_addr[18]"	LOC = G5;
+NET "mem_addr[19]"	LOC = D3;
+NET "mem_addr[20]"	LOC = M4;
+NET "mem_addr[21]"	LOC = A3;
+NET "mem_addr[22]"	LOC = C3;
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+--------------------------------------------------------------------------------
+Release 12.1 Trace  (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml dpimref.twx dpimref.ncd -o dpimref.twr dpimref.pcf
+
+Design file:              dpimref.ncd
+Physical constraint file: dpimref.pcf
+Device,package,speed:     xc3s400,ft256,-5 (PRODUCTION 1.39 2010-04-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock mclk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+astb        |    2.887(R)|    0.229(R)|mclk_BUFGP        |   0.000|
+dstb        |    3.960(R)|    0.093(R)|mclk_BUFGP        |   0.000|
+pdb<0>      |    1.706(R)|    0.673(R)|mclk_BUFGP        |   0.000|
+pdb<1>      |    1.589(R)|    0.850(R)|mclk_BUFGP        |   0.000|
+pdb<2>      |    1.308(R)|    0.781(R)|mclk_BUFGP        |   0.000|
+pdb<3>      |    1.606(R)|    0.719(R)|mclk_BUFGP        |   0.000|
+pdb<4>      |    1.278(R)|    0.765(R)|mclk_BUFGP        |   0.000|
+pdb<5>      |    1.501(R)|    0.790(R)|mclk_BUFGP        |   0.000|
+pdb<6>      |    1.765(R)|    0.777(R)|mclk_BUFGP        |   0.000|
+pdb<7>      |    1.829(R)|    0.792(R)|mclk_BUFGP        |   0.000|
+pwr         |    2.216(R)|    0.592(R)|mclk_BUFGP        |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock mclk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+led         |    8.777(R)|mclk_BUFGP        |   0.000|
+pdb<0>      |   14.559(R)|mclk_BUFGP        |   0.000|
+pdb<1>      |   14.332(R)|mclk_BUFGP        |   0.000|
+pdb<2>      |   13.948(R)|mclk_BUFGP        |   0.000|
+pdb<3>      |   14.797(R)|mclk_BUFGP        |   0.000|
+pdb<4>      |   13.007(R)|mclk_BUFGP        |   0.000|
+pdb<5>      |   13.056(R)|mclk_BUFGP        |   0.000|
+pdb<6>      |   13.329(R)|mclk_BUFGP        |   0.000|
+pdb<7>      |   13.542(R)|mclk_BUFGP        |   0.000|
+pwait       |    8.037(R)|mclk_BUFGP        |   0.000|
+rgLed<0>    |    7.915(R)|mclk_BUFGP        |   0.000|
+rgLed<1>    |    7.921(R)|mclk_BUFGP        |   0.000|
+rgLed<2>    |    7.311(R)|mclk_BUFGP        |   0.000|
+rgLed<3>    |    7.287(R)|mclk_BUFGP        |   0.000|
+rgLed<4>    |    7.619(R)|mclk_BUFGP        |   0.000|
+rgLed<5>    |    7.287(R)|mclk_BUFGP        |   0.000|
+rgLed<6>    |    7.311(R)|mclk_BUFGP        |   0.000|
+rgLed<7>    |    7.287(R)|mclk_BUFGP        |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock mclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+mclk           |    5.433|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+astb           |pdb<0>         |    8.868|
+astb           |pdb<1>         |    8.291|
+astb           |pdb<2>         |    9.176|
+astb           |pdb<3>         |    8.701|
+astb           |pdb<4>         |    8.244|
+astb           |pdb<5>         |    8.517|
+astb           |pdb<6>         |    7.674|
+astb           |pdb<7>         |    8.177|
+btn            |led            |    7.569|
+pwr            |pdb<0>         |    9.481|
+pwr            |pdb<1>         |    9.451|
+pwr            |pdb<2>         |    9.481|
+pwr            |pdb<3>         |    9.451|
+pwr            |pdb<4>         |    9.452|
+pwr            |pdb<5>         |   10.128|
+pwr            |pdb<6>         |    9.036|
+pwr            |pdb<7>         |   10.436|
+rgBtn<0>       |pdb<0>         |   10.188|
+rgBtn<1>       |pdb<1>         |   10.062|
+rgBtn<2>       |pdb<2>         |    9.578|
+rgBtn<3>       |pdb<3>         |   10.265|
+rgBtn<4>       |pdb<4>         |    8.699|
+rgSwt<0>       |pdb<0>         |   10.172|
+rgSwt<1>       |pdb<1>         |    9.505|
+rgSwt<2>       |pdb<2>         |    9.770|
+rgSwt<3>       |pdb<3>         |   10.441|
+rgSwt<4>       |pdb<4>         |    8.946|
+rgSwt<5>       |pdb<5>         |    9.230|
+rgSwt<6>       |pdb<6>         |    9.490|
+rgSwt<7>       |pdb<7>         |    9.547|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Aug 15 16:13:32 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 138 MB
+
+
+

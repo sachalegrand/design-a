@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Sacha\work\COMP3601\dpimrefTest\dpimref.ncd
+OUTFILE=C:\Users\Sacha\work\COMP3601\dpimrefTest\dpimref.bit
+FAMILY=Spartan3
+PART=xc3s400-5ft256
+WORKINGDIR=C:\Users\Sacha\work\COMP3601\dpimrefTest
+LICENSE=WebPack
+USER_INFO=210415787_0_0_110
