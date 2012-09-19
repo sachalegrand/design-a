@@ -63,18 +63,18 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity dpimref is
     Port (
-		mclk 	: in std_logic;
-        pdb		: inout std_logic_vector(7 downto 0);
-        astb 	: in std_logic;
-        dstb 	: in std_logic;
-        pwr 	: in std_logic;
-        pwait 	: out std_logic;
-		rgSwt	: in std_logic_vector(7 downto 0);
-		rgBtn	: in std_logic_vector(4 downto 0);
-		btn		: in std_logic	;
-		ldg		: out std_logic;
-		led		: out std_logic
-	);
+			mclk 	: in std_logic;
+			pdb		: inout std_logic_vector(7 downto 0);
+			astb 	: in std_logic;
+			dstb 	: in std_logic;
+			pwr 	: in std_logic;
+			pwait 	: out std_logic;
+			rgSwt	: in std_logic_vector(7 downto 0);
+			rgBtn	: in std_logic_vector(4 downto 0);
+			btn		: in std_logic	;
+			ldg		: out std_logic;
+			led		: out std_logic
+			);
 end dpimref;
 
 architecture Behavioral of dpimref is
@@ -130,18 +130,51 @@ architecture Behavioral of dpimref is
 	signal	busEppIn	: std_logic_vector(7 downto 0);
 	signal	busEppData	: std_logic_vector(7 downto 0);
 
+	-- Writing busy flags
+	signal isCompWriting : std_logic;
+
+	-- the computer sets this flag to announce it has received what it wanted
+	signal isCompWaitingData : std_logic;
+
 	-- Registers
 	signal	regEppAdr	: std_logic_vector(3 downto 0);
 	signal	regData0	: std_logic_vector(7 downto 0);
 	signal	regData1	: std_logic_vector(7 downto 0);
-    signal  regData2	: std_logic_vector(7 downto 0);
-    signal  regData3	: std_logic_vector(7 downto 0);
-    signal  regData4	: std_logic_vector(7 downto 0);
+   signal  regData2	: std_logic_vector(7 downto 0);
+   signal  regData3	: std_logic_vector(7 downto 0);
+   signal  regData4	: std_logic_vector(7 downto 0);
 	signal	regData5	: std_logic_vector(7 downto 0);
 	signal	regData6	: std_logic_vector(7 downto 0);
 	signal	regData7	: std_logic_vector(7 downto 0);
+	
+	signal	regDataFromComp0	: std_logic_vector(7 downto 0);
+	signal	regDataFromComp1	: std_logic_vector(7 downto 0);
+   signal  	regDataFromComp2	: std_logic_vector(7 downto 0);
+   signal  	regDataFromComp3	: std_logic_vector(7 downto 0);
+   signal  	regDataFromComp4	: std_logic_vector(7 downto 0);
+	signal	regDataFromComp5	: std_logic_vector(7 downto 0);
+	signal	regDataFromComp6	: std_logic_vector(7 downto 0);
+	signal	regDataFromComp7	: std_logic_vector(7 downto 0);
+
+	signal	regDataFromBoard0	: std_logic_vector(7 downto 0);
+	signal	regDataFromBoard1	: std_logic_vector(7 downto 0);
+   signal  	regDataFromBoard2	: std_logic_vector(7 downto 0);
+   signal  	regDataFromBoard3	: std_logic_vector(7 downto 0);
+   signal  	regDataFromBoard4	: std_logic_vector(7 downto 0);
+	signal	regDataFromBoard5	: std_logic_vector(7 downto 0);
+	signal	regDataFromBoard6	: std_logic_vector(7 downto 0);
+	signal	regDataFromBoard7	: std_logic_vector(7 downto 0);	
+	
 	signal	cntr		: std_logic_vector(23 downto 0); 
 
+	-- Testing signals
+	signal tempDataLow : std_logic_vector(7 downto 0);
+	signal tempDataHigh : std_logic_vector(7 downto 0);
+	signal humDataLow : std_logic_vector(7 downto 0);
+	signal humDataHigh : std_logic_vector(7 downto 0);
+	signal timeDataLow : std_logic_vector(7 downto 0);
+	signal timeDataHigh : std_logic_vector(7 downto 0);
+	
 ------------------------------------------------------------------------
 -- Module Implementation
 ------------------------------------------------------------------------
@@ -172,6 +205,29 @@ begin
 
 	ldg <= '1';
 
+	-- comp or board busy flag
+	isCompWriting <= '1';
+
+	isCompWaitingData <= regData0(1);
+
+	-- Assign regData registers according to comp or board writing to them
+	regData0 <= regDataFromComp0 when isCompWriting = '1' else
+					regDataFromBoard0;
+	regData1 <= regDataFromComp1 when isCompWriting = '1' else
+					regDataFromBoard1;
+	regData2 <= regDataFromComp2 when isCompWriting = '1' else
+					regDataFromBoard2;
+	regData3 <= regDataFromComp3 when isCompWriting = '1' else
+					regDataFromBoard3;
+	regData4 <= regDataFromComp4 when isCompWriting = '1' else
+					regDataFromBoard4;	
+	regData5 <= regDataFromComp5 when isCompWriting = '1' else
+					regDataFromBoard5;
+	regData6 <= regDataFromComp6 when isCompWriting = '1' else
+					regDataFromBoard6;
+	regData7 <= regDataFromComp7 when isCompWriting = '1' else
+					regDataFromBoard7;
+					
 	-- Decode the address register and select the appropriate data register
 	busEppData <=	regData0 when regEppAdr = "0000" else
 					regData1 when regEppAdr = "0001" else
@@ -311,7 +367,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0000" then
-					regData0 <= busEppIn;
+					regDataFromComp0 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -320,7 +376,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0001" then
-					regData1 <= busEppIn;
+					regDataFromComp1 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -329,7 +385,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0010" then
-					regData2 <= busEppIn;
+					regDataFromComp2 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -338,7 +394,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0011" then
-					regData3 <= busEppIn;
+					regDataFromComp3 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -347,7 +403,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0100" then
-					regData4 <= busEppIn;
+					regDataFromComp4 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -356,7 +412,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0101" then
-					regData5 <= busEppIn;
+					regDataFromComp5 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -365,7 +421,7 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0110" then
-					regData6 <= busEppIn;
+					regDataFromComp6 <= busEppIn;
 				end if;
 			end if;
 		end process;
@@ -374,10 +430,17 @@ begin
 		begin
 			if clkMain = '1' and clkMain'Event then
 				if ctlEppDwr = '1' and regEppAdr = "0111" then
-					regData7 <= busEppIn;
+					regDataFromComp7 <= busEppIn;
 				end if;
 			end if;
 		end process;
+
+
+	
+	
+	
+	
+	
 
 	------------------------------------------------------------------------
     -- Gate array configuration verification logic

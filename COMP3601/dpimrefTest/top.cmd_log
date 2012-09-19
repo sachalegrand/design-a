@@ -93,3 +93,15 @@ map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o top_map.
 par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
 bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.xst" -ofn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.syr" 
+xst -intstyle ise -ifn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.xst" -ofn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s400-ft256-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+xst -intstyle ise -ifn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.xst" -ofn "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s400-ft256-5 top.ngc top.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 

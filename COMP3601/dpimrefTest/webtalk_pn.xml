@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Mon Aug 27 23:10:18 2012">
+<application name="pn" timeStamp="Wed Sep 19 10:01:58 2012">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="F3BB9950FD884C0AAF31781B67288B18" type="project"/>
-<property name="ProjectIteration" value="14" type="project"/>
-<property name="ProjectFile" value="C:/Users/Sacha/work/COMP3601/dpimrefTest/dpimrefTest.xise" type="project"/>
+<property name="ProjectIteration" value="15" type="project"/>
+<property name="ProjectFile" value="C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimrefTest.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2012-08-13T12:55:45" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -25,7 +25,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Constraints Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2012-08-13T12:55:45" type="design"/>
 <property name="PROP_intWbtProjectID" value="F3BB9950FD884C0AAF31781B67288B18" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="14" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="15" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_xilxBitgStart_Clk" value="JTAG Clock" type="process"/>

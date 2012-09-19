@@ -1,9 +1,9 @@
 EN my_dpimref NULL C:/Users/Sacha/work/COMP3601/dpimrefTest/dpimref.vhd sub00/vhpl04 1345427512
-EN mem_tester NULL C:/Users/Sacha/work/COMP3601/dpimrefTest/mem_tester.vhd sub00/vhpl07 1346072993
-AR top structural C:/Users/Sacha/work/COMP3601/dpimrefTest/top.vhd sub00/vhpl03 1346072996
-EN top NULL C:/Users/Sacha/work/COMP3601/dpimrefTest/top.vhd sub00/vhpl02 1346072995
-EN memory NULL C:/Users/Sacha/work/COMP3601/dpimrefTest/memory.vhd sub00/vhpl05 1346072991
-AR mem_tester behavioral C:/Users/Sacha/work/COMP3601/dpimrefTest/mem_tester.vhd sub00/vhpl08 1346072994
-AR memory behavioral C:/Users/Sacha/work/COMP3601/dpimrefTest/memory.vhd sub00/vhpl06 1346072992
-EN dpimref NULL C:/Users/Sacha/work/COMP3601/dpimrefTest/dpimref.vhd sub00/vhpl00 1346072989
-AR dpimref behavioral C:/Users/Sacha/work/COMP3601/dpimrefTest/dpimref.vhd sub00/vhpl01 1346072990
+EN mem_tester NULL C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/mem_tester.vhd sub00/vhpl07 1348012899
+AR top structural C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.vhd sub00/vhpl03 1348012902
+EN top NULL C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.vhd sub00/vhpl02 1348012901
+EN memory NULL C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/memory.vhd sub00/vhpl05 1348012897
+AR mem_tester behavioral C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/mem_tester.vhd sub00/vhpl08 1348012900
+AR memory behavioral C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/memory.vhd sub00/vhpl06 1348012898
+EN dpimref NULL C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd sub00/vhpl00 1348012895
+AR dpimref behavioral C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd sub00/vhpl01 1348012896

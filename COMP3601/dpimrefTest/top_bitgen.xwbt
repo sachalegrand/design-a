@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Sacha\work\COMP3601\dpimrefTest\top.ncd
-OUTFILE=C:\Users\Sacha\work\COMP3601\dpimrefTest\top.bit
+INFILE=C:\Users\Sacha\work\design-a\COMP3601\dpimrefTest\top.ncd
+OUTFILE=C:\Users\Sacha\work\design-a\COMP3601\dpimrefTest\top.bit
 FAMILY=Spartan3
 PART=xc3s400-5ft256
-WORKINGDIR=C:\Users\Sacha\work\COMP3601\dpimrefTest
+WORKINGDIR=C:\Users\Sacha\work\design-a\COMP3601\dpimrefTest
 LICENSE=WebPack
 USER_INFO=210415787_0_0_110
