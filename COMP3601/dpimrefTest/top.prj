@@ -1,4 +1,3 @@
-vhdl work "mem_tester.vhd"
 vhdl work "memory.vhd"
 vhdl work "dpimref.vhd"
 vhdl work "top.vhd"

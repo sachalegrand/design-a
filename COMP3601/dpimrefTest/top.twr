@@ -43,18 +43,17 @@ Setup/Hold to clock clkT
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-par_ast     |    2.902(R)|    0.109(R)|clkT_BUFGP        |   0.000|
-par_data<0> |    1.561(R)|    0.533(R)|clkT_BUFGP        |   0.000|
-par_data<1> |    1.829(R)|    0.568(R)|clkT_BUFGP        |   0.000|
-par_data<2> |    1.836(R)|    0.536(R)|clkT_BUFGP        |   0.000|
-par_data<3> |    2.155(R)|    0.584(R)|clkT_BUFGP        |   0.000|
-par_data<4> |    1.598(R)|    0.786(R)|clkT_BUFGP        |   0.000|
-par_data<5> |    2.407(R)|    0.812(R)|clkT_BUFGP        |   0.000|
-par_data<6> |    1.268(R)|    0.998(R)|clkT_BUFGP        |   0.000|
-par_data<7> |    1.801(R)|    0.806(R)|clkT_BUFGP        |   0.000|
-par_dst     |    4.181(R)|    0.083(R)|clkT_BUFGP        |   0.000|
-par_wr      |    1.996(R)|    0.493(R)|clkT_BUFGP        |   0.000|
-pbs<0>      |    3.524(R)|    0.717(R)|clkT_BUFGP        |   0.000|
+par_ast     |    3.916(R)|   -0.399(R)|clkT_BUFGP        |   0.000|
+par_data<0> |    1.553(R)|    0.663(R)|clkT_BUFGP        |   0.000|
+par_data<1> |    1.807(R)|    0.574(R)|clkT_BUFGP        |   0.000|
+par_data<2> |    2.174(R)|    0.687(R)|clkT_BUFGP        |   0.000|
+par_data<3> |    2.230(R)|    0.469(R)|clkT_BUFGP        |   0.000|
+par_data<4> |    1.386(R)|    0.772(R)|clkT_BUFGP        |   0.000|
+par_data<5> |    2.228(R)|    0.477(R)|clkT_BUFGP        |   0.000|
+par_data<6> |    1.732(R)|    0.635(R)|clkT_BUFGP        |   0.000|
+par_data<7> |    1.591(R)|    0.724(R)|clkT_BUFGP        |   0.000|
+par_dst     |    4.403(R)|   -0.115(R)|clkT_BUFGP        |   0.000|
+par_wr      |    3.661(R)|   -0.054(R)|clkT_BUFGP        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clkT to Pad
@@ -62,23 +61,24 @@ Clock clkT to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-leds<1>     |    8.331(R)|clkT_BUFGP        |   0.000|
-leds<3>     |    8.315(R)|clkT_BUFGP        |   0.000|
-leds<5>     |    8.331(R)|clkT_BUFGP        |   0.000|
-leds<7>     |    8.902(R)|clkT_BUFGP        |   0.000|
-mem_addr<2> |    9.011(R)|clkT_BUFGP        |   0.000|
-mt_cf       |    8.725(R)|clkT_BUFGP        |   0.000|
-mt_oe       |    9.018(R)|clkT_BUFGP        |   0.000|
+leds<0>     |   13.326(R)|clkT_BUFGP        |   0.000|
+leds<1>     |   12.684(R)|clkT_BUFGP        |   0.000|
+leds<2>     |   13.144(R)|clkT_BUFGP        |   0.000|
+leds<3>     |   13.920(R)|clkT_BUFGP        |   0.000|
+leds<4>     |   15.597(R)|clkT_BUFGP        |   0.000|
+leds<5>     |   14.098(R)|clkT_BUFGP        |   0.000|
+leds<6>     |   13.933(R)|clkT_BUFGP        |   0.000|
+leds<7>     |   13.924(R)|clkT_BUFGP        |   0.000|
 mt_we       |    6.424(R)|clkT_BUFGP        |   0.000|
-par_data<0> |   13.160(R)|clkT_BUFGP        |   0.000|
-par_data<1> |   13.476(R)|clkT_BUFGP        |   0.000|
-par_data<2> |   12.175(R)|clkT_BUFGP        |   0.000|
-par_data<3> |   12.710(R)|clkT_BUFGP        |   0.000|
-par_data<4> |   12.829(R)|clkT_BUFGP        |   0.000|
-par_data<5> |   13.085(R)|clkT_BUFGP        |   0.000|
-par_data<6> |   12.075(R)|clkT_BUFGP        |   0.000|
-par_data<7> |   12.501(R)|clkT_BUFGP        |   0.000|
-par_wait    |    7.518(R)|clkT_BUFGP        |   0.000|
+par_data<0> |   14.280(R)|clkT_BUFGP        |   0.000|
+par_data<1> |   13.874(R)|clkT_BUFGP        |   0.000|
+par_data<2> |   14.591(R)|clkT_BUFGP        |   0.000|
+par_data<3> |   13.554(R)|clkT_BUFGP        |   0.000|
+par_data<4> |   13.087(R)|clkT_BUFGP        |   0.000|
+par_data<5> |   13.037(R)|clkT_BUFGP        |   0.000|
+par_data<6> |   13.612(R)|clkT_BUFGP        |   0.000|
+par_data<7> |   14.388(R)|clkT_BUFGP        |   0.000|
+par_wait    |    8.629(R)|clkT_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clkT
@@ -86,52 +86,116 @@ Clock to Setup on destination clock clkT
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clkT           |    5.376|         |         |         |
+clkT           |    5.394|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-par_ast        |par_data<0>    |    9.021|
-par_ast        |par_data<1>    |    9.203|
-par_ast        |par_data<2>    |   10.969|
-par_ast        |par_data<3>    |   11.237|
-par_ast        |par_data<4>    |    7.840|
-par_ast        |par_data<5>    |    8.330|
-par_ast        |par_data<6>    |    8.234|
-par_ast        |par_data<7>    |    8.116|
-par_wr         |par_data<0>    |    8.067|
-par_wr         |par_data<1>    |    7.753|
-par_wr         |par_data<2>    |    8.080|
-par_wr         |par_data<3>    |    8.387|
-par_wr         |par_data<4>    |    8.388|
-par_wr         |par_data<5>    |    8.034|
-par_wr         |par_data<6>    |    7.735|
-par_wr         |par_data<7>    |    8.389|
-pbs<0>         |par_data<0>    |   12.878|
-pbs<1>         |par_data<1>    |   10.812|
-pbs<2>         |par_data<2>    |    9.905|
-pbs<3>         |par_data<3>    |   10.180|
-switches<0>    |par_data<0>    |    9.767|
-switches<1>    |par_data<1>    |   10.314|
-switches<2>    |par_data<2>    |    9.956|
-switches<3>    |par_data<3>    |   10.357|
-switches<4>    |par_data<4>    |   10.402|
-switches<5>    |par_data<5>    |   10.834|
-switches<6>    |par_data<6>    |    9.874|
-switches<7>    |par_data<7>    |   10.150|
+par_ast        |par_data<0>    |   10.984|
+par_ast        |par_data<1>    |    9.223|
+par_ast        |par_data<2>    |   10.041|
+par_ast        |par_data<3>    |   10.924|
+par_ast        |par_data<4>    |    8.204|
+par_ast        |par_data<5>    |    7.845|
+par_ast        |par_data<6>    |    8.193|
+par_ast        |par_data<7>    |    8.422|
+par_wr         |par_data<0>    |    8.417|
+par_wr         |par_data<1>    |    9.355|
+par_wr         |par_data<2>    |    8.740|
+par_wr         |par_data<3>    |    9.381|
+par_wr         |par_data<4>    |    9.058|
+par_wr         |par_data<5>    |    9.681|
+par_wr         |par_data<6>    |    9.381|
+par_wr         |par_data<7>    |    9.357|
+pbs<0>         |par_data<0>    |   10.663|
+pbs<1>         |par_data<1>    |   10.002|
+pbs<2>         |par_data<2>    |   11.204|
+pbs<3>         |par_data<3>    |    9.407|
+switches<0>    |leds<0>        |   14.085|
+switches<0>    |leds<1>        |   13.842|
+switches<0>    |leds<2>        |   12.894|
+switches<0>    |leds<3>        |   15.273|
+switches<0>    |leds<4>        |   15.469|
+switches<0>    |leds<5>        |   15.079|
+switches<0>    |leds<6>        |   14.261|
+switches<0>    |leds<7>        |   15.947|
+switches<0>    |par_data<0>    |   10.209|
+switches<1>    |leds<0>        |   14.270|
+switches<1>    |leds<1>        |   14.027|
+switches<1>    |leds<2>        |   13.079|
+switches<1>    |leds<3>        |   15.458|
+switches<1>    |leds<4>        |   15.654|
+switches<1>    |leds<5>        |   15.264|
+switches<1>    |leds<6>        |   14.446|
+switches<1>    |leds<7>        |   16.132|
+switches<1>    |par_data<1>    |   10.432|
+switches<2>    |leds<0>        |   14.447|
+switches<2>    |leds<1>        |   14.204|
+switches<2>    |leds<2>        |   13.256|
+switches<2>    |leds<3>        |   15.635|
+switches<2>    |leds<4>        |   15.831|
+switches<2>    |leds<5>        |   15.441|
+switches<2>    |leds<6>        |   14.623|
+switches<2>    |leds<7>        |   16.309|
+switches<2>    |par_data<2>    |   11.210|
+switches<3>    |leds<0>        |   14.266|
+switches<3>    |leds<1>        |   14.023|
+switches<3>    |leds<2>        |   13.075|
+switches<3>    |leds<3>        |   15.454|
+switches<3>    |leds<4>        |   15.650|
+switches<3>    |leds<5>        |   15.260|
+switches<3>    |leds<6>        |   14.442|
+switches<3>    |leds<7>        |   16.128|
+switches<3>    |par_data<3>    |   10.800|
+switches<4>    |leds<0>        |   13.450|
+switches<4>    |leds<1>        |   12.973|
+switches<4>    |leds<2>        |   12.190|
+switches<4>    |leds<3>        |   14.296|
+switches<4>    |leds<4>        |   14.695|
+switches<4>    |leds<5>        |   14.688|
+switches<4>    |leds<6>        |   13.562|
+switches<4>    |leds<7>        |   14.995|
+switches<4>    |par_data<4>    |   10.295|
+switches<5>    |leds<0>        |   13.705|
+switches<5>    |leds<1>        |   13.228|
+switches<5>    |leds<2>        |   12.445|
+switches<5>    |leds<3>        |   14.551|
+switches<5>    |leds<4>        |   14.950|
+switches<5>    |leds<5>        |   14.943|
+switches<5>    |leds<6>        |   13.817|
+switches<5>    |leds<7>        |   15.250|
+switches<5>    |par_data<5>    |    8.796|
+switches<6>    |leds<0>        |   13.920|
+switches<6>    |leds<1>        |   13.443|
+switches<6>    |leds<2>        |   12.660|
+switches<6>    |leds<3>        |   14.766|
+switches<6>    |leds<4>        |   15.165|
+switches<6>    |leds<5>        |   15.158|
+switches<6>    |leds<6>        |   14.032|
+switches<6>    |leds<7>        |   15.465|
+switches<6>    |par_data<6>    |   10.344|
+switches<7>    |leds<0>        |   14.386|
+switches<7>    |leds<1>        |   13.909|
+switches<7>    |leds<2>        |   13.126|
+switches<7>    |leds<3>        |   15.232|
+switches<7>    |leds<4>        |   15.631|
+switches<7>    |leds<5>        |   15.624|
+switches<7>    |leds<6>        |   14.498|
+switches<7>    |leds<7>        |   15.931|
+switches<7>    |par_data<7>    |   11.845|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Sep 19 10:01:57 2012 
+Analysis completed Wed Sep 19 18:53:09 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 137 MB
+Peak Memory Usage: 139 MB
 
 
 
