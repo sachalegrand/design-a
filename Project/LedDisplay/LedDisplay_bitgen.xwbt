@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=H:\12s2\COMP3601\Project\LedDisplay\LedDisplay.ncd
-OUTFILE=H:\12s2\COMP3601\Project\LedDisplay\LedDisplay.bit
-FAMILY=Spartan3
-PART=xc3s400-5ft256
-WORKINGDIR=H:\12s2\COMP3601\Project\LedDisplay
-LICENSE=WebPack
-USER_INFO=207993701_0_0_657

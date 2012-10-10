@@ -1,0 +1,8 @@
+EN tester NULL H:/12s2/COMP3601/Project/digit_separator/tester.vhd sub00/vhpl06 1349602357
+AR digit_separator behavioral H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl05 1349602355
+AR tester behavioral H:/12s2/COMP3601/Project/digit_separator/tester.vhd sub00/vhpl07 1349602358
+AR integer_divider behavioral H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl01 1349602352
+PH digit_separator_package NULL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl04 1349602356
+EN integer_divider NULL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl00 1349602351
+PH integer_divider_package NULL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl02 1349602353
+EN digit_separator NULL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl03 1349602354

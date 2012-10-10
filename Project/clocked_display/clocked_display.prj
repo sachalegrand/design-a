@@ -1,0 +1,2 @@
+vhdl work "../display_decoder/display_decoder.vhd"
+vhdl work "clocked_display.vhd"

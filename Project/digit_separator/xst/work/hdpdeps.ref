@@ -1,0 +1,31 @@
+V3 15
+FL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd 2012/10/07.20:29:22 O.61xd
+EN work/digit_separator 1349602354 \
+      FL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/std_logic_arith 1308643378 PH work/integer_divider_package 1349602353
+AR work/digit_separator/Behavioral 1349602355 \
+      FL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd \
+      EN work/digit_separator 1349602354 CP integer_divider
+PH work/digit_separator_package 1349602356 \
+      FL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/std_logic_arith 1308643378 CD digit_separator
+FL H:/12s2/COMP3601/Project/digit_separator/tester.vhd 2012/10/07.20:32:27 O.61xd
+EN work/tester 1349602357 FL H:/12s2/COMP3601/Project/digit_separator/tester.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/std_logic_arith 1308643378 PH work/digit_separator_package 1349602356
+AR work/tester/Behavioral 1349602358 \
+      FL H:/12s2/COMP3601/Project/digit_separator/tester.vhd EN work/tester 1349602357 \
+      CP digit_separator
+FL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd 2012/10/07.19:55:51 O.61xd
+EN work/integer_divider 1349602351 \
+      FL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/integer_divider/Behavioral 1349602352 \
+      FL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd \
+      EN work/integer_divider 1349602351
+PH work/integer_divider_package 1349602353 \
+      FL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      CD integer_divider

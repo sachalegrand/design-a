@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-5 tester.ngc tester.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o tester_map.ncd tester.ngd tester.pcf 
+par -w -intstyle ise -ol high -t 1 tester_map.ncd tester.ncd tester.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml tester.twx tester.ncd -o tester.twr tester.pcf 
+bitgen -intstyle ise -f tester.ut tester.ncd 
+bitgen -intstyle ise -f tester.ut tester.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tester.ucf -p xc3s400-ft256-5 tester.ngc tester.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o tester_map.ncd tester.ngd tester.pcf 
+par -w -intstyle ise -ol high -t 1 tester_map.ncd tester.ncd tester.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml tester.twx tester.ncd -o tester.twr tester.pcf -ucf tester.ucf 
+bitgen -intstyle ise -f tester.ut tester.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/integer_divider/tester.xst" -ofn "H:/12s2/COMP3601/Project/integer_divider/tester.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tester.ucf -p xc3s400-ft256-5 tester.ngc tester.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o tester_map.ncd tester.ngd tester.pcf 
+par -w -intstyle ise -ol high -t 1 tester_map.ncd tester.ncd tester.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml tester.twx tester.ncd -o tester.twr tester.pcf -ucf tester.ucf 
+bitgen -intstyle ise -f tester.ut tester.ncd 

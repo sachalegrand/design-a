@@ -1,0 +1,14 @@
+EN clocked_display NULL H:/12s2/COMP3601/Project/clocked_display/clocked_display.vhd sub00/vhpl09 1349608211
+EN display_decoder NULL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl06 1349608202
+AR display behavioral H:/12s2/COMP3601/Project/display/display.vhd sub00/vhpl13 1349608215
+PH clocked_display_package NULL H:/12s2/COMP3601/Project/clocked_display/clocked_display.vhd sub00/vhpl11 1349608213
+EN display NULL H:/12s2/COMP3601/Project/display/display.vhd sub00/vhpl12 1349608214
+AR digit_separator behavioral H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl04 1349608209
+AR clocked_display behavioral H:/12s2/COMP3601/Project/clocked_display/clocked_display.vhd sub00/vhpl10 1349608212
+PH display_decoder_package NULL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl08 1349608204
+AR integer_divider behavioral H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl01 1349608206
+PH digit_separator_package NULL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl05 1349608210
+AR display_decoder behavioral H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl07 1349608203
+EN integer_divider NULL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl00 1349608205
+PH integer_divider_package NULL H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd sub00/vhpl02 1349608207
+EN digit_separator NULL H:/12s2/COMP3601/Project/digit_separator/digit_separator.vhd sub00/vhpl03 1349608208

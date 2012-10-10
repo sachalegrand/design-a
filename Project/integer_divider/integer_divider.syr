@@ -1,0 +1,446 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: integer_divider.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "integer_divider.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "integer_divider"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-ft256
+
+---- Source Options
+Top Module Name                    : integer_divider
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd" in Library work.
+Entity <integer_divider> compiled.
+Entity <integer_divider> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <integer_divider> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <integer_divider> in library <work> (Architecture <Behavioral>).
+Entity <integer_divider> analyzed. Unit <integer_divider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <integer_divider>.
+    Related source file is "H:/12s2/COMP3601/Project/integer_divider/integer_divider.vhd".
+    Found 32-bit up accumulator for signal <numerator>.
+    Found 32-bit up counter for signal <quotient_signal>.
+    Found 32-bit register for signal <remainder_signal>.
+    Found 32-bit comparator greatequal for signal <remainder_signal$cmp_ge0000> created at line 51.
+    Found 32-bit subtractor for signal <remainder_signal$sub0000> created at line 55.
+    Found 32-bit subtractor for signal <remainder_signal$sub0001> created at line 51.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <integer_divider> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 2
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 2
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <integer_divider> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block integer_divider, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 96
+ Flip-Flops                                            : 96
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : integer_divider.ngr
+Top Level Output File Name         : integer_divider
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 130
+
+Cell Usage :
+# BELS                             : 449
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 31
+#      LUT2                        : 131
+#      MUXCY                       : 156
+#      VCC                         : 1
+#      XORCY                       : 128
+# FlipFlops/Latches                : 96
+#      FDE                         : 96
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 129
+#      IBUF                        : 65
+#      OBUF                        : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-5 
+
+ Number of Slices:                       93  out of   3584     2%  
+ Number of Slice Flip Flops:             96  out of   7168     1%  
+ Number of 4 input LUTs:                163  out of   7168     2%  
+ Number of IOs:                         130
+ Number of bonded IOBs:                 130  out of    173    75%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 96    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.399ns (Maximum Frequency: 96.160MHz)
+   Minimum input arrival time before clock: 10.613ns
+   Maximum output required time after clock: 6.306ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 10.399ns (frequency: 96.160MHz)
+  Total number of paths / destination ports: 100384 / 192
+-------------------------------------------------------------------------
+Delay:               10.399ns (Levels of Logic = 36)
+  Source:            numerator_0 (FF)
+  Destination:       remainder_signal_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: numerator_0 to remainder_signal_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.915  numerator_0 (numerator_0)
+     LUT2:I1->O            1   0.479   0.000  Msub_remainder_signal_sub0001_lut<0> (Msub_remainder_signal_sub0001_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Msub_remainder_signal_sub0001_cy<0> (Msub_remainder_signal_sub0001_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<1> (Msub_remainder_signal_sub0001_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<2> (Msub_remainder_signal_sub0001_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<3> (Msub_remainder_signal_sub0001_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<4> (Msub_remainder_signal_sub0001_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<5> (Msub_remainder_signal_sub0001_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<6> (Msub_remainder_signal_sub0001_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<7> (Msub_remainder_signal_sub0001_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<8> (Msub_remainder_signal_sub0001_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<9> (Msub_remainder_signal_sub0001_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<10> (Msub_remainder_signal_sub0001_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<11> (Msub_remainder_signal_sub0001_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<12> (Msub_remainder_signal_sub0001_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<13> (Msub_remainder_signal_sub0001_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<14> (Msub_remainder_signal_sub0001_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<15> (Msub_remainder_signal_sub0001_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<16> (Msub_remainder_signal_sub0001_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<17> (Msub_remainder_signal_sub0001_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<18> (Msub_remainder_signal_sub0001_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<19> (Msub_remainder_signal_sub0001_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<20> (Msub_remainder_signal_sub0001_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<21> (Msub_remainder_signal_sub0001_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<22> (Msub_remainder_signal_sub0001_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<23> (Msub_remainder_signal_sub0001_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<24> (Msub_remainder_signal_sub0001_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<25> (Msub_remainder_signal_sub0001_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<26> (Msub_remainder_signal_sub0001_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<27> (Msub_remainder_signal_sub0001_cy<27>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<28> (Msub_remainder_signal_sub0001_cy<28>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<29> (Msub_remainder_signal_sub0001_cy<29>)
+     MUXCY:CI->O           0   0.056   0.000  Msub_remainder_signal_sub0001_cy<30> (Msub_remainder_signal_sub0001_cy<30>)
+     XORCY:CI->O           1   0.786   0.851  Msub_remainder_signal_sub0001_xor<31> (remainder_signal_sub0001<31>)
+     LUT2:I1->O            1   0.479   0.000  Mcompar_remainder_signal_cmp_ge0000_lut<31> (Mcompar_remainder_signal_cmp_ge0000_lut<31>)
+     MUXCY:S->O            3   0.644   0.941  Mcompar_remainder_signal_cmp_ge0000_cy<31> (remainder_signal_cmp_ge0000)
+     LUT2:I1->O           32   0.479   1.575  remainder_signal_and00001 (remainder_signal_and0000)
+     FDE:CE                    0.524          remainder_signal_0
+    ----------------------------------------
+    Total                     10.399ns (6.117ns logic, 4.282ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 195376 / 160
+-------------------------------------------------------------------------
+Offset:              10.613ns (Levels of Logic = 37)
+  Source:            dividend<0> (PAD)
+  Destination:       remainder_signal_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: dividend<0> to remainder_signal_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.715   1.040  dividend_0_IBUF (dividend_0_IBUF)
+     LUT2:I0->O            1   0.479   0.000  Msub_remainder_signal_sub0001_lut<0> (Msub_remainder_signal_sub0001_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Msub_remainder_signal_sub0001_cy<0> (Msub_remainder_signal_sub0001_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<1> (Msub_remainder_signal_sub0001_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<2> (Msub_remainder_signal_sub0001_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<3> (Msub_remainder_signal_sub0001_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<4> (Msub_remainder_signal_sub0001_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<5> (Msub_remainder_signal_sub0001_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<6> (Msub_remainder_signal_sub0001_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<7> (Msub_remainder_signal_sub0001_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<8> (Msub_remainder_signal_sub0001_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<9> (Msub_remainder_signal_sub0001_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<10> (Msub_remainder_signal_sub0001_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<11> (Msub_remainder_signal_sub0001_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<12> (Msub_remainder_signal_sub0001_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<13> (Msub_remainder_signal_sub0001_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<14> (Msub_remainder_signal_sub0001_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<15> (Msub_remainder_signal_sub0001_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<16> (Msub_remainder_signal_sub0001_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<17> (Msub_remainder_signal_sub0001_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<18> (Msub_remainder_signal_sub0001_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<19> (Msub_remainder_signal_sub0001_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<20> (Msub_remainder_signal_sub0001_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<21> (Msub_remainder_signal_sub0001_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<22> (Msub_remainder_signal_sub0001_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<23> (Msub_remainder_signal_sub0001_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<24> (Msub_remainder_signal_sub0001_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<25> (Msub_remainder_signal_sub0001_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<26> (Msub_remainder_signal_sub0001_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<27> (Msub_remainder_signal_sub0001_cy<27>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<28> (Msub_remainder_signal_sub0001_cy<28>)
+     MUXCY:CI->O           1   0.056   0.000  Msub_remainder_signal_sub0001_cy<29> (Msub_remainder_signal_sub0001_cy<29>)
+     MUXCY:CI->O           0   0.056   0.000  Msub_remainder_signal_sub0001_cy<30> (Msub_remainder_signal_sub0001_cy<30>)
+     XORCY:CI->O           1   0.786   0.851  Msub_remainder_signal_sub0001_xor<31> (remainder_signal_sub0001<31>)
+     LUT2:I1->O            1   0.479   0.000  Mcompar_remainder_signal_cmp_ge0000_lut<31> (Mcompar_remainder_signal_cmp_ge0000_lut<31>)
+     MUXCY:S->O            3   0.644   0.941  Mcompar_remainder_signal_cmp_ge0000_cy<31> (remainder_signal_cmp_ge0000)
+     LUT2:I1->O           32   0.479   1.575  remainder_signal_and00001 (remainder_signal_and0000)
+     FDE:CE                    0.524          remainder_signal_0
+    ----------------------------------------
+    Total                     10.613ns (6.206ns logic, 4.407ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              6.306ns (Levels of Logic = 1)
+  Source:            quotient_signal_31 (FF)
+  Destination:       quotient<31> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: quotient_signal_31 to quotient<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.626   0.771  quotient_signal_31 (quotient_signal_31)
+     OBUF:I->O                 4.909          quotient_31_OBUF (quotient<31>)
+    ----------------------------------------
+    Total                      6.306ns (5.535ns logic, 0.771ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.09 secs
+ 
+--> 
+
+Total memory usage is 192800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

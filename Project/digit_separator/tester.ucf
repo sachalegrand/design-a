@@ -1,0 +1,12 @@
+NET "clock" LOC = A8;
+NET "selDigit[1]" LOC = J16;
+NET "selDigit[0]" LOC = N15;
+NET "reset" LOC = J13;
+NET "leds[7]" LOC = R16;
+NET "leds[6]" LOC = P14;
+NET "leds[5]" LOC = M13;
+NET "leds[4]" LOC = N14;
+NET "leds[3]" LOC = L12;
+NET "leds[2]" LOC = M14;
+NET "leds[1]" LOC = L13;
+NET "leds[0]" LOC = L14;

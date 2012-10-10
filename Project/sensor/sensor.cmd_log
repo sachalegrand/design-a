@@ -4,3 +4,1400 @@ map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_m
 par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
 bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/sensor.xst" -ofn "H:/12s2/COMP3601/Project/sensor/sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 sensor.ngc sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o sensor_map.ncd sensor.ngd sensor.pcf 
+par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml sensor.twx sensor.ncd -o sensor.twr sensor.pcf -ucf sensor.ucf 
+bitgen -intstyle ise -f sensor.ut sensor.ncd 

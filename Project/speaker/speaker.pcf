@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Tue Oct 09 23:04:21 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock" LOCATE = SITE "A8" LEVEL 1;
+COMP "output" LOCATE = SITE "A9" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

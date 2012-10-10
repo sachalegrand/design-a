@@ -1,0 +1,90 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml tester.twx tester.ncd -o tester.twr tester.pcf -ucf
+tester.ucf
+
+Design file:              tester.ncd
+Physical constraint file: tester.pcf
+Device,package,speed:     xc3s400,ft256,-5 (PRODUCTION 1.39 2011-06-20)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clock to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+leds<0>     |    8.867(R)|clock_BUFGP       |   0.000|
+leds<1>     |    9.127(R)|clock_BUFGP       |   0.000|
+leds<2>     |    9.227(R)|clock_BUFGP       |   0.000|
+leds<3>     |    8.991(R)|clock_BUFGP       |   0.000|
+leds<4>     |   10.540(R)|clock_BUFGP       |   0.000|
+leds<5>     |   10.307(R)|clock_BUFGP       |   0.000|
+leds<6>     |   10.235(R)|clock_BUFGP       |   0.000|
+leds<7>     |    9.939(R)|clock_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    7.895|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+selVar         |leds<0>        |    8.369|
+selVar         |leds<1>        |    8.571|
+selVar         |leds<2>        |    8.618|
+selVar         |leds<3>        |    8.290|
+selVar         |leds<4>        |    9.127|
+selVar         |leds<5>        |    8.875|
+selVar         |leds<6>        |    8.830|
+selVar         |leds<7>        |    8.895|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 07 19:56:29 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 98 MB
+
+
+

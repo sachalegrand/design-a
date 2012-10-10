@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Sun Oct 07 19:56:17 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "leds<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "M14" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "L12" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "M13" LEVEL 1;
+COMP "selVar" LOCATE = SITE "N15" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "P14" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "R16" LEVEL 1;
+COMP "clock" LOCATE = SITE "A8" LEVEL 1;
+COMP "reset" LOCATE = SITE "J13" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

@@ -1,0 +1,2 @@
+NET "clock" LOC = A8;
+NET "output" LOC = A9; 

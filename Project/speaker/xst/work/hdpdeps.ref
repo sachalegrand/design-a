@@ -1,0 +1,6 @@
+V3 3
+FL H:/12s2/COMP3601/Project/speaker/speaker.vhd 2012/10/09.23:04:05 O.61xd
+EN work/speaker 1349784249 FL H:/12s2/COMP3601/Project/speaker/speaker.vhd \
+      PB ieee/std_logic_1164 1308643377
+AR work/speaker/Behavioral 1349784250 \
+      FL H:/12s2/COMP3601/Project/speaker/speaker.vhd EN work/speaker 1349784249

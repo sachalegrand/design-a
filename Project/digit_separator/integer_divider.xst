@@ -1,0 +1,5 @@
+set -tmpdir "H:/12s2/COMP3601/Project/digit_separator/xst/projnav.tmp"
+set -xsthdpdir "H:/12s2/COMP3601/Project/digit_separator/xst"
+elaborate
+-ifn integer_divider.prj
+-ifmt mixed

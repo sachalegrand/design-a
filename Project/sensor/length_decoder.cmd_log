@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/length_decoder.xst" -ofn "H:/12s2/COMP3601/Project/sensor/length_decoder.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/length_decoder.xst" -ofn "H:/12s2/COMP3601/Project/sensor/length_decoder.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/sensor/length_decoder.xst" -ofn "H:/12s2/COMP3601/Project/sensor/length_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 length_decoder.ngc length_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 length_decoder.ngc length_decoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sensor.ucf -p xc3s400-ft256-5 length_decoder.ngc length_decoder.ngd  

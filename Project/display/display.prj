@@ -1,0 +1,5 @@
+vhdl work "../integer_divider/integer_divider.vhd"
+vhdl work "../display_decoder/display_decoder.vhd"
+vhdl work "../digit_separator/digit_separator.vhd"
+vhdl work "../clocked_display/clocked_display.vhd"
+vhdl work "display.vhd"

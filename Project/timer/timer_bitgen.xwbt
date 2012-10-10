@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=H:\12s2\COMP3601\Project\timer\timer.ncd
-OUTFILE=H:\12s2\COMP3601\Project\timer\timer.bit
-FAMILY=Spartan3
-PART=xc3s400-5ft256
-WORKINGDIR=H:\12s2\COMP3601\Project\timer
-LICENSE=WebPack
-USER_INFO=207993701_0_0_657

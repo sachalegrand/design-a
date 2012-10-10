@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Sun Oct 07 20:33:05 2012
+
+drc -z tester.ncd tester.pcf
+
+DRC detected 0 errors and 0 warnings.

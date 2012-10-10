@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">remainder&lt;31:8&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">quotient&lt;31:8&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">remainder_signal_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">remainder_signal_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">integer_divider</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">numerator_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">integer_divider</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/quotient_signal_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">test/remainder_signal_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">tester</arg>&gt;.
+</msg>
+
+</messages>
+

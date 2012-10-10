@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-09-07T11:36:42</DateModified>
-  <ModuleName>timer</ModuleName>
+  <DateModified>2012-10-07T16:31:19</DateModified>
+  <ModuleName>sensor</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>H:/12s2/COMP3601/Project/sensor/iseconfig/sensor.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>H:/12s2/COMP3601/Project/sensor</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>H:/12s2/COMP3601/Project/sensor\</ImplementationReportsDirectory>
   <DateInitialized>2012-09-07T11:36:42</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

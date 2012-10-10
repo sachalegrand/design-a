@@ -1,0 +1,2 @@
+vhdl work "../integer_divider/integer_divider.vhd"
+vhdl work "digit_separator.vhd"

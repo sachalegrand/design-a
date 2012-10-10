@@ -1,0 +1,5 @@
+EN clocked_display NULL H:/12s2/COMP3601/Project/clocked_display/clocked_display.vhd sub00/vhpl03 1349607126
+EN display_decoder NULL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl00 1349607123
+AR clocked_display behavioral H:/12s2/COMP3601/Project/clocked_display/clocked_display.vhd sub00/vhpl04 1349607127
+PH display_decoder_package NULL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl02 1349607125
+AR display_decoder behavioral H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd sub00/vhpl01 1349607124

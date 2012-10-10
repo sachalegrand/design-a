@@ -1,2 +1,2 @@
-vhdl work "../clk_div/clk_div.vhd"
+vhdl work "PulseLengthDecoder.vhd"
 vhdl work "sensor.vhd"

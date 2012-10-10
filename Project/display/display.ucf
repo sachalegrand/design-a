@@ -1,0 +1,13 @@
+NET "clock" LOC = A8;
+NET "reset" LOC = J13;
+NET "an[3]" LOC = F12;
+NET "an[2]" LOC = G13;
+NET "an[1]" LOC = G12;
+NET "an[0]" LOC = G14;
+NET "ca[0]" LOC = F13;
+NET "ca[1]" LOC = E13;
+NET "ca[2]" LOC = G15;
+NET "ca[3]" LOC = H13;
+NET "ca[4]" LOC = J14;
+NET "ca[5]" LOC = E14;
+NET "ca[6]" LOC = G16;

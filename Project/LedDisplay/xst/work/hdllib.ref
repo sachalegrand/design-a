@@ -1,5 +1,0 @@
-EN leddisplay NULL H:/12s2/COMP3601/Project/LedDisplay/LedDisplay.vhd sub00/vhpl00 1345122596
-EN displaydecoder NULL H:/12s2/COMP3601/Project/DisplayDecoder/DisplayDecoder.vhd sub00/vhpl02 1345122593
-PH displaydecoderpackage NULL H:/12s2/COMP3601/Project/DisplayDecoder/DisplayDecoder.vhd sub00/vhpl04 1345122595
-AR displaydecoder behavioral H:/12s2/COMP3601/Project/DisplayDecoder/DisplayDecoder.vhd sub00/vhpl03 1345122594
-AR leddisplay behavioral H:/12s2/COMP3601/Project/LedDisplay/LedDisplay.vhd sub00/vhpl01 1345122597

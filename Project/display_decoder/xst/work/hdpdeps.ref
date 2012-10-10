@@ -1,0 +1,11 @@
+V3 5
+FL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd 2012/10/07.21:40:17 O.61xd
+EN work/display_decoder 1349606421 \
+      FL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd \
+      PB ieee/std_logic_1164 1308643377
+AR work/display_decoder/Behavioral 1349606422 \
+      FL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd \
+      EN work/display_decoder 1349606421
+PH work/display_decoder_package 1349606423 \
+      FL H:/12s2/COMP3601/Project/display_decoder/display_decoder.vhd \
+      PB ieee/std_logic_1164 1308643377 CD display_decoder

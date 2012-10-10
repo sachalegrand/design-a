@@ -1,0 +1,5 @@
+vhdl work "H:\12s2\COMP3601\Project\integer_divider\integer_divider.vhd"
+vhdl work "H:\12s2\COMP3601\Project\display_decoder\display_decoder.vhd"
+vhdl work "H:\12s2\COMP3601\Project\digit_separator\digit_separator.vhd"
+vhdl work "H:\12s2\COMP3601\Project\clocked_display\clocked_display.vhd"
+vhdl work "H:\12s2\COMP3601\Project\display\display.vhd"

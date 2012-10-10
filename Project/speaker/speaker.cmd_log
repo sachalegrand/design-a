@@ -1,0 +1,115 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/speaker/speaker.xst" -ofn "H:/12s2/COMP3601/Project/speaker/speaker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc speaker.ucf -p xc3s400-ft256-5 speaker.ngc speaker.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o speaker_map.ncd speaker.ngd speaker.pcf 
+par -w -intstyle ise -ol high -t 1 speaker_map.ncd speaker.ncd speaker.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml speaker.twx speaker.ncd -o speaker.twr speaker.pcf -ucf speaker.ucf 
+bitgen -intstyle ise -f speaker.ut speaker.ncd 

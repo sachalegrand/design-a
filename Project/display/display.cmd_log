@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s400-ft256-5 display.ngc display.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o display_map.ncd display.ngd display.pcf 
+par -w -intstyle ise -ol high -t 1 display_map.ncd display.ncd display.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml display.twx display.ncd -o display.twr display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f display.ut display.ncd 
+bitgen -intstyle ise -f display.ut display.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/display/display.xst" -ofn "H:/12s2/COMP3601/Project/display/display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s400-ft256-5 display.ngc display.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o display_map.ncd display.ngd display.pcf 
+par -w -intstyle ise -ol high -t 1 display_map.ncd display.ncd display.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml display.twx display.ncd -o display.twr display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f display.ut display.ncd 

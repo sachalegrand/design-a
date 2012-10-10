@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.95 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.95 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: sensor.prj
 
@@ -104,27 +104,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "H:/12s2/COMP3601/Project/clk_div/clk_div.vhd" in Library work.
-Architecture behavioral of Entity clk_div is up to date.
+Compiling vhdl file "H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd" in Library work.
+Architecture behaviour of Entity pulselengthdecoder is up to date.
 Compiling vhdl file "H:/12s2/COMP3601/Project/sensor/sensor.vhd" in Library work.
-Architecture structure of Entity sensor is up to date.
+Entity <sensor> compiled.
+Entity <sensor> (Architecture <behaviour>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <sensor> in library <work> (architecture <structure>).
+Analyzing hierarchy for entity <sensor> in library <work> (architecture <behaviour>).
 
-Analyzing hierarchy for entity <clk_div> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <PulseLengthDecoder> in library <work> (architecture <behaviour>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <sensor> in library <work> (Architecture <structure>).
+Analyzing Entity <sensor> in library <work> (Architecture <behaviour>).
+WARNING:Xst:1610 - "H:/12s2/COMP3601/Project/sensor/sensor.vhd" line 119: Width mismatch. <sleepPulseLengths> has a width of 1280 bits but assigned expression is 40-bit wide.
+WARNING:Xst:1610 - "H:/12s2/COMP3601/Project/sensor/sensor.vhd" line 121: Width mismatch. <dataPulseLengths> has a width of 1280 bits but assigned expression is 40-bit wide.
+WARNING:Xst:819 - "H:/12s2/COMP3601/Project/sensor/sensor.vhd" line 317: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <currentState>, <dataIndex>
+INFO:Xst:2679 - Register <doneCounter> in unit <sensor> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <sensor> analyzed. Unit <sensor> generated.
 
-Analyzing Entity <clk_div> in library <work> (Architecture <behavioral>).
-Entity <clk_div> analyzed. Unit <clk_div> generated.
+Analyzing Entity <PulseLengthDecoder> in library <work> (Architecture <behaviour>).
+Entity <PulseLengthDecoder> analyzed. Unit <PulseLengthDecoder> generated.
 
 
 =========================================================================
@@ -133,67 +139,84 @@ Entity <clk_div> analyzed. Unit <clk_div> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <clk_div>.
-    Related source file is "H:/12s2/COMP3601/Project/clk_div/clk_div.vhd".
-    Found 1-bit register for signal <clk_1us>.
-    Found 1-bit register for signal <clk_1s>.
-    Found 1-bit register for signal <clk_1ms>.
-    Found 16-bit up counter for signal <counter_1ms>.
-    Found 16-bit comparator greater for signal <counter_1ms$cmp_gt0000> created at line 34.
-    Found 16-bit comparator less for signal <counter_1ms$cmp_lt0000> created at line 34.
-    Found 16-bit up counter for signal <counter_1s>.
-    Found 16-bit comparator greater for signal <counter_1s$cmp_gt0000> created at line 47.
-    Found 16-bit comparator less for signal <counter_1s$cmp_lt0000> created at line 47.
-    Found 16-bit up counter for signal <counter_1us>.
-    Found 16-bit comparator greater for signal <counter_1us$cmp_gt0000> created at line 21.
-    Found 16-bit comparator less for signal <counter_1us$cmp_lt0000> created at line 21.
+Synthesizing Unit <PulseLengthDecoder>.
+    Related source file is "H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <bitValue>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <bitValue$cmp_gt0000> created at line 17.
+    Found 32-bit comparator less for signal <bitValue$cmp_lt0000> created at line 17.
+    Found 32-bit comparator greater for signal <bitValueValid$cmp_gt0000> created at line 15.
+    Found 32-bit comparator less for signal <bitValueValid$cmp_lt0000> created at line 15.
     Summary:
-	inferred   3 Counter(s).
-	inferred   3 D-type flip-flop(s).
-	inferred   6 Comparator(s).
-Unit <clk_div> synthesized.
+	inferred   4 Comparator(s).
+Unit <PulseLengthDecoder> synthesized.
 
 
 Synthesizing Unit <sensor>.
     Related source file is "H:/12s2/COMP3601/Project/sensor/sensor.vhd".
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-    Using one-hot encoding for signal <current_state>.
-WARNING:Xst:737 - Found 1-bit latch for signal <one_wire>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 5-bit register for signal <current_state>.
-    Found 32-bit register for signal <timer_1ms>.
-    Found 32-bit adder for signal <timer_1ms$addsub0000> created at line 42.
-    Found 32-bit register for signal <timer_1s>.
-    Found 32-bit adder for signal <timer_1s$share0000>.
-    Found 32-bit register for signal <timer_1us>.
-    Found 32-bit adder for signal <timer_1us$addsub0000> created at line 45.
+WARNING:Xst:647 - Input <selPulse> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <temperatureValid> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tem1<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tem0<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <humidityValid> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <doneCounter<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <checksumValid> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <currentState>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | standby                                        |
+    | Power Up State     | standby                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <enState>.
+    Found 1-bit tristate buffer for signal <data>.
+    Found 8-bit adder for signal <calculatedChecksum>.
+    Found 8-bit adder for signal <calculatedChecksum$add0001> created at line 102.
+    Found 8-bit adder for signal <calculatedChecksum$addsub0000> created at line 102.
+    Found 1-bit register for signal <dataIn>.
+    Found 32-bit up counter for signal <dataIndex>.
+    Found 32-bit up counter for signal <dataIndexCounter>.
+    Found 32-bit up counter for signal <dataPulseLengths>.
+    Found 32-bit up counter for signal <preparationLength>.
+    Found 32-bit up counter for signal <presenceLength>.
+    Found 32-bit up counter for signal <sendingCounter>.
+    Found 32-bit up counter for signal <sleepIndex>.
+    Found 32-bit up counter for signal <sleepIndexCounter>.
+    Found 32-bit up counter for signal <sleepPulseLengths>.
+    Found 32-bit up counter for signal <standbyCounter>.
+    Found 32-bit up counter for signal <waitingLength>.
     Summary:
-	inferred 101 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+	inferred  89 Counter(s).
+	inferred   1 D-type flip-flop(s).
 	inferred   3 Adder/Subtractor(s).
+	inferred   1 Tristate(s).
 Unit <sensor> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 3
- 32-bit adder                                          : 3
-# Counters                                             : 3
- 16-bit up counter                                     : 3
-# Registers                                            : 7
- 1-bit register                                        : 3
- 32-bit register                                       : 3
- 5-bit register                                        : 1
-# Latches                                              : 1
- 1-bit latch                                           : 1
-# Comparators                                          : 6
- 16-bit comparator greater                             : 3
- 16-bit comparator less                                : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 46
+ 32-bit up counter                                     : 46
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Latches                                              : 40
+ 1-bit latch                                           : 40
+# Comparators                                          : 160
+ 32-bit comparator greater                             : 80
+ 32-bit comparator less                                : 80
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
 
 =========================================================================
 
@@ -201,71 +224,55 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <currentState/FSM> on signal <currentState[1:10]> with one-hot encoding.
+-------------------------------
+ State           | Encoding
+-------------------------------
+ standby         | 0000000001
+ sending         | 0000000010
+ waiting         | 0000000100
+ presence        | 0000001000
+ preparation     | 0000010000
+ sleep           | 0000100000
+ sleepindexstate | 0001000000
+ datastate       | 0010000000
+ dataindexstate  | 1000000000
+ done            | 0100000000
+-------------------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# FSMs                                                 : 1
 # Adders/Subtractors                                   : 3
- 32-bit adder                                          : 3
-# Counters                                             : 3
- 16-bit up counter                                     : 3
-# Registers                                            : 104
- Flip-Flops                                            : 104
-# Latches                                              : 1
- 1-bit latch                                           : 1
-# Comparators                                          : 6
- 16-bit comparator greater                             : 3
- 16-bit comparator less                                : 3
+ 8-bit adder                                           : 3
+# Counters                                             : 45
+ 32-bit up counter                                     : 45
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 40
+ 1-bit latch                                           : 40
+# Comparators                                          : 160
+ 32-bit comparator greater                             : 80
+ 32-bit comparator less                                : 80
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <currentState_FSM_FFd2> of sequential type is unconnected in block <sensor>.
 
 Optimizing unit <sensor> ...
 
-Optimizing unit <clk_div> ...
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_15> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_15> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_14> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_13> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_12> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_10> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_9> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_11> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_8> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_7> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_6> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_5> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_3> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_2> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_4> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_1> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1ms_0> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_13> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_12> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_14> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_11> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_10> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_9> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_8> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_6> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_5> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_7> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_4> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_3> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_2> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_1> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/counter_1s_0> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/clk_1s> of sequential type is unconnected in block <sensor>.
-WARNING:Xst:2677 - Node <timer_inst/clk_1ms> of sequential type is unconnected in block <sensor>.
+Optimizing unit <PulseLengthDecoder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block sensor, actual ratio is 4.
-Latch one_wire has been replicated 1 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block sensor, actual ratio is 54.
+FlipFlop currentState_FSM_FFd10 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -273,8 +280,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 118
- Flip-Flops                                            : 118
+# Registers                                            : 1452
+ Flip-Flops                                            : 1452
 
 =========================================================================
 
@@ -300,38 +307,37 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 11
+# IOs                              : 16
 
 Cell Usage :
-# BELS                             : 603
+# BELS                             : 8458
+#      BUF                         : 2
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 109
-#      LUT2                        : 15
-#      LUT2_D                      : 2
-#      LUT3                        : 39
+#      INV                         : 686
+#      LUT1                        : 1533
+#      LUT2                        : 173
+#      LUT2_D                      : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 362
 #      LUT3_D                      : 1
-#      LUT3_L                      : 12
-#      LUT4                        : 112
-#      LUT4_D                      : 10
-#      LUT4_L                      : 41
-#      MUXCY                       : 142
-#      MUXF5                       : 2
+#      LUT4                        : 853
+#      LUT4_D                      : 14
+#      LUT4_L                      : 2
+#      MUXCY                       : 3368
 #      VCC                         : 1
-#      XORCY                       : 112
-# FlipFlops/Latches                : 120
-#      FD                          : 1
-#      FDR                         : 109
-#      FDRS                        : 6
-#      FDS                         : 1
-#      FDSE                        : 1
-#      LD                          : 2
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+#      XORCY                       : 1456
+# FlipFlops/Latches                : 1492
+#      FDC                         : 8
+#      FDCE                        : 1408
+#      FDE                         : 33
+#      FDPE                        : 3
+#      LDCE                        : 40
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 10
-#      IBUF                        : 1
-#      OBUF                        : 9
+# IO Buffers                       : 11
+#      IBUF                        : 2
+#      IOBUF                       : 1
+#      OBUF                        : 8
 =========================================================================
 
 Device utilization summary:
@@ -339,13 +345,12 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-5 
 
- Number of Slices:                      179  out of   3584     4%  
- Number of Slice Flip Flops:            119  out of   7168     1%  
- Number of 4 input LUTs:                345  out of   7168     4%  
- Number of IOs:                          11
- Number of bonded IOBs:                  11  out of    173     6%  
-    IOB Flip Flops:                       1
- Number of GCLKs:                         2  out of      8    25%  
+ Number of Slices:                     1860  out of   3584    51%  
+ Number of Slice Flip Flops:           1492  out of   7168    20%  
+ Number of 4 input LUTs:               3630  out of   7168    50%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  12  out of    173     6%  
+ Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -365,166 +370,1243 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-timer_inst/clk_1us1                | BUFG                   | 101   |
-one_wire_or0000(one_wire_or00001:O)| NONE(*)(one_wire)      | 2     |
-clk_50                             | BUFGP                  | 17    |
------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
+--------------------------------------------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                                                                | Clock buffer(FF name)       | Load  |
+--------------------------------------------------------------------------------------------+-----------------------------+-------+
+clock                                                                                       | BUFGP                       | 1452  |
+chk_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit00/bitValue) | 1     |
+chk_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit01/bitValue) | 1     |
+chk_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit02/bitValue) | 1     |
+chk_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit03/bitValue) | 1     |
+chk_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit04/bitValue) | 1     |
+chk_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit05/bitValue) | 1     |
+chk_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit06/bitValue) | 1     |
+chk_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>(chk_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(chk_bit07/bitValue) | 1     |
+temp_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit00/bitValue)| 1     |
+temp_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit01/bitValue)| 1     |
+temp_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit02/bitValue)| 1     |
+temp_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit03/bitValue)| 1     |
+temp_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit04/bitValue)| 1     |
+temp_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit05/bitValue)| 1     |
+temp_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit06/bitValue)| 1     |
+temp_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit07/bitValue)| 1     |
+temp_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit08/bitValue)| 1     |
+temp_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit09/bitValue)| 1     |
+temp_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit10/bitValue)| 1     |
+temp_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit11/bitValue)| 1     |
+temp_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit12/bitValue)| 1     |
+temp_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit13/bitValue)| 1     |
+temp_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit14/bitValue)| 1     |
+temp_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>(temp_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>:O)| NONE(*)(temp_bit15/bitValue)| 1     |
+hum_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit00/bitValue) | 1     |
+hum_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit01/bitValue) | 1     |
+hum_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit02/bitValue) | 1     |
+hum_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit03/bitValue) | 1     |
+hum_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit04/bitValue) | 1     |
+hum_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit05/bitValue) | 1     |
+hum_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit06/bitValue) | 1     |
+hum_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit07/bitValue) | 1     |
+hum_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit08/bitValue) | 1     |
+hum_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit09/bitValue) | 1     |
+hum_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit10/bitValue) | 1     |
+hum_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit11/bitValue) | 1     |
+hum_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit12/bitValue) | 1     |
+hum_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit13/bitValue) | 1     |
+hum_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit14/bitValue) | 1     |
+hum_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>(hum_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>:O)  | NONE(*)(hum_bit15/bitValue) | 1     |
+--------------------------------------------------------------------------------------------+-----------------------------+-------+
+(*) These 40 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------------------------------+-----------------------------+-------+
+Control Signal                                             | Buffer(FF name)             | Load  |
+-----------------------------------------------------------+-----------------------------+-------+
+reset_IBUF_2(reset_IBUF_2:O)                               | NONE(dataPulseLengths_22_2) | 475   |
+reset_IBUF_1(reset_IBUF_1:O)                               | NONE(dataPulseLengths_36_15)| 473   |
+reset                                                      | IBUF                        | 471   |
+chk_bit00/bitValue_and0000(chk_bit00/bitValue_and00001:O)  | NONE(chk_bit00/bitValue)    | 1     |
+chk_bit01/bitValue_and0000(chk_bit01/bitValue_and00001:O)  | NONE(chk_bit01/bitValue)    | 1     |
+chk_bit02/bitValue_and0000(chk_bit02/bitValue_and00001:O)  | NONE(chk_bit02/bitValue)    | 1     |
+chk_bit03/bitValue_and0000(chk_bit03/bitValue_and00001:O)  | NONE(chk_bit03/bitValue)    | 1     |
+chk_bit04/bitValue_and0000(chk_bit04/bitValue_and00001:O)  | NONE(chk_bit04/bitValue)    | 1     |
+chk_bit05/bitValue_and0000(chk_bit05/bitValue_and00001:O)  | NONE(chk_bit05/bitValue)    | 1     |
+chk_bit06/bitValue_and0000(chk_bit06/bitValue_and00001:O)  | NONE(chk_bit06/bitValue)    | 1     |
+chk_bit07/bitValue_and0000(chk_bit07/bitValue_and00001:O)  | NONE(chk_bit07/bitValue)    | 1     |
+hum_bit00/bitValue_and0000(hum_bit00/bitValue_and00001:O)  | NONE(hum_bit00/bitValue)    | 1     |
+hum_bit01/bitValue_and0000(hum_bit01/bitValue_and00001:O)  | NONE(hum_bit01/bitValue)    | 1     |
+hum_bit02/bitValue_and0000(hum_bit02/bitValue_and00001:O)  | NONE(hum_bit02/bitValue)    | 1     |
+hum_bit03/bitValue_and0000(hum_bit03/bitValue_and00001:O)  | NONE(hum_bit03/bitValue)    | 1     |
+hum_bit04/bitValue_and0000(hum_bit04/bitValue_and00001:O)  | NONE(hum_bit04/bitValue)    | 1     |
+hum_bit05/bitValue_and0000(hum_bit05/bitValue_and00001:O)  | NONE(hum_bit05/bitValue)    | 1     |
+hum_bit06/bitValue_and0000(hum_bit06/bitValue_and00001:O)  | NONE(hum_bit06/bitValue)    | 1     |
+hum_bit07/bitValue_and0000(hum_bit07/bitValue_and00001:O)  | NONE(hum_bit07/bitValue)    | 1     |
+hum_bit08/bitValue_and0000(hum_bit08/bitValue_and00001:O)  | NONE(hum_bit08/bitValue)    | 1     |
+hum_bit09/bitValue_and0000(hum_bit09/bitValue_and00001:O)  | NONE(hum_bit09/bitValue)    | 1     |
+hum_bit10/bitValue_and0000(hum_bit10/bitValue_and00001:O)  | NONE(hum_bit10/bitValue)    | 1     |
+hum_bit11/bitValue_and0000(hum_bit11/bitValue_and00001:O)  | NONE(hum_bit11/bitValue)    | 1     |
+hum_bit12/bitValue_and0000(hum_bit12/bitValue_and00001:O)  | NONE(hum_bit12/bitValue)    | 1     |
+hum_bit13/bitValue_and0000(hum_bit13/bitValue_and00001:O)  | NONE(hum_bit13/bitValue)    | 1     |
+hum_bit14/bitValue_and0000(hum_bit14/bitValue_and00001:O)  | NONE(hum_bit14/bitValue)    | 1     |
+hum_bit15/bitValue_and0000(hum_bit15/bitValue_and00001:O)  | NONE(hum_bit15/bitValue)    | 1     |
+temp_bit00/bitValue_and0000(temp_bit00/bitValue_and00001:O)| NONE(temp_bit00/bitValue)   | 1     |
+temp_bit01/bitValue_and0000(temp_bit01/bitValue_and00001:O)| NONE(temp_bit01/bitValue)   | 1     |
+temp_bit02/bitValue_and0000(temp_bit02/bitValue_and00001:O)| NONE(temp_bit02/bitValue)   | 1     |
+temp_bit03/bitValue_and0000(temp_bit03/bitValue_and00001:O)| NONE(temp_bit03/bitValue)   | 1     |
+temp_bit04/bitValue_and0000(temp_bit04/bitValue_and00001:O)| NONE(temp_bit04/bitValue)   | 1     |
+temp_bit05/bitValue_and0000(temp_bit05/bitValue_and00001:O)| NONE(temp_bit05/bitValue)   | 1     |
+temp_bit06/bitValue_and0000(temp_bit06/bitValue_and00001:O)| NONE(temp_bit06/bitValue)   | 1     |
+temp_bit07/bitValue_and0000(temp_bit07/bitValue_and00001:O)| NONE(temp_bit07/bitValue)   | 1     |
+temp_bit08/bitValue_and0000(temp_bit08/bitValue_and00001:O)| NONE(temp_bit08/bitValue)   | 1     |
+temp_bit09/bitValue_and0000(temp_bit09/bitValue_and00001:O)| NONE(temp_bit09/bitValue)   | 1     |
+temp_bit10/bitValue_and0000(temp_bit10/bitValue_and00001:O)| NONE(temp_bit10/bitValue)   | 1     |
+temp_bit11/bitValue_and0000(temp_bit11/bitValue_and00001:O)| NONE(temp_bit11/bitValue)   | 1     |
+temp_bit12/bitValue_and0000(temp_bit12/bitValue_and00001:O)| NONE(temp_bit12/bitValue)   | 1     |
+temp_bit13/bitValue_and0000(temp_bit13/bitValue_and00001:O)| NONE(temp_bit13/bitValue)   | 1     |
+temp_bit14/bitValue_and0000(temp_bit14/bitValue_and00001:O)| NONE(temp_bit14/bitValue)   | 1     |
+temp_bit15/bitValue_and0000(temp_bit15/bitValue_and00001:O)| NONE(temp_bit15/bitValue)   | 1     |
+-----------------------------------------------------------+-----------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 7.864ns (Maximum Frequency: 127.170MHz)
-   Minimum input arrival time before clock: 6.292ns
-   Maximum output required time after clock: 9.372ns
-   Maximum combinational path delay: No path found
+   Minimum period: 7.343ns (Maximum Frequency: 136.193MHz)
+   Minimum input arrival time before clock: 10.332ns
+   Maximum output required time after clock: 14.508ns
+   Maximum combinational path delay: 7.999ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'timer_inst/clk_1us1'
-  Clock period: 7.756ns (frequency: 128.933MHz)
-  Total number of paths / destination ports: 15055 / 104
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 7.343ns (frequency: 136.193MHz)
+  Total number of paths / destination ports: 68424 / 2891
 -------------------------------------------------------------------------
-Delay:               7.756ns (Levels of Logic = 11)
-  Source:            timer_1ms_25 (FF)
-  Destination:       timer_1s_0 (FF)
-  Source Clock:      timer_inst/clk_1us1 rising
-  Destination Clock: timer_inst/clk_1us1 rising
+Delay:               7.343ns (Levels of Logic = 9)
+  Source:            dataIndex_25 (FF)
+  Destination:       dataPulseLengths_25_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
 
-  Data Path: timer_1ms_25 to timer_1s_0
+  Data Path: dataIndex_25 to dataPulseLengths_25_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.626   1.066  timer_1ms_25 (timer_1ms_25)
-     LUT2:I0->O            1   0.479   0.000  current_state_cmp_eq00031_wg_lut<0> (current_state_cmp_eq00031_wg_lut<0>)
-     MUXCY:S->O            1   0.435   0.000  current_state_cmp_eq00031_wg_cy<0> (current_state_cmp_eq00031_wg_cy<0>)
-     MUXCY:CI->O           1   0.056   0.000  current_state_cmp_eq00031_wg_cy<1> (current_state_cmp_eq00031_wg_cy<1>)
-     MUXCY:CI->O           1   0.056   0.000  current_state_cmp_eq00031_wg_cy<2> (current_state_cmp_eq00031_wg_cy<2>)
-     MUXCY:CI->O           1   0.056   0.000  current_state_cmp_eq00031_wg_cy<3> (current_state_cmp_eq00031_wg_cy<3>)
-     MUXCY:CI->O           1   0.056   0.000  current_state_cmp_eq00031_wg_cy<4> (current_state_cmp_eq00031_wg_cy<4>)
-     MUXCY:CI->O           1   0.056   0.000  current_state_cmp_eq00031_wg_cy<5> (current_state_cmp_eq00031_wg_cy<5>)
-     MUXCY:CI->O           7   0.265   0.929  current_state_cmp_eq00031_wg_cy<6> (current_state_cmp_eq00031_wg_cy<6>)
-     LUT4:I3->O            4   0.479   0.838  current_state_mux0000<4>1111_1 (current_state_mux0000<4>1111)
-     LUT4_D:I2->O         18   0.479   1.227  timer_1s_mux0000<0>12_2 (timer_1s_mux0000<0>121)
-     LUT4:I3->O            1   0.479   0.000  timer_1s_mux0000<8>1 (timer_1s_mux0000<8>)
-     FDR:D                     0.176          timer_1s_23
+     FDE:C->Q              2   0.626   1.040  dataIndex_25 (dataIndex_25)
+     LUT2:I0->O            1   0.479   0.000  currentState_cmp_eq00031_wg_lut<0> (currentState_cmp_eq00031_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  currentState_cmp_eq00031_wg_cy<0> (currentState_cmp_eq00031_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  currentState_cmp_eq00031_wg_cy<1> (currentState_cmp_eq00031_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  currentState_cmp_eq00031_wg_cy<2> (currentState_cmp_eq00031_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  currentState_cmp_eq00031_wg_cy<3> (currentState_cmp_eq00031_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  currentState_cmp_eq00031_wg_cy<4> (currentState_cmp_eq00031_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  currentState_cmp_eq00031_wg_cy<5> (currentState_cmp_eq00031_wg_cy<5>)
+     MUXCY:CI->O          41   0.265   1.642  currentState_cmp_eq00031_wg_cy<6> (currentState_cmp_eq00031_wg_cy<6>)
+     LUT4:I3->O           32   0.479   1.575  dataPulseLengths_40_not00011 (dataPulseLengths_40_not0001)
+     FDCE:CE                   0.524          dataPulseLengths_40_0
     ----------------------------------------
-    Total                      7.756ns (3.695ns logic, 4.061ns route)
-                                       (47.6% logic, 52.4% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk_50'
-  Clock period: 7.864ns (frequency: 127.170MHz)
-  Total number of paths / destination ports: 1176 / 37
--------------------------------------------------------------------------
-Delay:               7.864ns (Levels of Logic = 4)
-  Source:            timer_inst/counter_1us_15 (FF)
-  Destination:       timer_inst/counter_1us_15 (FF)
-  Source Clock:      clk_50 rising
-  Destination Clock: clk_50 rising
-
-  Data Path: timer_inst/counter_1us_15 to timer_inst/counter_1us_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              4   0.626   1.074  timer_inst/counter_1us_15 (timer_inst/counter_1us_15)
-     LUT4:I0->O            1   0.479   0.851  timer_inst/counter_1us_cmp_eq0000158_SW0 (N186)
-     LUT4_D:I1->O          1   0.479   0.704  timer_inst/counter_1us_cmp_eq0000158 (timer_inst/N01)
-     LUT4:I3->O            5   0.479   0.806  timer_inst/counter_1us_cmp_eq00002 (timer_inst/counter_1us_cmp_eq0000)
-     LUT4:I3->O           13   0.479   0.994  timer_inst/Mcount_counter_1us_val1 (timer_inst/Mcount_counter_1us_val)
-     FDR:R                     0.892          timer_inst/counter_1us_1
-    ----------------------------------------
-    Total                      7.864ns (3.434ns logic, 4.430ns route)
-                                       (43.7% logic, 56.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'timer_inst/clk_1us1'
-  Total number of paths / destination ports: 104 / 101
--------------------------------------------------------------------------
-Offset:              6.292ns (Levels of Logic = 5)
-  Source:            reset (PAD)
-  Destination:       current_state_4 (FF)
-  Destination Clock: timer_inst/clk_1us1 rising
-
-  Data Path: reset to current_state_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           104   0.715   2.096  reset_IBUF (reset_IBUF)
-     LUT2:I1->O            1   0.479   0.704  current_state_mux0000<0>1_SW1 (N90)
-     LUT4:I3->O            1   0.479   0.000  timer_1s_mux0000<0>11_SW1_F (N274)
-     MUXF5:I0->O           1   0.314   0.851  timer_1s_mux0000<0>11_SW1 (N190)
-     LUT4:I1->O            1   0.479   0.000  current_state_mux0000<0>1 (current_state_mux0000<0>1)
-     FD:D                      0.176          current_state_4
-    ----------------------------------------
-    Total                      6.292ns (2.642ns logic, 3.650ns route)
+    Total                      7.343ns (3.085ns logic, 4.258ns route)
                                        (42.0% logic, 58.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'one_wire_or0000'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
-Offset:              6.141ns (Levels of Logic = 1)
-  Source:            one_wire_1 (LATCH)
-  Destination:       one_wire (PAD)
-  Source Clock:      one_wire_or0000 falling
+Offset:              10.332ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       dataIn (FF)
+  Destination Clock: clock rising
 
-  Data Path: one_wire_1 to one_wire
+  Data Path: reset to dataIn
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.551   0.681  one_wire_1 (one_wire_1)
-     OBUF:I->O                 4.909          one_wire_OBUF (one_wire)
+     IBUF:I->O           474   0.715   3.727  reset_IBUF (reset_IBUF)
+     BUF:I->O            474   0.479   3.727  reset_IBUF_1 (reset_IBUF_1)
+     INV:I->O              1   0.479   0.681  reset_inv1_INV_0 (reset_inv)
+     FDE:CE                    0.524          dataIn
     ----------------------------------------
-    Total                      6.141ns (5.460ns logic, 0.681ns route)
-                                       (88.9% logic, 11.1% route)
+    Total                     10.332ns (2.197ns logic, 8.135ns route)
+                                       (21.3% logic, 78.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'timer_inst/clk_1us1'
-  Total number of paths / destination ports: 15 / 5
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              9.372ns (Levels of Logic = 3)
-  Source:            current_state_0 (FF)
-  Destination:       leds<7> (PAD)
-  Source Clock:      timer_inst/clk_1us1 rising
+Offset:              7.984ns (Levels of Logic = 2)
+  Source:            currentState_FSM_FFd9 (FF)
+  Destination:       data (PAD)
+  Source Clock:      clock rising
 
-  Data Path: current_state_0 to leds<7>
+  Data Path: currentState_FSM_FFd9 to data
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             12   0.626   1.245  current_state_0 (current_state_0)
-     LUT2:I0->O            5   0.479   0.953  one_wire_mux00021 (one_wire_mux0002)
-     LUT4:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     FDC:C->Q              5   0.626   1.078  currentState_FSM_FFd9 (currentState_FSM_FFd9)
+     LUT2:I0->O            1   0.479   0.681  data_or00001 (data_not0001_inv)
+     IOBUF:T->IO               5.120          data_IOBUF (data)
+    ----------------------------------------
+    Total                      7.984ns (6.225ns logic, 1.759ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 64 / 8
+-------------------------------------------------------------------------
+Offset:              11.946ns (Levels of Logic = 12)
+  Source:            temp_bit08/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit08/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit08/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.681  temp_bit08/bitValue (temp_bit08/bitValue)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<0> (Madd_calculatedChecksum_addsub0000_Madd_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<1> (Madd_calculatedChecksum_addsub0000_Madd_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
      OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
     ----------------------------------------
-    Total                      9.372ns (6.493ns logic, 2.879ns route)
+    Total                     11.946ns (8.758ns logic, 3.188ns route)
+                                       (73.3% logic, 26.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 113 / 8
+-------------------------------------------------------------------------
+Offset:              13.100ns (Levels of Logic = 13)
+  Source:            hum_bit00/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit00/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit00/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.976  hum_bit00/bitValue (hum_bit00/bitValue)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<0> (Madd_calculatedChecksum_addsub0000_Madd_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<0> (Madd_calculatedChecksum_addsub0000_Madd_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<1> (Madd_calculatedChecksum_addsub0000_Madd_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     13.100ns (9.617ns logic, 3.483ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit08/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 64 / 8
+-------------------------------------------------------------------------
+Offset:              12.975ns (Levels of Logic = 13)
+  Source:            hum_bit08/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit08/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit08/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  hum_bit08/bitValue (hum_bit08/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<0> (Madd_calculatedChecksum_addsub0000_Madd_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<0> (Madd_calculatedChecksum_addsub0000_Madd_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<1> (Madd_calculatedChecksum_addsub0000_Madd_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     12.975ns (9.617ns logic, 3.358ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              10.355ns (Levels of Logic = 11)
+  Source:            temp_bit00/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit00/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit00/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit00/bitValue (temp_bit00/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<0> (Madd_calculatedChecksum_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<0> (Madd_calculatedChecksum_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<1> (Madd_calculatedChecksum_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<2> (Madd_calculatedChecksum_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<3> (Madd_calculatedChecksum_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<4> (Madd_calculatedChecksum_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.355ns (7.972ns logic, 2.383ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 110 / 7
+-------------------------------------------------------------------------
+Offset:              14.383ns (Levels of Logic = 12)
+  Source:            temp_bit09/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit09/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit09/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  temp_bit09/bitValue (temp_bit09/bitValue)
+     LUT3:I1->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C1 (Madd_calculatedChecksum_addsub0000C)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<2> (Madd_calculatedChecksum_addsub0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.383ns (9.984ns logic, 4.399ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit09/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 110 / 7
+-------------------------------------------------------------------------
+Offset:              14.508ns (Levels of Logic = 12)
+  Source:            hum_bit09/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit09/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit09/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit09/bitValue (hum_bit09/bitValue)
+     LUT3:I0->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C1 (Madd_calculatedChecksum_addsub0000C)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<2> (Madd_calculatedChecksum_addsub0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.508ns (9.984ns logic, 4.524ns route)
+                                       (68.8% logic, 31.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 110 / 7
+-------------------------------------------------------------------------
+Offset:              14.272ns (Levels of Logic = 12)
+  Source:            hum_bit01/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit01/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit01/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  hum_bit01/bitValue (hum_bit01/bitValue)
+     LUT3:I2->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C1 (Madd_calculatedChecksum_addsub0000C)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<2> (Madd_calculatedChecksum_addsub0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<2> (Madd_calculatedChecksum_addsub0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.272ns (9.984ns logic, 4.288ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              10.299ns (Levels of Logic = 10)
+  Source:            temp_bit01/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit01/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit01/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit01/bitValue (temp_bit01/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<1> (Madd_calculatedChecksum_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<1> (Madd_calculatedChecksum_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<2> (Madd_calculatedChecksum_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<3> (Madd_calculatedChecksum_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<4> (Madd_calculatedChecksum_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.299ns (7.917ns logic, 2.383ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 77 / 6
+-------------------------------------------------------------------------
+Offset:              14.328ns (Levels of Logic = 11)
+  Source:            temp_bit10/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit10/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit10/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  temp_bit10/bitValue (temp_bit10/bitValue)
+     LUT3:I1->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C11 (Madd_calculatedChecksum_addsub0000C1)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<3> (Madd_calculatedChecksum_addsub0000_Madd_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.328ns (9.929ns logic, 4.399ns route)
                                        (69.3% logic, 30.7% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit10/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 77 / 6
+-------------------------------------------------------------------------
+Offset:              14.217ns (Levels of Logic = 11)
+  Source:            hum_bit10/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit10/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit10/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  hum_bit10/bitValue (hum_bit10/bitValue)
+     LUT3:I2->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C11 (Madd_calculatedChecksum_addsub0000C1)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<3> (Madd_calculatedChecksum_addsub0000_Madd_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.217ns (9.929ns logic, 4.288ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 77 / 6
+-------------------------------------------------------------------------
+Offset:              14.453ns (Levels of Logic = 11)
+  Source:            hum_bit02/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit02/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit02/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit02/bitValue (hum_bit02/bitValue)
+     LUT3:I0->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C11 (Madd_calculatedChecksum_addsub0000C1)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<3> (Madd_calculatedChecksum_addsub0000_Madd_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<3> (Madd_calculatedChecksum_addsub0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.453ns (9.929ns logic, 4.524ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              10.244ns (Levels of Logic = 9)
+  Source:            temp_bit02/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit02/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit02/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit02/bitValue (temp_bit02/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<2> (Madd_calculatedChecksum_lut<2>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<2> (Madd_calculatedChecksum_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<3> (Madd_calculatedChecksum_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<4> (Madd_calculatedChecksum_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.244ns (7.861ns logic, 2.383ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 50 / 5
+-------------------------------------------------------------------------
+Offset:              14.272ns (Levels of Logic = 10)
+  Source:            temp_bit11/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit11/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit11/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  temp_bit11/bitValue (temp_bit11/bitValue)
+     LUT3:I1->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C21 (Madd_calculatedChecksum_addsub0000C2)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<4> (Madd_calculatedChecksum_addsub0000_Madd_lut<4>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.272ns (9.873ns logic, 4.399ns route)
+                                       (69.2% logic, 30.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit11/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 50 / 5
+-------------------------------------------------------------------------
+Offset:              14.161ns (Levels of Logic = 10)
+  Source:            hum_bit11/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit11/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit11/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  hum_bit11/bitValue (hum_bit11/bitValue)
+     LUT3:I2->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C21 (Madd_calculatedChecksum_addsub0000C2)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<4> (Madd_calculatedChecksum_addsub0000_Madd_lut<4>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.161ns (9.873ns logic, 4.288ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 50 / 5
+-------------------------------------------------------------------------
+Offset:              14.397ns (Levels of Logic = 10)
+  Source:            hum_bit03/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit03/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit03/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit03/bitValue (hum_bit03/bitValue)
+     LUT3:I0->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C21 (Madd_calculatedChecksum_addsub0000C2)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<4> (Madd_calculatedChecksum_addsub0000_Madd_lut<4>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<4> (Madd_calculatedChecksum_addsub0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.397ns (9.873ns logic, 4.524ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              10.188ns (Levels of Logic = 8)
+  Source:            temp_bit03/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit03/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit03/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit03/bitValue (temp_bit03/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<3> (Madd_calculatedChecksum_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<3> (Madd_calculatedChecksum_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<4> (Madd_calculatedChecksum_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.188ns (7.806ns logic, 2.383ns route)
+                                       (76.6% logic, 23.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 29 / 4
+-------------------------------------------------------------------------
+Offset:              14.217ns (Levels of Logic = 9)
+  Source:            temp_bit12/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit12/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit12/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  temp_bit12/bitValue (temp_bit12/bitValue)
+     LUT3:I1->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C31 (Madd_calculatedChecksum_addsub0000C3)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<5> (Madd_calculatedChecksum_addsub0000_Madd_lut<5>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.217ns (9.818ns logic, 4.399ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit12/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 29 / 4
+-------------------------------------------------------------------------
+Offset:              14.106ns (Levels of Logic = 9)
+  Source:            hum_bit12/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit12/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit12/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  hum_bit12/bitValue (hum_bit12/bitValue)
+     LUT3:I2->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C31 (Madd_calculatedChecksum_addsub0000C3)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<5> (Madd_calculatedChecksum_addsub0000_Madd_lut<5>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.106ns (9.818ns logic, 4.288ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 29 / 4
+-------------------------------------------------------------------------
+Offset:              14.342ns (Levels of Logic = 9)
+  Source:            hum_bit04/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit04/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit04/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit04/bitValue (hum_bit04/bitValue)
+     LUT3:I0->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C31 (Madd_calculatedChecksum_addsub0000C3)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<5> (Madd_calculatedChecksum_addsub0000_Madd_lut<5>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<5> (Madd_calculatedChecksum_addsub0000_Madd_cy<5>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<6> (calculatedChecksum_addsub0000<6>)
+     LUT2:I0->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     14.342ns (9.818ns logic, 4.524ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              10.133ns (Levels of Logic = 7)
+  Source:            temp_bit04/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit04/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit04/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit04/bitValue (temp_bit04/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<4> (Madd_calculatedChecksum_lut<4>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<4> (Madd_calculatedChecksum_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.133ns (7.750ns logic, 2.383ns route)
+                                       (76.5% logic, 23.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 14 / 3
+-------------------------------------------------------------------------
+Offset:              13.537ns (Levels of Logic = 8)
+  Source:            temp_bit13/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit13/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit13/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  temp_bit13/bitValue (temp_bit13/bitValue)
+     LUT3:I1->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C41 (Madd_calculatedChecksum_addsub0000C4)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<6> (Madd_calculatedChecksum_addsub0000_Madd_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<6> (Madd_calculatedChecksum_addsub0000_Madd_cy<6>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     13.537ns (9.138ns logic, 4.399ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit13/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 14 / 3
+-------------------------------------------------------------------------
+Offset:              13.426ns (Levels of Logic = 8)
+  Source:            hum_bit13/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit13/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit13/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  hum_bit13/bitValue (hum_bit13/bitValue)
+     LUT3:I2->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C41 (Madd_calculatedChecksum_addsub0000C4)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<6> (Madd_calculatedChecksum_addsub0000_Madd_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<6> (Madd_calculatedChecksum_addsub0000_Madd_cy<6>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     13.426ns (9.138ns logic, 4.288ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 14 / 3
+-------------------------------------------------------------------------
+Offset:              13.662ns (Levels of Logic = 8)
+  Source:            hum_bit05/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit05/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit05/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit05/bitValue (hum_bit05/bitValue)
+     LUT3:I0->O            1   0.479   0.976  Madd_calculatedChecksum_addsub0000C41 (Madd_calculatedChecksum_addsub0000C4)
+     LUT4:I0->O            1   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<6> (Madd_calculatedChecksum_addsub0000_Madd_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_addsub0000_Madd_cy<6> (Madd_calculatedChecksum_addsub0000_Madd_cy<6>)
+     XORCY:CI->O           1   0.786   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     13.662ns (9.138ns logic, 4.524ns route)
+                                       (66.9% logic, 33.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              10.077ns (Levels of Logic = 6)
+  Source:            temp_bit05/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit05/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit05/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit05/bitValue (temp_bit05/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<5> (Madd_calculatedChecksum_lut<5>)
+     MUXCY:S->O            1   0.435   0.000  Madd_calculatedChecksum_cy<5> (Madd_calculatedChecksum_cy<5>)
+     MUXCY:CI->O           0   0.056   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.077ns (7.694ns logic, 2.383ns route)
+                                       (76.4% logic, 23.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 5 / 2
+-------------------------------------------------------------------------
+Offset:              12.474ns (Levels of Logic = 7)
+  Source:            temp_bit14/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit14/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit14/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.804  temp_bit14/bitValue (temp_bit14/bitValue)
+     LUT3:I2->O            1   0.479   0.704  Madd_calculatedChecksum_addsub0000_Madd_lut<7>_SW0 (N98)
+     LUT4:I3->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     12.474ns (8.458ns logic, 4.016ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit14/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 5 / 2
+-------------------------------------------------------------------------
+Offset:              12.585ns (Levels of Logic = 7)
+  Source:            hum_bit14/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit14/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit14/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   0.915  hum_bit14/bitValue (hum_bit14/bitValue)
+     LUT3:I1->O            1   0.479   0.704  Madd_calculatedChecksum_addsub0000_Madd_lut<7>_SW0 (N98)
+     LUT4:I3->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     12.585ns (8.458ns logic, 4.127ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 5 / 2
+-------------------------------------------------------------------------
+Offset:              12.710ns (Levels of Logic = 7)
+  Source:            hum_bit06/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit06/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit06/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   0.551   1.040  hum_bit06/bitValue (hum_bit06/bitValue)
+     LUT3:I0->O            1   0.479   0.704  Madd_calculatedChecksum_addsub0000_Madd_lut<7>_SW0 (N98)
+     LUT4:I3->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     12.710ns (8.458ns logic, 4.252ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              10.022ns (Levels of Logic = 5)
+  Source:            temp_bit06/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit06/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit06/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit06/bitValue (temp_bit06/bitValue)
+     LUT2:I1->O            1   0.479   0.000  Madd_calculatedChecksum_lut<6> (Madd_calculatedChecksum_lut<6>)
+     MUXCY:S->O            0   0.435   0.000  Madd_calculatedChecksum_cy<6> (Madd_calculatedChecksum_cy<6>)
+     XORCY:CI->O           1   0.786   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     10.022ns (7.639ns logic, 2.383ns route)
+                                       (76.2% logic, 23.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              11.462ns (Levels of Logic = 6)
+  Source:            hum_bit07/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit07/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit07/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.976  hum_bit07/bitValue (hum_bit07/bitValue)
+     LUT4:I0->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     11.462ns (7.979ns logic, 3.483ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hum_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              11.337ns (Levels of Logic = 6)
+  Source:            hum_bit15/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      hum_bit15/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: hum_bit15/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  hum_bit15/bitValue (hum_bit15/bitValue)
+     LUT4:I1->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     11.337ns (7.979ns logic, 3.358ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit15/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              11.226ns (Levels of Logic = 6)
+  Source:            temp_bit15/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit15/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit15/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  temp_bit15/bitValue (temp_bit15/bitValue)
+     LUT4:I2->O            0   0.479   0.000  Madd_calculatedChecksum_addsub0000_Madd_lut<7> (Madd_calculatedChecksum_addsub0000_Madd_lut<7>)
+     XORCY:LI->O           1   0.541   0.976  Madd_calculatedChecksum_addsub0000_Madd_xor<7> (calculatedChecksum_addsub0000<7>)
+     LUT2:I0->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                     11.226ns (7.979ns logic, 3.247ns route)
+                                       (71.1% logic, 28.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              9.342ns (Levels of Logic = 4)
+  Source:            temp_bit07/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      temp_bit07/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: temp_bit07/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.851  temp_bit07/bitValue (temp_bit07/bitValue)
+     LUT2:I1->O            0   0.479   0.000  Madd_calculatedChecksum_lut<7> (Madd_calculatedChecksum_lut<7>)
+     XORCY:LI->O           1   0.541   0.851  Madd_calculatedChecksum_xor<7> (calculatedChecksum<7>)
+     LUT3:I1->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      9.342ns (6.959ns logic, 2.383ns route)
+                                       (74.5% logic, 25.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit07/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit07/bitValue (LATCH)
+  Destination:       leds<7> (PAD)
+  Source Clock:      chk_bit07/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit07/bitValue to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit07/bitValue (chk_bit07/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<7>1 (leds_7_OBUF)
+     OBUF:I->O                 4.909          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit06/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit06/bitValue (LATCH)
+  Destination:       leds<6> (PAD)
+  Source Clock:      chk_bit06/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit06/bitValue to leds<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit06/bitValue (chk_bit06/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<6>1 (leds_6_OBUF)
+     OBUF:I->O                 4.909          leds_6_OBUF (leds<6>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit05/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit05/bitValue (LATCH)
+  Destination:       leds<5> (PAD)
+  Source Clock:      chk_bit05/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit05/bitValue to leds<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit05/bitValue (chk_bit05/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<5>1 (leds_5_OBUF)
+     OBUF:I->O                 4.909          leds_5_OBUF (leds<5>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit04/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit04/bitValue (LATCH)
+  Destination:       leds<4> (PAD)
+  Source Clock:      chk_bit04/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit04/bitValue to leds<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit04/bitValue (chk_bit04/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<4>1 (leds_4_OBUF)
+     OBUF:I->O                 4.909          leds_4_OBUF (leds<4>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit03/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit03/bitValue (LATCH)
+  Destination:       leds<3> (PAD)
+  Source Clock:      chk_bit03/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit03/bitValue to leds<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit03/bitValue (chk_bit03/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<3>1 (leds_3_OBUF)
+     OBUF:I->O                 4.909          leds_3_OBUF (leds<3>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit02/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit02/bitValue (LATCH)
+  Destination:       leds<2> (PAD)
+  Source Clock:      chk_bit02/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit02/bitValue to leds<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit02/bitValue (chk_bit02/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<2>1 (leds_2_OBUF)
+     OBUF:I->O                 4.909          leds_2_OBUF (leds<2>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit01/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit01/bitValue (LATCH)
+  Destination:       leds<1> (PAD)
+  Source Clock:      chk_bit01/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit01/bitValue to leds<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit01/bitValue (chk_bit01/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<1>1 (leds_1_OBUF)
+     OBUF:I->O                 4.909          leds_1_OBUF (leds<1>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'chk_bit00/Mcompar_bitValue_cmp_lt0000_cy<9>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.360ns (Levels of Logic = 2)
+  Source:            chk_bit00/bitValue (LATCH)
+  Destination:       leds<0> (PAD)
+  Source Clock:      chk_bit00/Mcompar_bitValue_cmp_lt0000_cy<9> rising
+
+  Data Path: chk_bit00/bitValue to leds<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             1   0.551   0.740  chk_bit00/bitValue (chk_bit00/bitValue)
+     LUT3:I2->O            1   0.479   0.681  leds<0>1 (leds_0_OBUF)
+     OBUF:I->O                 4.909          leds_0_OBUF (leds<0>)
+    ----------------------------------------
+    Total                      7.360ns (5.939ns logic, 1.421ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               7.999ns (Levels of Logic = 3)
+  Source:            selByte (PAD)
+  Destination:       leds<7> (PAD)
+
+  Data Path: selByte to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.715   1.216  selByte_IBUF (selByte_IBUF)
+     LUT3:I0->O            1   0.479   0.681  leds<0>1 (leds_0_OBUF)
+     OBUF:I->O                 4.909          leds_0_OBUF (leds<0>)
+    ----------------------------------------
+    Total                      7.999ns (6.103ns logic, 1.896ns route)
+                                       (76.3% logic, 23.7% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.91 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.35 secs
  
 --> 
 
-Total memory usage is 196896 kilobytes
+Total memory usage is 221856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   35 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

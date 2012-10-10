@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/clocked_display/clocked_display.xst" -ofn "H:/12s2/COMP3601/Project/clocked_display/clocked_display.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/Project/clocked_display/clocked_display.xst" -ofn "H:/12s2/COMP3601/Project/clocked_display/clocked_display.syr" 
