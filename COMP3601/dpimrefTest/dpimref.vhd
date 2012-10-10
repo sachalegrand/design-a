@@ -71,6 +71,7 @@ entity dpimref is
 			pwait 	: out std_logic;
 			rgSwt	: in std_logic_vector(7 downto 0);
 			rgBtn	: in std_logic_vector(4 downto 0);
+			rgLeds : out std_logic_vector(7 downto 0); -- testing purpose
 			btn		: in std_logic	;
 			ldg		: out std_logic;
 			led		: out std_logic
@@ -107,6 +108,7 @@ architecture Behavioral of dpimref is
 	constant	stEppDrdA	: std_logic_vector(7 downto 0) := "0111" & "0010";
 	constant	stEppDrdB	: std_logic_vector(7 downto 0) := "1000" & "0011";
 
+
 ------------------------------------------------------------------------
 -- Signal Declarations
 ------------------------------------------------------------------------
@@ -130,11 +132,7 @@ architecture Behavioral of dpimref is
 	signal	busEppIn	: std_logic_vector(7 downto 0);
 	signal	busEppData	: std_logic_vector(7 downto 0);
 
-	-- Writing busy flags
-	signal isCompWriting : std_logic;
 
-	-- the computer sets this flag to announce it has received what it wanted
-	signal isCompWaitingData : std_logic;
 
 	-- Registers
 	signal	regEppAdr	: std_logic_vector(3 downto 0);
@@ -167,6 +165,16 @@ architecture Behavioral of dpimref is
 	
 	signal	cntr		: std_logic_vector(23 downto 0); 
 
+	-- USB protocol various flags
+	signal isSnapRequest : std_logic;
+	signal isStreamRequest : std_logic;
+	signal isAlarmRequest : std_logic;
+	signal isUpdateFromBoard : std_logic;
+	signal isBoardWriting : std_logic;	
+	signal isCompWriting : std_logic; -- Writing busy flags	
+	signal isCompWaitingData : std_logic; -- the computer sets this flag to announce it has received what it wanted
+
+
 	-- Testing signals
 	signal tempDataLow : std_logic_vector(7 downto 0);
 	signal tempDataHigh : std_logic_vector(7 downto 0);
@@ -180,6 +188,15 @@ architecture Behavioral of dpimref is
 ------------------------------------------------------------------------
 
 begin
+ 
+	-- testing signals
+	tempDataLow <= "00000101";
+	tempDataHigh <= "00000001";
+	humDataLow <= "00010001";
+	humDataHigh <= "00000011";
+	timeDataLow <= "00001101";
+	timeDataHigh <= "00011000";
+
 
     ------------------------------------------------------------------------
 	-- Map basic status and control signals
@@ -206,26 +223,31 @@ begin
 	ldg <= '1';
 
 	-- comp or board busy flag
-	isCompWriting <= '1';
-
-	isCompWaitingData <= regData0(1);
+	isCompWriting <= regData0(7);
+	--isBoardWriting
+	isCompWaitingData <= regData0(5);
+	--isUpdateFromBoard
+	
+	isAlarmRequest <= regData0(2);
+	isStreamRequest <= regData0(1);
+	isSnapRequest <= regData0(0);
 
 	-- Assign regData registers according to comp or board writing to them
-	regData0 <= regDataFromComp0 when isCompWriting = '1' else
+	regData0 <= regDataFromComp0 when isCompWaitingData = '0' else
 					regDataFromBoard0;
-	regData1 <= regDataFromComp1 when isCompWriting = '1' else
+	regData1 <= regDataFromComp1 when isCompWaitingData = '0' else
 					regDataFromBoard1;
-	regData2 <= regDataFromComp2 when isCompWriting = '1' else
+	regData2 <= regDataFromComp2 when isCompWaitingData = '0' else
 					regDataFromBoard2;
-	regData3 <= regDataFromComp3 when isCompWriting = '1' else
+	regData3 <= regDataFromComp3 when isCompWaitingData = '0' else
 					regDataFromBoard3;
-	regData4 <= regDataFromComp4 when isCompWriting = '1' else
+	regData4 <= regDataFromComp4 when isCompWaitingData = '0' else
 					regDataFromBoard4;	
-	regData5 <= regDataFromComp5 when isCompWriting = '1' else
+	regData5 <= regDataFromComp5 when isCompWaitingData = '0' else
 					regDataFromBoard5;
-	regData6 <= regDataFromComp6 when isCompWriting = '1' else
+	regData6 <= regDataFromComp6 when isCompWaitingData = '0' else
 					regDataFromBoard6;
-	regData7 <= regDataFromComp7 when isCompWriting = '1' else
+	regData7 <= regDataFromComp7 when isCompWaitingData = '0' else
 					regDataFromBoard7;
 					
 	-- Decode the address register and select the appropriate data register
@@ -241,9 +263,40 @@ begin
 					"000" & rgBtn when regEppAdr = "1001" else
 					"00000000";
 
-    ------------------------------------------------------------------------
+
+   ------------------------------------------------------------------------
+	-- USB Protocol Implementation Processes
+   ------------------------------------------------------------------------
+
+	process (isCompWriting, isCompWaitingData)
+	begin
+		if  isCompWriting = '1' and isCompWaitingData = '1' then
+--			if isTempData = '1' then
+--				regDataFromBoard2 <= tempDataHigh;
+--				regDataFromBoard3 <= tempDataLow;
+--			elsif isHumData = '1' then
+--				regDataFromBoard2 <= humDataHigh;
+--				regDataFromBoard3 <= humDataLow;
+--			elsif isTimeData = '1' then
+--				regDataFromBoard2 <= timeDataHigh;
+--				regDataFromBoard3 <= timeDataLow;
+--			else
+--				regDataFromBoard2 <= regDataFromComp2;
+--				regDataFromBoard3 <= regDataFromComp3;
+--			end if;		
+
+		else
+
+
+		end if;
+	end process;
+
+
+
+
+   ------------------------------------------------------------------------
 	-- EPP Interface Control State Machine
-    ------------------------------------------------------------------------
+   ------------------------------------------------------------------------
 
 	-- Map control signals from the current state
 	ctlEppWait <= stEppCur(0);
@@ -439,6 +492,21 @@ begin
 	
 	
 	
+	-- led testing
+	process 
+	begin
+		case rgSwt is
+			when "00000001" => rgLeds <= regData0;
+			when "00000010" => rgLeds <= regData1;
+			when "00000100" => rgLeds <= regData2;
+			when "00001000" => rgLeds <= regData3;
+			when "00010000" => rgLeds <= regData4;
+			when "00100000" => rgLeds <= regData5;
+			when "01000000" => rgLeds <= regData6;
+			when "10000000" => rgLeds <= regData7;
+			when others => rgLeds <= "00000000";
+	end case;
+	end process;
 	
 	
 

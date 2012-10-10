@@ -105,11 +105,10 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Compiling vhdl file "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd" in Library work.
 Entity <dpimref> compiled.
+WARNING:HDLParsers:1406 - "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd" Line 489. No sensitivity list and no wait in the process
 Entity <dpimref> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/memory.vhd" in Library work.
 Architecture behavioral of Entity memory is up to date.
-Compiling vhdl file "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/mem_tester.vhd" in Library work.
-Architecture behavioral of Entity mem_tester is up to date.
 Compiling vhdl file "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.vhd" in Library work.
 Architecture structural of Entity top is up to date.
 
@@ -122,8 +121,6 @@ Analyzing hierarchy for entity <dpimref> in library <work> (architecture <behavi
 
 Analyzing hierarchy for entity <memory> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <mem_tester> in library <work> (architecture <behavioral>).
-
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -132,6 +129,10 @@ Analyzing Entity <top> in library <work> (Architecture <structural>).
 Entity <top> analyzed. Unit <top> generated.
 
 Analyzing Entity <dpimref> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd" line 268: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <regDataFromComp2>, <regDataFromComp3>
+WARNING:Xst:819 - "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd" line 489: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <rgSwt>, <regData0>, <regData1>, <regData2>, <regData3>, <regData4>, <regData5>, <regData6>, <regData7>
 Entity <dpimref> analyzed. Unit <dpimref> generated.
 
 Analyzing Entity <memory> in library <work> (Architecture <behavioral>).
@@ -140,11 +141,6 @@ INFO:Xst:2679 - Register <sram_clk> in unit <memory> has a constant value of 0 d
 INFO:Xst:2679 - Register <sram_cre> in unit <memory> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <sram_wait> in unit <memory> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <memory> analyzed. Unit <memory> generated.
-
-Analyzing Entity <mem_tester> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <mem_write_enable> in unit <mem_tester> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <mem_read_enable> in unit <mem_tester> has a constant value of 1 during circuit operation. The register is replaced by logic.
-Entity <mem_tester> analyzed. Unit <mem_tester> generated.
 
 
 =========================================================================
@@ -155,14 +151,15 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <dpimref>.
     Related source file is "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/dpimref.vhd".
-WARNING:Xst:1780 - Signal <regDataFromBoard7> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <regDataFromBoard0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <regDataFromBoard7> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <regDataFromBoard6> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <regDataFromBoard5> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <regDataFromBoard4> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <regDataFromBoard1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <regDataFromBoard0> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:646 - Signal <isAlarmData> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 8-bit latch for signal <regDataFromBoard2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <regDataFromBoard3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 8-bit tristate buffer for signal <pdb>.
     Found 24-bit up counter for signal <cntr>.
     Found 8-bit register for signal <regDataFromComp0>.
@@ -201,23 +198,14 @@ WARNING:Xst:646 - Signal <ctl_ab> is assigned but never used. This unconnected s
 Unit <memory> synthesized.
 
 
-Synthesizing Unit <mem_tester>.
-    Related source file is "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/mem_tester.vhd".
-WARNING:Xst:646 - Signal <my_data_to_leds<15:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <my_data> is used but never assigned. This sourceless signal will be automatically connected to value 0000000010101010.
-WARNING:Xst:653 - Signal <my_addr> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000100.
-    Using one-hot encoding for signal <stCur>.
-    Found 16-bit register for signal <data_to_mem>.
-    Found 23-bit register for signal <addr_to_mem>.
-    Found 16-bit register for signal <my_data_to_leds>.
-    Found 4-bit register for signal <stCur>.
-    Summary:
-	inferred  59 D-type flip-flop(s).
-Unit <mem_tester> synthesized.
-
-
 Synthesizing Unit <top>.
     Related source file is "C:/Users/Sacha/work/design-a/COMP3601/dpimrefTest/top.vhd".
+WARNING:Xst:653 - Signal <sig_mem_write_enable> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <sig_mem_read_enable> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <sig_mem_data_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <sig_mem_data_in> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:646 - Signal <sig_mem_busy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <sig_mem_address> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000.
 WARNING:Xst:646 - Signal <sig_led> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <sig_ldg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <top> synthesized.
@@ -229,13 +217,15 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  24-bit up counter                                     : 1
-# Registers                                            : 22
+# Registers                                            : 18
  1-bit register                                        : 4
- 16-bit register                                       : 4
- 23-bit register                                       : 2
+ 16-bit register                                       : 2
+ 23-bit register                                       : 1
  3-bit register                                        : 1
- 4-bit register                                        : 2
+ 4-bit register                                        : 1
  8-bit register                                        : 9
+# Latches                                              : 2
+ 8-bit latch                                           : 2
 # Tristates                                            : 1
  8-bit tristate buffer                                 : 1
 
@@ -245,44 +235,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <data_to_mem_0> in Unit <my_memory_tester> is equivalent to the following 11 FFs/Latches, which will be removed : <data_to_mem_2> <data_to_mem_4> <data_to_mem_6> <data_to_mem_8> <data_to_mem_9> <data_to_mem_10> <data_to_mem_11> <data_to_mem_12> <data_to_mem_13> <data_to_mem_14> <data_to_mem_15> 
-INFO:Xst:2261 - The FF/Latch <data_to_mem_1> in Unit <my_memory_tester> is equivalent to the following 3 FFs/Latches, which will be removed : <data_to_mem_3> <data_to_mem_5> <data_to_mem_7> 
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_8> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_7> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_6> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_5> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_4> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_3> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_1> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_0> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_to_mem_1> (without init value) has a constant value of 1 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_to_mem_0> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sram_lb> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_data_read_6> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_data_read_4> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_data_read_2> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_data_read_0> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_22> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_21> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_20> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <my_data_to_leds_6> has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <my_data_to_leds_4> has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <my_data_to_leds_2> has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <my_data_to_leds_0> has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_22> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_21> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_20> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_19> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_18> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_17> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_16> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_15> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_14> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_13> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_12> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_11> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_10> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_9> (without init value) has a constant value of 0 in block <my_memory_tester>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sram_addr_0> in Unit <my_memory> is equivalent to the following 22 FFs/Latches, which will be removed : <sram_addr_1> <sram_addr_2> <sram_addr_3> <sram_addr_4> <sram_addr_5> <sram_addr_6> <sram_addr_7> <sram_addr_8> <sram_addr_9> <sram_addr_10> <sram_addr_11> <sram_addr_12> <sram_addr_13> <sram_addr_14> <sram_addr_15> <sram_addr_16> <sram_addr_17> <sram_addr_18> <sram_addr_19> <sram_addr_20> <sram_addr_21> <sram_addr_22> 
+INFO:Xst:2261 - The FF/Latch <stMemCur_0> in Unit <my_memory> is equivalent to the following FF/Latch, which will be removed : <stMemCur_1> 
 WARNING:Xst:1293 - FF/Latch <sram_addr_0> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_15> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_14> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
@@ -292,60 +246,19 @@ WARNING:Xst:1710 - FF/Latch <mem_data_11> (without init value) has a constant va
 WARNING:Xst:1710 - FF/Latch <mem_data_10> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_9> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_8> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_data_7> (without init value) has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mem_data_7> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_6> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_data_5> (without init value) has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mem_data_5> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_4> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_data_3> (without init value) has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mem_data_3> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_2> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <mem_data_1> (without init value) has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mem_data_1> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mem_data_0> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sram_oe> has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sram_ce> has a constant value of 1 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <stMemCur_2> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_19> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_18> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_17> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_16> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_15> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_14> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_13> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_12> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_11> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_10> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_9> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_8> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_7> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_6> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_5> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_4> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_3> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <sram_addr_1> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <sram_data_read_8> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_9> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_10> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_11> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_12> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_13> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_14> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <sram_data_read_15> of sequential type is unconnected in block <my_memory>.
-WARNING:Xst:2677 - Node <stCur_3> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_8> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_9> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_10> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_11> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_12> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_13> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_14> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_15> of sequential type is unconnected in block <my_memory_tester>.
-WARNING:Xst:2404 -  FFs/Latches <data_to_mem<15:8>> (without init value) have a constant value of 0 in block <mem_tester>.
-WARNING:Xst:2677 - Node <stCur_3> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_8> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_9> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_10> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_11> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_12> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_13> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_14> of sequential type is unconnected in block <mem_tester>.
-WARNING:Xst:2677 - Node <my_data_to_leds_15> of sequential type is unconnected in block <mem_tester>.
+WARNING:Xst:1293 - FF/Latch <stMemCur_0> has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sram_lb> (without init value) has a constant value of 0 in block <my_memory>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -353,8 +266,10 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  24-bit up counter                                     : 1
-# Registers                                            : 180
- Flip-Flops                                            : 180
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+# Latches                                              : 2
+ 8-bit latch                                           : 2
 
 =========================================================================
 
@@ -362,36 +277,31 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <sram_lb> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_to_mem_7> (without init value) has a constant value of 1 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_6> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_5> (without init value) has a constant value of 1 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_4> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_3> (without init value) has a constant value of 1 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_2> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_1> (without init value) has a constant value of 1 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_to_mem_0> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_22> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_21> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_20> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_19> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_18> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_17> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_16> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_15> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_14> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_13> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_12> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_11> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_10> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_9> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_8> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_7> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_6> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_5> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_4> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_3> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_1> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_to_mem_0> (without init value) has a constant value of 0 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <mem_data_0> in Unit <memory> is equivalent to the following 15 FFs/Latches, which will be removed : <mem_data_1> <mem_data_2> <mem_data_3> <mem_data_4> <mem_data_5> <mem_data_6> <mem_data_7> <mem_data_8> <mem_data_9> <mem_data_10> <mem_data_11> <mem_data_12> <mem_data_13> <mem_data_14> <mem_data_15> 
+INFO:Xst:2261 - The FF/Latch <sram_addr_0> in Unit <memory> is equivalent to the following 22 FFs/Latches, which will be removed : <sram_addr_1> <sram_addr_2> <sram_addr_3> <sram_addr_4> <sram_addr_5> <sram_addr_6> <sram_addr_7> <sram_addr_8> <sram_addr_9> <sram_addr_10> <sram_addr_11> <sram_addr_12> <sram_addr_13> <sram_addr_14> <sram_addr_15> <sram_addr_16> <sram_addr_17> <sram_addr_18> <sram_addr_19> <sram_addr_20> <sram_addr_21> <sram_addr_22> 
+WARNING:Xst:1293 - FF/Latch <sram_data_read_15> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_14> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_13> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_12> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_11> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_10> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_9> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_8> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_7> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_6> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_5> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_4> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_3> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_2> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_1> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_data_read_0> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_addr_0> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_data_0> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <stMemCur_0> in Unit <memory> is equivalent to the following FF/Latch, which will be removed : <stMemCur_1> 
+WARNING:Xst:1293 - FF/Latch <stMemCur_2> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_ce> has a constant value of 1 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sram_oe> has a constant value of 1 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stMemCur_0> has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <my_dpimref/cntr_23> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <my_dpimref/cntr_22> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <my_dpimref/cntr_21> of sequential type is unconnected in block <top>.
@@ -416,75 +326,13 @@ WARNING:Xst:2677 - Node <my_dpimref/cntr_3> of sequential type is unconnected in
 WARNING:Xst:2677 - Node <my_dpimref/cntr_2> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <my_dpimref/cntr_1> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <my_dpimref/cntr_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2170 - Unit top : the following signal(s) form a combinatorial loop: my_dpimref/regData0<1>.
 
 Optimizing unit <top> ...
 
-Optimizing unit <memory> ...
-
-Optimizing unit <mem_tester> ...
-WARNING:Xst:1710 - FF/Latch <addr_to_mem_2> (without init value) has a constant value of 1 in block <mem_tester>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <my_memory/sram_addr_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_7> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_5> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_3> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_1> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <my_memory/mem_data_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/stMemCur_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_data_read_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_data_read_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_data_read_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_data_read_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory/sram_addr_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory_tester/my_data_to_leds_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory_tester/my_data_to_leds_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory_tester/my_data_to_leds_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <my_memory_tester/my_data_to_leds_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_15> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_14> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_13> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_12> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_11> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_10> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_9> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <my_memory/sram_data_read_8> of sequential type is unconnected in block <top>.
-
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <my_memory/sram_data_read_7> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <my_memory/sram_data_read_5> <my_memory/sram_data_read_3> <my_memory/sram_data_read_1> 
-INFO:Xst:2261 - The FF/Latch <my_memory/sram_oe> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <my_memory/sram_ce> 
-INFO:Xst:2261 - The FF/Latch <my_memory_tester/my_data_to_leds_7> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <my_memory_tester/my_data_to_leds_5> <my_memory_tester/my_data_to_leds_3> <my_memory_tester/my_data_to_leds_1> 
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 4.
 
 Final Macro Processing ...
 
@@ -492,8 +340,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 86
- Flip-Flops                                            : 86
+# Registers                                            : 77
+ Flip-Flops                                            : 77
 
 =========================================================================
 
@@ -522,24 +370,23 @@ Design Statistics
 # IOs                              : 81
 
 Cell Usage :
-# BELS                             : 128
+# BELS                             : 248
 #      GND                         : 1
-#      INV                         : 2
-#      LUT2                        : 4
-#      LUT3                        : 33
-#      LUT3_D                      : 6
+#      LUT2                        : 18
+#      LUT3                        : 55
+#      LUT3_D                      : 5
 #      LUT3_L                      : 1
-#      LUT4                        : 62
+#      LUT4                        : 143
 #      LUT4_D                      : 3
 #      LUT4_L                      : 4
-#      MUXF5                       : 11
+#      MUXF5                       : 17
 #      VCC                         : 1
-# FlipFlops/Latches                : 86
+# FlipFlops/Latches                : 93
 #      FD                          : 2
 #      FDE                         : 68
-#      FDR                         : 7
-#      FDRE                        : 2
-#      FDS                         : 7
+#      FDR                         : 2
+#      FDS                         : 5
+#      LDE                         : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 80
@@ -553,9 +400,9 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-5 
 
- Number of Slices:                       72  out of   3584     2%  
- Number of Slice Flip Flops:             85  out of   7168     1%  
- Number of 4 input LUTs:                115  out of   7168     1%  
+ Number of Slices:                      130  out of   3584     3%  
+ Number of Slice Flip Flops:             92  out of   7168     1%  
+ Number of 4 input LUTs:                229  out of   7168     3%  
  Number of IOs:                          81
  Number of bonded IOBs:                  81  out of    173    46%  
     IOB Flip Flops:                       1
@@ -579,11 +426,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clkT                               | BUFGP                  | 86    |
------------------------------------+------------------------+-------+
+-------------------------------------------------+----------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)                  | Load  |
+-------------------------------------------------+----------------------------------------+-------+
+my_dpimref/regData0<7>(my_dpimref/regData0<7>1:O)| NONE(*)(my_dpimref/regDataFromBoard2_7)| 16    |
+clkT                                             | BUFGP                                  | 77    |
+-------------------------------------------------+----------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -593,10 +445,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.809ns (Maximum Frequency: 172.133MHz)
-   Minimum input arrival time before clock: 5.691ns
-   Maximum output required time after clock: 12.546ns
-   Maximum combinational path delay: 10.586ns
+   Minimum period: 6.476ns (Maximum Frequency: 154.413MHz)
+   Minimum input arrival time before clock: 6.485ns
+   Maximum output required time after clock: 14.760ns
+   Maximum combinational path delay: 15.373ns
 
 Timing Detail:
 --------------
@@ -604,33 +456,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clkT'
-  Clock period: 5.809ns (frequency: 172.133MHz)
-  Total number of paths / destination ports: 535 / 90
+  Clock period: 6.476ns (frequency: 154.413MHz)
+  Total number of paths / destination ports: 546 / 80
 -------------------------------------------------------------------------
-Delay:               5.809ns (Levels of Logic = 3)
-  Source:            my_dpimref/stEppCur_1 (FF)
-  Destination:       my_dpimref/stEppCur_1 (FF)
+Delay:               6.476ns (Levels of Logic = 3)
+  Source:            my_dpimref/stEppCur_4 (FF)
+  Destination:       my_dpimref/stEppCur_5 (FF)
   Source Clock:      clkT rising
   Destination Clock: clkT rising
 
-  Data Path: my_dpimref/stEppCur_1 to my_dpimref/stEppCur_1
+  Data Path: my_dpimref/stEppCur_4 to my_dpimref/stEppCur_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              6   0.626   1.148  my_dpimref/stEppCur_1 (my_dpimref/stEppCur_1)
-     LUT4_L:I0->LO         1   0.479   0.123  my_dpimref/stEppNext_cmp_eq00031_SW0 (N0)
-     LUT4:I3->O            4   0.479   0.838  my_dpimref/stEppNext_cmp_eq00031 (N16)
-     LUT4:I2->O            2   0.479   0.745  my_dpimref/stEppNext<7> (my_dpimref/stEppNext<7>)
-     FDS:S                     0.892          my_dpimref/stEppCur_1
+     FD:C->Q              11   0.626   1.267  my_dpimref/stEppCur_4 (my_dpimref/stEppCur_4)
+     LUT3:I0->O            1   0.479   0.740  my_dpimref/stEppNext_cmp_eq000121_SW0 (N117)
+     LUT4:I2->O            2   0.479   0.768  my_dpimref/stEppNext_cmp_eq00051 (my_dpimref/stEppNext_cmp_eq0005)
+     LUT4:I3->O            2   0.479   0.745  my_dpimref/stEppNext<0>2 (N37)
+     FDS:S                     0.892          my_dpimref/stEppCur_5
     ----------------------------------------
-    Total                      5.809ns (2.955ns logic, 2.854ns route)
-                                       (50.9% logic, 49.1% route)
+    Total                      6.476ns (2.955ns logic, 3.521ns route)
+                                       (45.6% logic, 54.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clkT'
-  Total number of paths / destination ports: 103 / 90
+  Total number of paths / destination ports: 94 / 81
 -------------------------------------------------------------------------
-Offset:              5.691ns (Levels of Logic = 4)
+Offset:              6.485ns (Levels of Logic = 4)
   Source:            par_dst (PAD)
   Destination:       my_dpimref/stEppCur_5 (FF)
   Destination Clock: clkT rising
@@ -640,70 +492,101 @@ Offset:              5.691ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             8   0.715   1.216  par_dst_IBUF (par_dst_IBUF)
-     LUT3:I0->O            1   0.479   0.851  my_dpimref/stEppNext_cmp_eq00021_SW1 (N47)
-     LUT3:I1->O            1   0.479   0.000  my_dpimref/stEppNext<0>230_F (N65)
-     MUXF5:I0->O           2   0.314   0.745  my_dpimref/stEppNext<0>230 (N12)
+     LUT2:I0->O            1   0.479   0.740  my_dpimref/stEppNext_cmp_eq00021_SW1 (N113)
+     LUT4:I2->O            1   0.479   0.740  my_dpimref/stEppNext<0>2_SW1 (N73)
+     LUT4:I2->O            2   0.479   0.745  my_dpimref/stEppNext<0>2 (N37)
      FDS:S                     0.892          my_dpimref/stEppCur_5
     ----------------------------------------
-    Total                      5.691ns (2.879ns logic, 2.812ns route)
-                                       (50.6% logic, 49.4% route)
+    Total                      6.485ns (3.044ns logic, 3.441ns route)
+                                       (46.9% logic, 53.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clkT'
-  Total number of paths / destination ports: 271 / 17
+  Total number of paths / destination ports: 455 / 18
 -------------------------------------------------------------------------
-Offset:              12.546ns (Levels of Logic = 5)
-  Source:            my_dpimref/regEppAdr_1 (FF)
-  Destination:       par_data<7> (PAD)
+Offset:              14.760ns (Levels of Logic = 8)
+  Source:            my_dpimref/regDataFromComp0_1 (FF)
+  Destination:       par_data<1> (PAD)
   Source Clock:      clkT rising
 
-  Data Path: my_dpimref/regEppAdr_1 to par_data<7>
+  Data Path: my_dpimref/regDataFromComp0_1 to par_data<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             20   0.626   1.608  my_dpimref/regEppAdr_1 (my_dpimref/regEppAdr_1)
-     LUT3_D:I0->O          8   0.479   1.216  my_dpimref/busEppData_cmp_eq000411 (N23)
-     LUT4:I0->O            1   0.479   0.740  my_dpimref/busEppOut<7>13 (my_dpimref/busEppOut<7>13)
-     LUT4:I2->O            1   0.479   0.851  my_dpimref/busEppOut<7>36 (my_dpimref/busEppOut<7>36)
-     LUT3:I1->O            1   0.479   0.681  my_dpimref/busEppOut<7>90 (my_dpimref/busEppOut<7>)
-     IOBUF:I->IO               4.909          par_data_7_IOBUF (par_data<7>)
+     FDE:C->Q              1   0.626   0.976  my_dpimref/regDataFromComp0_1 (my_dpimref/regDataFromComp0_1)
+     LUT2:I0->O           66   0.479   2.036  my_dpimref/regData0<1>1 (my_dpimref/regData0<1>)
+     LUT3:I0->O            3   0.479   1.066  my_dpimref/regData2<1>1 (my_dpimref/regData2<1>)
+     LUT4:I0->O            1   0.479   0.000  my_dpimref/busEppOut<1>271 (my_dpimref/busEppOut<1>271)
+     MUXF5:I1->O           1   0.314   0.740  my_dpimref/busEppOut<1>27_f5 (my_dpimref/busEppOut<1>27)
+     LUT3:I2->O            1   0.479   0.000  my_dpimref/busEppOut<1>139_SW02 (my_dpimref/busEppOut<1>139_SW01)
+     MUXF5:I0->O           1   0.314   0.704  my_dpimref/busEppOut<1>139_SW0_f5 (N141)
+     LUT4:I3->O            1   0.479   0.681  my_dpimref/busEppOut<1>139 (my_dpimref/busEppOut<1>)
+     IOBUF:I->IO               4.909          par_data_1_IOBUF (par_data<1>)
     ----------------------------------------
-    Total                     12.546ns (7.451ns logic, 5.095ns route)
-                                       (59.4% logic, 40.6% route)
+    Total                     14.760ns (8.558ns logic, 6.202ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_dpimref/regData0<7>'
+  Total number of paths / destination ports: 39 / 16
+-------------------------------------------------------------------------
+Offset:              12.045ns (Levels of Logic = 7)
+  Source:            my_dpimref/regDataFromBoard2_1 (LATCH)
+  Destination:       par_data<1> (PAD)
+  Source Clock:      my_dpimref/regData0<7> falling
+
+  Data Path: my_dpimref/regDataFromBoard2_1 to par_data<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.551   0.851  my_dpimref/regDataFromBoard2_1 (my_dpimref/regDataFromBoard2_1)
+     LUT3:I1->O            3   0.479   1.066  my_dpimref/regData2<1>1 (my_dpimref/regData2<1>)
+     LUT4:I0->O            1   0.479   0.000  my_dpimref/busEppOut<1>271 (my_dpimref/busEppOut<1>271)
+     MUXF5:I1->O           1   0.314   0.740  my_dpimref/busEppOut<1>27_f5 (my_dpimref/busEppOut<1>27)
+     LUT3:I2->O            1   0.479   0.000  my_dpimref/busEppOut<1>139_SW02 (my_dpimref/busEppOut<1>139_SW01)
+     MUXF5:I0->O           1   0.314   0.704  my_dpimref/busEppOut<1>139_SW0_f5 (N141)
+     LUT4:I3->O            1   0.479   0.681  my_dpimref/busEppOut<1>139 (my_dpimref/busEppOut<1>)
+     IOBUF:I->IO               4.909          par_data_1_IOBUF (par_data<1>)
+    ----------------------------------------
+    Total                     12.045ns (8.004ns logic, 4.041ns route)
+                                       (66.4% logic, 33.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 30 / 8
+  Total number of paths / destination ports: 487 / 16
 -------------------------------------------------------------------------
-Delay:               10.586ns (Levels of Logic = 6)
-  Source:            pbs<1> (PAD)
-  Destination:       par_data<1> (PAD)
+Delay:               15.373ns (Levels of Logic = 9)
+  Source:            switches<6> (PAD)
+  Destination:       leds<7> (PAD)
 
-  Data Path: pbs<1> to par_data<1>
+  Data Path: switches<6> to leds<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.715   0.976  pbs_1_IBUF (pbs_1_IBUF)
-     LUT3:I0->O            1   0.479   0.000  my_dpimref/busEppOut<1>78_G (N100)
-     MUXF5:I1->O           1   0.314   0.851  my_dpimref/busEppOut<1>78 (my_dpimref/busEppOut<1>78)
-     LUT4:I1->O            1   0.479   0.704  my_dpimref/busEppOut<1>140_SW0 (N67)
-     LUT4:I3->O            1   0.479   0.681  my_dpimref/busEppOut<1>140 (my_dpimref/busEppOut<1>)
-     IOBUF:I->IO               4.909          par_data_1_IOBUF (par_data<1>)
+     IBUF:I->O             8   0.715   1.216  switches_6_IBUF (switches_6_IBUF)
+     LUT4:I0->O            3   0.479   1.066  my_dpimref/rgLeds_cmp_eq000011 (N14)
+     LUT4:I0->O            1   0.479   0.000  my_dpimref/rgLeds_cmp_eq00011 (my_dpimref/rgLeds_cmp_eq00011)
+     MUXF5:I0->O           8   0.314   0.944  my_dpimref/rgLeds_cmp_eq0001_f5 (my_dpimref/rgLeds_cmp_eq0001)
+     LUT4:I3->O            1   0.479   0.976  my_dpimref/rgLeds<1>5 (my_dpimref/rgLeds<1>5)
+     LUT3:I0->O            1   0.479   0.976  my_dpimref/rgLeds<1>60_SW0 (N143)
+     LUT4:I0->O            1   0.479   0.704  my_dpimref/rgLeds<1>60 (my_dpimref/rgLeds<1>60)
+     LUT4:I3->O            1   0.479   0.681  my_dpimref/rgLeds<1>110 (leds_1_OBUF)
+     OBUF:I->O                 4.909          leds_1_OBUF (leds<1>)
     ----------------------------------------
-    Total                     10.586ns (7.375ns logic, 3.211ns route)
-                                       (69.7% logic, 30.3% route)
+    Total                     15.373ns (8.812ns logic, 6.561ns route)
+                                       (57.3% logic, 42.7% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.71 secs
+Total CPU time to Xst completion: 5.86 secs
  
 --> 
 
-Total memory usage is 256944 kilobytes
+Total memory usage is 269552 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  226 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

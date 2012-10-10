@@ -72,8 +72,9 @@ component dpimref
 				dstb 	: in std_logic;
 				pwr 	: in std_logic;
 				pwait 	: out std_logic;
-				rgSwt	: in std_logic_vector(7 downto 0);
+				rgSwt	: in std_logic_vector(7 downto 0); -- testing
 				rgBtn	: in std_logic_vector(4 downto 0);
+				rgLeds : out std_logic_vector(7 downto 0); -- testing purpose
 				btn		: in std_logic;
 				ldg		: out std_logic;
 				led		: out std_logic
@@ -109,17 +110,17 @@ end component;
 
 
 -- component used to test memory operations
-component mem_tester is
-    Port ( clk : in  STD_LOGIC;
-           reset : in  STD_LOGIC;
-           data_to_mem : out  STD_LOGIC_VECTOR (15 downto 0);
-           addr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
-           data_to_leds : out  STD_LOGIC_VECTOR (7 downto 0);
-           data_from_mem : in  STD_LOGIC_VECTOR (15 downto 0);
-			  mem_read_enable : out std_logic;
-			  mem_write_enable : out std_logic;
-           mem_busy : in  STD_LOGIC);
-end component;
+--component mem_tester is
+--    Port ( clk : in  STD_LOGIC;
+--           reset : in  STD_LOGIC;
+--           data_to_mem : out  STD_LOGIC_VECTOR (15 downto 0);
+--           addr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+--           data_to_leds : out  STD_LOGIC_VECTOR (7 downto 0);
+--           data_from_mem : in  STD_LOGIC_VECTOR (15 downto 0);
+--			  mem_read_enable : out std_logic;
+--			  mem_write_enable : out std_logic;
+--           mem_busy : in  STD_LOGIC);
+--end component;
 
 
 
@@ -147,6 +148,7 @@ begin
 					 pwait => par_wait,
 					 rgSwt => switches,
 					 rgBtn => sig_pbs,
+					 rgLeds => leds,
 					 btn => switches(0),
 					 ldg => sig_ldg,
 					 led => sig_led
@@ -174,17 +176,17 @@ begin
 						mem_wait => mt_wait							
 		);
 	 
-	 my_memory_tester : mem_tester
-		port map (	clk => clkT,
-						reset => sig_pbs(0),
-						data_to_mem => sig_mem_data_in,
-						addr_to_mem => sig_mem_address,
-						data_to_leds => leds,
-						data_from_mem => sig_mem_data_out,
-						mem_read_enable => sig_mem_read_enable,
-						mem_write_enable => sig_mem_write_enable,
-						mem_busy => sig_mem_busy
-		);
+--	 my_memory_tester : mem_tester
+--		port map (	clk => clkT,
+--						reset => sig_pbs(0),
+--						data_to_mem => sig_mem_data_in,
+--						addr_to_mem => sig_mem_address,
+--						data_to_leds => leds,
+--						data_from_mem => sig_mem_data_out,
+--						mem_read_enable => sig_mem_read_enable,
+--						mem_write_enable => sig_mem_write_enable,
+--						mem_busy => sig_mem_busy
+--		);
 	 
 	 
 	 --leds <= switches;

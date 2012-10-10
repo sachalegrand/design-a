@@ -1,8 +1,12 @@
 Release 12.1 Drc M.53d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Wed Sep 19 10:01:59 2012
+Wed Sep 19 18:53:12 2012
 
 drc -z top.ncd top.pcf
 
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net my_dpimref/regData0<7> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
