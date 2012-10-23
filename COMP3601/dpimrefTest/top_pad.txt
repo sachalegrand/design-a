@@ -1,7 +1,7 @@
 Release 12.1 - par M.53d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Wed Sep 19 18:53:07 2012
+Tue Oct 23 18:23:02 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -68,8 +68,8 @@ Pinout by Pin Number:
 |C14       |            |         |TCK                |         |           |              |          |         |           |         |         |          |           |                |
 |C15       |            |DIFFS    |IO_L16N_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |C16       |            |DIFFM    |IO_L01P_2/VRN_2    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|D1        |mem_data<13>|IOB      |IO_L17N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|D2        |mem_data<15>|IOB      |IO_L17P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|D1        |mem_data<13>|IOB      |IO_L17N_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|D2        |mem_data<15>|IOB      |IO_L17P_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |D3        |mem_addr<19>|IOB      |IO_L19P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |D4        |            |         |VCCINT             |         |           |              |          |         |           |         |1.2      |          |           |                |
 |D5        |            |IOB      |IO/VREF_0          |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
@@ -84,8 +84,8 @@ Pinout by Pin Number:
 |D14       |            |DIFFM    |IO_L16P_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |D15       |            |DIFFS    |IO_L17N_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |D16       |            |DIFFM    |IO_L17P_2/VREF_2   |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|E1        |mem_data<12>|IOB      |IO_L20N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|E2        |mem_data<14>|IOB      |IO_L20P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|E1        |mem_data<12>|IOB      |IO_L20N_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|E2        |mem_data<14>|IOB      |IO_L20P_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |E3        |mem_addr<8> |IOB      |IO_L19N_7/VREF_7   |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |E4        |            |DIFFM    |IO_L21P_7          |UNUSED   |           |7             |          |         |           |         |         |          |           |                |
 |E5        |            |         |VCCINT             |         |           |              |          |         |           |         |1.2      |          |           |                |
@@ -101,7 +101,7 @@ Pinout by Pin Number:
 |E15       |            |DIFFS    |IO_L20N_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |E16       |            |DIFFM    |IO_L20P_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |F1        |            |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
-|F2        |mem_data<11>|IOB      |IO_L22N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|F2        |mem_data<11>|IOB      |IO_L22N_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |F3        |mem_addr<14>|IOB      |IO_L22P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |F4        |mem_addr<9> |IOB      |IO_L21N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |F5        |mem_addr<10>|IOB      |IO_L23P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -116,8 +116,8 @@ Pinout by Pin Number:
 |F14       |            |DIFFS    |IO_L22N_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |F15       |            |DIFFM    |IO_L22P_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |F16       |            |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
-|G1        |mem_data<9> |IOB      |IO_L40P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|G2        |mem_data<10>|IOB      |IO                 |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|G1        |mem_data<9> |IOB      |IO_L40P_7          |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|G2        |mem_data<10>|IOB      |IO                 |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |G3        |mem_addr<7> |IOB      |IO_L24N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G4        |mem_addr<16>|IOB      |IO_L24P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G5        |mem_addr<18>|IOB      |IO_L23N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -132,7 +132,7 @@ Pinout by Pin Number:
 |G14       |            |DIFFS    |IO_L24N_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |G15       |            |DIFFM    |IO_L24P_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |G16       |            |DIFFM    |IO                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|H1        |mem_data<8> |IOB      |IO_L40N_7/VREF_7   |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|H1        |mem_data<8> |IOB      |IO_L40N_7/VREF_7   |BIDIR    |LVCMOS25*  |7             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |H2        |            |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
 |H3        |mem_addr<17>|IOB      |IO_L39N_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |H4        |mem_addr<5> |IOB      |IO_L39P_7          |OUTPUT   |LVCMOS25*  |7             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -196,8 +196,8 @@ Pinout by Pin Number:
 |L14       |leds<0>     |IOB      |IO_L22P_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |L15       |switches<4> |IOB      |IO_L22N_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |L16       |            |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
-|M1        |mem_data<1> |IOB      |IO_L20P_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|M2        |mem_data<0> |IOB      |IO_L20N_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|M1        |mem_data<1> |IOB      |IO_L20P_6          |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|M2        |mem_data<0> |IOB      |IO_L20N_6          |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |M3        |mem_addr<13>|IOB      |IO_L19P_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |M4        |mem_addr<20>|IOB      |IO_L19N_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |M5        |            |         |VCCINT             |         |           |              |          |         |           |         |1.2      |          |           |                |
@@ -212,8 +212,8 @@ Pinout by Pin Number:
 |M14       |leds<2>     |IOB      |IO_L19N_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |M15       |switches<6> |IOB      |IO_L20P_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |M16       |switches<5> |IOB      |IO_L20N_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|N1        |mem_data<3> |IOB      |IO_L17P_6/VREF_6   |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|N2        |mem_data<2> |IOB      |IO_L17N_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|N1        |mem_data<3> |IOB      |IO_L17P_6/VREF_6   |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|N2        |mem_data<2> |IOB      |IO_L17N_6          |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |N3        |mem_addr<11>|IOB      |IO_L16P_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |N4        |            |         |VCCINT             |         |           |              |          |         |           |         |1.2      |          |           |                |
 |N5        |par_wait    |IOB      |IO                 |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -228,8 +228,8 @@ Pinout by Pin Number:
 |N14       |leds<4>     |IOB      |IO_L19P_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |N15       |switches<0> |IOB      |IO_L17P_3/VREF_3   |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |N16       |switches<7> |IOB      |IO_L17N_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|P1        |mem_data<5> |IOB      |IO_L01P_6/VRN_6    |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
-|P2        |mem_data<4> |IOB      |IO_L16N_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|P1        |mem_data<5> |IOB      |IO_L01P_6/VRN_6    |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
+|P2        |mem_data<4> |IOB      |IO_L16N_6          |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |P3        |            |         |M0                 |         |           |              |          |         |           |         |         |          |           |                |
 |P4        |            |         |M2                 |         |           |              |          |         |           |         |         |          |           |                |
 |P5        |            |DIFFM    |IO_L27P_5          |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
@@ -244,9 +244,9 @@ Pinout by Pin Number:
 |P14       |leds<6>     |IOB      |IO_L16P_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |P15       |            |DIFFS    |IO_L16N_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |P16       |            |DIFFS    |IO_L01N_3/VRP_3    |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|R1        |mem_data<6> |IOB      |IO_L01N_6/VRP_6    |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|R1        |mem_data<6> |IOB      |IO_L01N_6/VRP_6    |BIDIR    |LVCMOS25*  |6             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |R2        |            |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
-|R3        |mem_data<7> |IOB      |IO_L01P_5/CS_B     |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|R3        |mem_data<7> |IOB      |IO_L01P_5/CS_B     |BIDIR    |LVCMOS25*  |5             |12        |SLOW     |NONE**     |IFD      |         |LOCATED   |YES        |NONE            |
 |R4        |            |DIFFM    |IO_L10P_5/VRN_5    |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |R5        |            |DIFFS    |IO_L27N_5/VREF_5   |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |R6        |            |DIFFS    |IO_L29N_5          |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
@@ -262,7 +262,7 @@ Pinout by Pin Number:
 |R16       |leds<7>     |IOB      |IO_L01P_3/VRN_3    |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |T1        |            |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
 |T2        |            |         |M1                 |         |           |              |          |         |           |         |         |          |           |                |
-|T3        |mt_we       |IOB      |IO_L01N_5/RDWR_B   |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |NONE**     |         |         |LOCATED   |YES        |NONE            |
+|T3        |mt_we       |IOB      |IO_L01N_5/RDWR_B   |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |T4        |            |DIFFS    |IO_L10N_5/VRP_5    |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |T5        |            |IOB      |IO                 |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |T6        |            |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |

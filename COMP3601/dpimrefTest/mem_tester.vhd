@@ -33,7 +33,8 @@ entity mem_tester is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            data_to_mem : out  STD_LOGIC_VECTOR (15 downto 0);
-           addr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+           raddr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+			  waddr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
            data_to_leds : out  STD_LOGIC_VECTOR (7 downto 0);
            data_from_mem : in  STD_LOGIC_VECTOR (15 downto 0);
 			  mem_read_enable : out std_logic;
@@ -107,11 +108,11 @@ begin
 		else
 			if stCur = stMemWrite then
 				data_to_mem <= my_data;
-				addr_to_mem <= my_addr;
+				waddr_to_mem <= my_addr;
 				mem_write_enable <= '1';
 			elsif stCur = stMemRead then
 				my_data_to_leds <= data_from_mem;
-				addr_to_mem <= my_addr;
+				raddr_to_mem <= my_addr;
 				mem_read_enable <= '1';				
 			end if;	
 		end if;

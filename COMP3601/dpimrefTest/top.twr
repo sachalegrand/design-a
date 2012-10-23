@@ -43,17 +43,34 @@ Setup/Hold to clock clkT
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-par_ast     |    3.916(R)|   -0.399(R)|clkT_BUFGP        |   0.000|
-par_data<0> |    1.553(R)|    0.663(R)|clkT_BUFGP        |   0.000|
-par_data<1> |    1.807(R)|    0.574(R)|clkT_BUFGP        |   0.000|
-par_data<2> |    2.174(R)|    0.687(R)|clkT_BUFGP        |   0.000|
-par_data<3> |    2.230(R)|    0.469(R)|clkT_BUFGP        |   0.000|
-par_data<4> |    1.386(R)|    0.772(R)|clkT_BUFGP        |   0.000|
-par_data<5> |    2.228(R)|    0.477(R)|clkT_BUFGP        |   0.000|
-par_data<6> |    1.732(R)|    0.635(R)|clkT_BUFGP        |   0.000|
-par_data<7> |    1.591(R)|    0.724(R)|clkT_BUFGP        |   0.000|
-par_dst     |    4.403(R)|   -0.115(R)|clkT_BUFGP        |   0.000|
-par_wr      |    3.661(R)|   -0.054(R)|clkT_BUFGP        |   0.000|
+mem_data<0> |    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<1> |    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<2> |    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<3> |    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<4> |    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<5> |    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<6> |    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<7> |    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<8> |    2.493(R)|   -0.296(R)|clkT_BUFGP        |   0.000|
+mem_data<9> |    2.493(R)|   -0.296(R)|clkT_BUFGP        |   0.000|
+mem_data<10>|    2.493(R)|   -0.296(R)|clkT_BUFGP        |   0.000|
+mem_data<11>|    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<12>|    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<13>|    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<14>|    2.478(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+mem_data<15>|    2.479(R)|   -0.279(R)|clkT_BUFGP        |   0.000|
+par_ast     |    3.325(R)|    0.055(R)|clkT_BUFGP        |   0.000|
+par_data<0> |    2.489(R)|    0.530(R)|clkT_BUFGP        |   0.000|
+par_data<1> |    2.804(R)|    0.502(R)|clkT_BUFGP        |   0.000|
+par_data<2> |    1.977(R)|    0.744(R)|clkT_BUFGP        |   0.000|
+par_data<3> |    1.649(R)|    0.570(R)|clkT_BUFGP        |   0.000|
+par_data<4> |    2.237(R)|    0.453(R)|clkT_BUFGP        |   0.000|
+par_data<5> |    2.416(R)|    0.574(R)|clkT_BUFGP        |   0.000|
+par_data<6> |    1.441(R)|    0.627(R)|clkT_BUFGP        |   0.000|
+par_data<7> |    1.600(R)|    0.571(R)|clkT_BUFGP        |   0.000|
+par_dst     |    4.088(R)|    0.472(R)|clkT_BUFGP        |   0.000|
+par_wr      |    2.791(R)|    0.321(R)|clkT_BUFGP        |   0.000|
+pbs<0>      |    6.674(R)|   -1.086(R)|clkT_BUFGP        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clkT to Pad
@@ -61,24 +78,58 @@ Clock clkT to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-leds<0>     |   13.326(R)|clkT_BUFGP        |   0.000|
-leds<1>     |   12.684(R)|clkT_BUFGP        |   0.000|
-leds<2>     |   13.144(R)|clkT_BUFGP        |   0.000|
-leds<3>     |   13.920(R)|clkT_BUFGP        |   0.000|
-leds<4>     |   15.597(R)|clkT_BUFGP        |   0.000|
-leds<5>     |   14.098(R)|clkT_BUFGP        |   0.000|
-leds<6>     |   13.933(R)|clkT_BUFGP        |   0.000|
-leds<7>     |   13.924(R)|clkT_BUFGP        |   0.000|
-mt_we       |    6.424(R)|clkT_BUFGP        |   0.000|
-par_data<0> |   14.280(R)|clkT_BUFGP        |   0.000|
-par_data<1> |   13.874(R)|clkT_BUFGP        |   0.000|
-par_data<2> |   14.591(R)|clkT_BUFGP        |   0.000|
-par_data<3> |   13.554(R)|clkT_BUFGP        |   0.000|
-par_data<4> |   13.087(R)|clkT_BUFGP        |   0.000|
-par_data<5> |   13.037(R)|clkT_BUFGP        |   0.000|
-par_data<6> |   13.612(R)|clkT_BUFGP        |   0.000|
-par_data<7> |   14.388(R)|clkT_BUFGP        |   0.000|
-par_wait    |    8.629(R)|clkT_BUFGP        |   0.000|
+leds<0>     |   14.816(R)|clkT_BUFGP        |   0.000|
+leds<1>     |   13.999(R)|clkT_BUFGP        |   0.000|
+leds<2>     |   14.549(R)|clkT_BUFGP        |   0.000|
+leds<3>     |   15.053(R)|clkT_BUFGP        |   0.000|
+leds<4>     |   15.656(R)|clkT_BUFGP        |   0.000|
+leds<5>     |   16.444(R)|clkT_BUFGP        |   0.000|
+leds<6>     |   13.652(R)|clkT_BUFGP        |   0.000|
+leds<7>     |   15.408(R)|clkT_BUFGP        |   0.000|
+mem_addr<0> |    8.676(R)|clkT_BUFGP        |   0.000|
+mem_addr<1> |    8.629(R)|clkT_BUFGP        |   0.000|
+mem_addr<2> |    8.664(R)|clkT_BUFGP        |   0.000|
+mem_addr<3> |    8.916(R)|clkT_BUFGP        |   0.000|
+mem_addr<4> |    8.072(R)|clkT_BUFGP        |   0.000|
+mem_addr<5> |    8.765(R)|clkT_BUFGP        |   0.000|
+mem_addr<6> |    8.653(R)|clkT_BUFGP        |   0.000|
+mem_addr<7> |    9.441(R)|clkT_BUFGP        |   0.000|
+mem_addr<8> |    9.766(R)|clkT_BUFGP        |   0.000|
+mem_addr<9> |    9.138(R)|clkT_BUFGP        |   0.000|
+mem_addr<10>|    9.140(R)|clkT_BUFGP        |   0.000|
+mem_addr<11>|    9.215(R)|clkT_BUFGP        |   0.000|
+mem_addr<12>|    8.359(R)|clkT_BUFGP        |   0.000|
+mem_addr<13>|    8.725(R)|clkT_BUFGP        |   0.000|
+mem_addr<14>|    8.806(R)|clkT_BUFGP        |   0.000|
+mem_addr<15>|    9.044(R)|clkT_BUFGP        |   0.000|
+mem_data<0> |    9.076(R)|clkT_BUFGP        |   0.000|
+mem_data<1> |    9.957(R)|clkT_BUFGP        |   0.000|
+mem_data<2> |    9.381(R)|clkT_BUFGP        |   0.000|
+mem_data<3> |   10.226(R)|clkT_BUFGP        |   0.000|
+mem_data<4> |    9.674(R)|clkT_BUFGP        |   0.000|
+mem_data<5> |   10.527(R)|clkT_BUFGP        |   0.000|
+mem_data<6> |    9.951(R)|clkT_BUFGP        |   0.000|
+mem_data<7> |    9.628(R)|clkT_BUFGP        |   0.000|
+mem_data<8> |    8.556(R)|clkT_BUFGP        |   0.000|
+mem_data<9> |    8.847(R)|clkT_BUFGP        |   0.000|
+mem_data<10>|    8.853(R)|clkT_BUFGP        |   0.000|
+mem_data<11>|    9.746(R)|clkT_BUFGP        |   0.000|
+mem_data<12>|   10.048(R)|clkT_BUFGP        |   0.000|
+mem_data<13>|   10.344(R)|clkT_BUFGP        |   0.000|
+mem_data<14>|   10.038(R)|clkT_BUFGP        |   0.000|
+mem_data<15>|   10.340(R)|clkT_BUFGP        |   0.000|
+mt_cf       |    7.293(R)|clkT_BUFGP        |   0.000|
+mt_oe       |    7.923(R)|clkT_BUFGP        |   0.000|
+mt_we       |    9.094(R)|clkT_BUFGP        |   0.000|
+par_data<0> |   14.975(R)|clkT_BUFGP        |   0.000|
+par_data<1> |   14.765(R)|clkT_BUFGP        |   0.000|
+par_data<2> |   15.096(R)|clkT_BUFGP        |   0.000|
+par_data<3> |   14.339(R)|clkT_BUFGP        |   0.000|
+par_data<4> |   14.438(R)|clkT_BUFGP        |   0.000|
+par_data<5> |   16.878(R)|clkT_BUFGP        |   0.000|
+par_data<6> |   14.489(R)|clkT_BUFGP        |   0.000|
+par_data<7> |   14.353(R)|clkT_BUFGP        |   0.000|
+par_wait    |    8.121(R)|clkT_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clkT
@@ -86,116 +137,112 @@ Clock to Setup on destination clock clkT
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clkT           |    5.394|         |         |         |
+clkT           |    5.304|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-par_ast        |par_data<0>    |   10.984|
-par_ast        |par_data<1>    |    9.223|
-par_ast        |par_data<2>    |   10.041|
-par_ast        |par_data<3>    |   10.924|
-par_ast        |par_data<4>    |    8.204|
-par_ast        |par_data<5>    |    7.845|
-par_ast        |par_data<6>    |    8.193|
-par_ast        |par_data<7>    |    8.422|
-par_wr         |par_data<0>    |    8.417|
-par_wr         |par_data<1>    |    9.355|
-par_wr         |par_data<2>    |    8.740|
-par_wr         |par_data<3>    |    9.381|
-par_wr         |par_data<4>    |    9.058|
-par_wr         |par_data<5>    |    9.681|
-par_wr         |par_data<6>    |    9.381|
-par_wr         |par_data<7>    |    9.357|
-pbs<0>         |par_data<0>    |   10.663|
-pbs<1>         |par_data<1>    |   10.002|
-pbs<2>         |par_data<2>    |   11.204|
-pbs<3>         |par_data<3>    |    9.407|
-switches<0>    |leds<0>        |   14.085|
-switches<0>    |leds<1>        |   13.842|
-switches<0>    |leds<2>        |   12.894|
-switches<0>    |leds<3>        |   15.273|
-switches<0>    |leds<4>        |   15.469|
-switches<0>    |leds<5>        |   15.079|
-switches<0>    |leds<6>        |   14.261|
-switches<0>    |leds<7>        |   15.947|
-switches<0>    |par_data<0>    |   10.209|
-switches<1>    |leds<0>        |   14.270|
-switches<1>    |leds<1>        |   14.027|
-switches<1>    |leds<2>        |   13.079|
-switches<1>    |leds<3>        |   15.458|
-switches<1>    |leds<4>        |   15.654|
-switches<1>    |leds<5>        |   15.264|
-switches<1>    |leds<6>        |   14.446|
-switches<1>    |leds<7>        |   16.132|
-switches<1>    |par_data<1>    |   10.432|
-switches<2>    |leds<0>        |   14.447|
-switches<2>    |leds<1>        |   14.204|
-switches<2>    |leds<2>        |   13.256|
-switches<2>    |leds<3>        |   15.635|
-switches<2>    |leds<4>        |   15.831|
-switches<2>    |leds<5>        |   15.441|
-switches<2>    |leds<6>        |   14.623|
-switches<2>    |leds<7>        |   16.309|
-switches<2>    |par_data<2>    |   11.210|
-switches<3>    |leds<0>        |   14.266|
-switches<3>    |leds<1>        |   14.023|
-switches<3>    |leds<2>        |   13.075|
-switches<3>    |leds<3>        |   15.454|
-switches<3>    |leds<4>        |   15.650|
-switches<3>    |leds<5>        |   15.260|
-switches<3>    |leds<6>        |   14.442|
-switches<3>    |leds<7>        |   16.128|
-switches<3>    |par_data<3>    |   10.800|
-switches<4>    |leds<0>        |   13.450|
-switches<4>    |leds<1>        |   12.973|
-switches<4>    |leds<2>        |   12.190|
-switches<4>    |leds<3>        |   14.296|
-switches<4>    |leds<4>        |   14.695|
-switches<4>    |leds<5>        |   14.688|
-switches<4>    |leds<6>        |   13.562|
-switches<4>    |leds<7>        |   14.995|
-switches<4>    |par_data<4>    |   10.295|
-switches<5>    |leds<0>        |   13.705|
-switches<5>    |leds<1>        |   13.228|
-switches<5>    |leds<2>        |   12.445|
-switches<5>    |leds<3>        |   14.551|
-switches<5>    |leds<4>        |   14.950|
-switches<5>    |leds<5>        |   14.943|
-switches<5>    |leds<6>        |   13.817|
-switches<5>    |leds<7>        |   15.250|
-switches<5>    |par_data<5>    |    8.796|
-switches<6>    |leds<0>        |   13.920|
-switches<6>    |leds<1>        |   13.443|
-switches<6>    |leds<2>        |   12.660|
-switches<6>    |leds<3>        |   14.766|
-switches<6>    |leds<4>        |   15.165|
-switches<6>    |leds<5>        |   15.158|
-switches<6>    |leds<6>        |   14.032|
-switches<6>    |leds<7>        |   15.465|
-switches<6>    |par_data<6>    |   10.344|
-switches<7>    |leds<0>        |   14.386|
-switches<7>    |leds<1>        |   13.909|
-switches<7>    |leds<2>        |   13.126|
-switches<7>    |leds<3>        |   15.232|
-switches<7>    |leds<4>        |   15.631|
-switches<7>    |leds<5>        |   15.624|
-switches<7>    |leds<6>        |   14.498|
-switches<7>    |leds<7>        |   15.931|
-switches<7>    |par_data<7>    |   11.845|
+par_ast        |par_data<0>    |    8.611|
+par_ast        |par_data<1>    |    8.726|
+par_ast        |par_data<2>    |    9.075|
+par_ast        |par_data<3>    |    7.749|
+par_ast        |par_data<4>    |    8.307|
+par_ast        |par_data<5>    |    8.261|
+par_ast        |par_data<6>    |    8.764|
+par_ast        |par_data<7>    |    8.236|
+par_wr         |par_data<0>    |    8.097|
+par_wr         |par_data<1>    |    9.002|
+par_wr         |par_data<2>    |    8.397|
+par_wr         |par_data<3>    |    8.710|
+par_wr         |par_data<4>    |    8.063|
+par_wr         |par_data<5>    |    9.018|
+par_wr         |par_data<6>    |    9.017|
+par_wr         |par_data<7>    |    7.764|
+switches<0>    |leds<0>        |   14.753|
+switches<0>    |leds<1>        |   14.133|
+switches<0>    |leds<2>        |   14.778|
+switches<0>    |leds<3>        |   15.203|
+switches<0>    |leds<4>        |   14.613|
+switches<0>    |leds<5>        |   15.777|
+switches<0>    |leds<6>        |   14.706|
+switches<0>    |leds<7>        |   15.467|
+switches<0>    |par_data<0>    |    8.715|
+switches<1>    |leds<0>        |   15.724|
+switches<1>    |leds<1>        |   15.021|
+switches<1>    |leds<2>        |   15.749|
+switches<1>    |leds<3>        |   16.174|
+switches<1>    |leds<4>        |   15.584|
+switches<1>    |leds<5>        |   16.665|
+switches<1>    |leds<6>        |   15.594|
+switches<1>    |leds<7>        |   16.355|
+switches<1>    |par_data<1>    |   10.267|
+switches<2>    |leds<0>        |   14.919|
+switches<2>    |leds<1>        |   14.449|
+switches<2>    |leds<2>        |   14.992|
+switches<2>    |leds<3>        |   15.453|
+switches<2>    |leds<4>        |   14.779|
+switches<2>    |leds<5>        |   15.273|
+switches<2>    |leds<6>        |   14.447|
+switches<2>    |leds<7>        |   14.891|
+switches<2>    |par_data<2>    |   12.129|
+switches<3>    |leds<0>        |   15.208|
+switches<3>    |leds<1>        |   15.041|
+switches<3>    |leds<2>        |   15.584|
+switches<3>    |leds<3>        |   16.160|
+switches<3>    |leds<4>        |   15.895|
+switches<3>    |leds<5>        |   15.204|
+switches<3>    |leds<6>        |   14.814|
+switches<3>    |leds<7>        |   16.347|
+switches<3>    |par_data<3>    |   10.487|
+switches<4>    |leds<0>        |   14.887|
+switches<4>    |leds<1>        |   14.720|
+switches<4>    |leds<2>        |   15.263|
+switches<4>    |leds<3>        |   15.839|
+switches<4>    |leds<4>        |   15.574|
+switches<4>    |leds<5>        |   14.798|
+switches<4>    |leds<6>        |   14.493|
+switches<4>    |leds<7>        |   16.026|
+switches<4>    |par_data<4>    |   10.818|
+switches<5>    |leds<0>        |   14.200|
+switches<5>    |leds<1>        |   14.033|
+switches<5>    |leds<2>        |   14.576|
+switches<5>    |leds<3>        |   15.152|
+switches<5>    |leds<4>        |   14.887|
+switches<5>    |leds<5>        |   14.599|
+switches<5>    |leds<6>        |   13.806|
+switches<5>    |leds<7>        |   15.339|
+switches<5>    |par_data<5>    |   11.092|
+switches<6>    |leds<0>        |   14.247|
+switches<6>    |leds<1>        |   14.080|
+switches<6>    |leds<2>        |   14.623|
+switches<6>    |leds<3>        |   15.199|
+switches<6>    |leds<4>        |   14.934|
+switches<6>    |leds<5>        |   14.353|
+switches<6>    |leds<6>        |   13.914|
+switches<6>    |leds<7>        |   15.386|
+switches<6>    |par_data<6>    |   11.004|
+switches<7>    |leds<0>        |   14.120|
+switches<7>    |leds<1>        |   14.132|
+switches<7>    |leds<2>        |   14.665|
+switches<7>    |leds<3>        |   15.047|
+switches<7>    |leds<4>        |   14.496|
+switches<7>    |leds<5>        |   15.776|
+switches<7>    |leds<6>        |   14.705|
+switches<7>    |leds<7>        |   15.466|
+switches<7>    |par_data<7>    |   10.484|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Sep 19 18:53:09 2012 
+Analysis completed Tue Oct 23 18:23:05 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 139 MB
+Peak Memory Usage: 144 MB
 
 
 

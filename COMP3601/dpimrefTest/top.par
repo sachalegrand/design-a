@@ -1,7 +1,7 @@
 Release 12.1 par M.53d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-SACHA-PC::  Wed Sep 19 18:53:01 2012
+SACHA-PC::  Tue Oct 23 18:22:54 2012
 
 par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
 
@@ -24,11 +24,11 @@ Device speed data version:  "PRODUCTION 1.39 2010-04-09".
 
 Device Utilization Summary:
 
-   Number of BUFGMUXs                        1 out of 8      12%
+   Number of BUFGMUXs                        2 out of 8      25%
    Number of External IOBs                  81 out of 173    46%
       Number of LOCed IOBs                  81 out of 81    100%
 
-   Number of Slices                        155 out of 3584    4%
+   Number of Slices                        287 out of 3584    8%
       Number of SLICEMs                      0 out of 1792    0%
 
 
@@ -41,39 +41,43 @@ Router effort level (-rl):    High
 Starting initial Timing Analysis.  REAL time: 0 secs 
 Finished initial Timing Analysis.  REAL time: 0 secs 
 
+WARNING:Par:288 - The signal pbs<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal pbs<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal pbs<3>_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
 Total REAL time at the beginning of Placer: 0 secs 
 Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:c61be0dc) REAL time: 0 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ba2e2d4c) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:c61be0dc) REAL time: 0 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ba2e2d4c) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:c61be0dc) REAL time: 0 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ba2e2d4c) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:262fcf3d) REAL time: 0 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:51b500ff) REAL time: 1 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:262fcf3d) REAL time: 0 secs 
+Phase 5.36  Local Placement Optimization (Checksum:51b500ff) REAL time: 1 secs 
 
 Phase 6.8  Global Placement
-.....
-Phase 6.8  Global Placement (Checksum:e340d294) REAL time: 4 secs 
+....
+....
+Phase 6.8  Global Placement (Checksum:1ddfafbd) REAL time: 4 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:e340d294) REAL time: 4 secs 
+Phase 7.5  Local Placement Optimization (Checksum:1ddfafbd) REAL time: 4 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:c1e47436) REAL time: 4 secs 
+Phase 8.18  Placement Optimization (Checksum:619345d9) REAL time: 4 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:c1e47436) REAL time: 4 secs 
+Phase 9.5  Local Placement Optimization (Checksum:619345d9) REAL time: 4 secs 
 
 Total REAL time to Placer completion: 4 secs 
 Total CPU  time to Placer completion: 4 secs 
@@ -84,32 +88,30 @@ Writing design to file top.ncd
 Starting Router
 
 
-Phase  1  : 1078 unrouted;      REAL time: 4 secs 
+Phase  1  : 2119 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 1027 unrouted;      REAL time: 4 secs 
+Phase  2  : 1942 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 453 unrouted;      REAL time: 4 secs 
+Phase  3  : 936 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 458 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 956 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: top.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
-WARNING:Route:455 - CLK Net:my_dpimref/regData0<7> may have excessive skew because 
-      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion: 5 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -127,10 +129,10 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|          clkT_BUFGP |      BUFGMUX6| No   |   42 |  0.053     |  0.936      |
+|          clkT_BUFGP |      BUFGMUX6| No   |  113 |  0.053     |  0.936      |
 +---------------------+--------------+------+------+------------+-------------+
-|my_dpimref/regData0< |              |      |      |            |             |
-|                  7> |         Local|      |   10 |  0.091     |  2.555      |
+|my_dpimref/regDataFr |              |      |      |            |             |
+|          omComp0<7> |      BUFGMUX3| No   |   50 |  0.018     |  0.902      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -147,8 +149,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.394ns|     N/A|           0
-  T_BUFGP                                   | HOLD        |     1.047ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.304ns|     N/A|           0
+  T_BUFGP                                   | HOLD        |     0.714ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net my_ | SETUP       |         N/A|     3.503ns|     N/A|           0
+  dpimref/regDataFromComp0<7>               | HOLD        |     0.768ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -164,16 +169,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 5 secs 
-Total CPU time to PAR completion: 5 secs 
+WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Peak Memory Usage:  227 MB
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
+
+Peak Memory Usage:  231 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 1
+Number of warning messages: 5
 Number of info messages: 1
 
 Writing design to file top.ncd

@@ -48,12 +48,14 @@ entity memory is
 		Port (
 				clk 		: in std_logic;
 				reset 	: in std_logic;
-				address	: in std_logic_vector (22 downto 0);
+				read_address	: in std_logic_vector (22 downto 0);
+				write_address  : in std_logic_vector (22 downto 0);
 				read_enable : in std_logic;
 				write_enable : in std_logic;
 				data_in			: in std_logic_vector(15 downto 0);
 				data_out 		: out std_logic_vector(15 downto 0);
-				busy_flag		: out std_logic;
+				done_read		: out std_logic;
+				done_write		: out std_logic;
 				mem_address 	: out std_logic_vector(22 downto 0);
 				mem_data		: inout std_logic_vector (15 downto 0);
 				mem_oe			: out std_logic;
@@ -75,10 +77,12 @@ architecture Behavioral of memory is
 
 	-- States of the FSM
 	constant stMemReady : std_logic_vector(2 downto 0) := "000";
-	constant stMemReadA : std_logic_vector(2 downto 0) := "010";
-	constant stMemReadB : std_logic_vector(2 downto 0) := "011";
-	constant stMemWriteA : std_logic_vector(2 downto 0) := "101";
-	constant stMemWriteB : std_logic_vector(2 downto 0) := "100";
+	constant stMemRead : std_logic_vector(2 downto 0) := "010";
+	constant stMemDoneR : std_logic_vector(2 downto 0) := "011";
+--	constant stMemDoneR : std_logic_vector(2 downto 0) := "001";
+	constant stMemWrite : std_logic_vector(2 downto 0) := "101";
+--	constant stMemWriteB : std_logic_vector(2 downto 0) := "100";
+	constant stMemDoneW : std_logic_vector(2 downto 0) := "100";
 
 
 -- signals
@@ -87,21 +91,6 @@ architecture Behavioral of memory is
 	signal	stMemNext	: std_logic_vector(2 downto 0);
 	
 	-- ram related signals
---	signal sram_addr     : std_logic_vector(22 downto 0);
---	signal sram_data_read  : std_logic_vector(15 downto 0);
---	signal sram_data_write : std_logic_vector(15 downto 0);
---	signal sram_oe       : std_logic ;
---	signal sram_we       : std_logic ;
---	signal sram_adv      : std_logic ;
---	signal sram_clk      : std_logic;
---	signal sram_ub      	: std_logic ;
---	signal sram_lb      	: std_logic;
---	signal sram_ce      	: std_logic;
---	signal sram_cre      : std_logic;
---	signal sram_wait     : std_logic ;
-	
-	
-	
 	signal sram_addr     : std_logic_vector(22 downto 0) := "00000000000000000000000";
 	signal sram_data_read  : std_logic_vector(15 downto 0) := "0000000000000000";
 	signal sram_data_write : std_logic_vector(15 downto 0) := "0000000000000000";
@@ -119,15 +108,34 @@ architecture Behavioral of memory is
 	signal ctl_read      : std_logic;	--are we in stMemRead?
 	signal ctl_write		: std_logic;	--are we in stMemWrite?
 	signal ctl_ab			: std_logic;	--are we in stage a or b ? 
+	signal sig_ctl_d_r	: std_logic;
+	signal sig_ctl_d_w	:std_logic;
+	signal priority : std_logic;
+	signal sig_read_enable : std_logic := '0';
+	signal sig_write_enable : std_logic := '0';
 	
-	-- busy flag signal
-	signal sig_busy :std_logic := '0';
+	signal counter : integer range 0 to 15 := 0;
+	signal ctl_we : std_logic := '1';
 	
 begin
 
-ctl_read <= stMemCur(1);
-ctl_write <= stMemCur(2);
-ctl_ab <= stMemCur(0);
+--ctl_read <= (not stMemCur(2) and  stMemCur(1) and not stMemCur(0)) OR 
+--				(not stMemCur(2) and  stMemCur(1) and stMemCur(0)) OR
+--				(not stMemCur(2) and  not stMemCur(1) and stMemCur(0));
+--ctl_write <= stMemCur(2);
+
+ctl_read <= not stMemCur(2) and  stMemCur(1) and not stMemCur(0);
+ctl_write <= stMemCur(2) and not stMemCur(1) and stMemCur(0);
+
+
+sig_read_enable <= read_enable;
+sig_write_enable <= write_enable;
+
+sig_ctl_d_r <= not stMemCur(2) and stMemCur(1) and stMemCur(0);
+sig_ctl_d_w <= stMemCur(2) and not stMemCur(1) and  not stMemCur(0);
+
+
+priority <= read_enable AND write_enable;
 
 -- Process gets the FSM from one state to the next every clock cycle
 process (clk, reset)
@@ -136,7 +144,22 @@ begin
 			if reset = '1' then
 				stMemCur <= stMemReady;
 			else
-				stMemCur <= stMemNext;
+				if stMemCur = stMemRead or stMemCur = stMemWrite then
+					
+					if counter = 2 then 
+						ctl_we <='0';
+					end if;
+					
+					if counter = 6 then 
+						stMemCur <= stMemNext;
+						counter <= 0;
+						ctl_we <= '1';
+					else 
+						counter <= counter + 1;
+					end if;
+				else 
+					stMemCur <= stMemNext;
+				end if;
 			end if;
 		end if;
 end process;
@@ -144,25 +167,21 @@ end process;
 
 -- Finite State Machine for reading and writing into memory
 --process(stMemCurr, stMemNext, address, read_enable, write_enable, data_in, data_out)
-process(stMemCur, stMemNext, read_enable, write_enable)
+process(stMemCur, stMemNext, read_enable, write_enable, priority, counter)
 begin
 	case stMemCur is 
-		when stMemReady =>
-			if read_enable = '1' then
-				stMemNext <= stMemReadA;
-			elsif write_enable = '1' then
-				stMemNext <= stMemWriteA;
-			else
+		when stMemReady =>		
+			if sig_write_enable = '1' or priority = '1' then
+				stMemNext <= stMemWrite;
+			elsif sig_read_enable = '1' then
+				stMemNext <= stMemRead;
+			else 
 				stMemNext <= stMemReady;
-			end if;
-		when stMemReadA =>
-			stMemNext <= stMemReadB;
-		when stMemReadB =>
-			stMemNext <= stMemReady;
-		when stMemWriteA =>
-			stMemNext <= stMemWriteB;
-		when stMemWriteB =>
-			stMemNext <= stMemReady;
+			end if;		
+		when stMemRead =>
+			stMemNext <= stMemDoneR;
+		when stMemWrite =>
+			stMemNext <= stMemDoneW;
 		when others =>
 			stMemNext <= stMemReady;
 	end case;
@@ -170,7 +189,7 @@ end process;
 
 -- sets the signals back to memory noop values
 -- when we're not writing or reading
-process(clk, ctl_read, ctl_write)
+process(clk, reset, ctl_read, ctl_write)
 begin
 	if clk'event and clk = '1' then
 		if reset = '1' then
@@ -185,29 +204,27 @@ begin
 			sram_ce <='1';
 			sram_cre <='0';
 			sram_wait <='L';
-			sig_busy <= '0';
 		else
 			if ctl_read = '1' then
-				sram_addr <= address;
+				sram_addr <= read_address;
 				sram_data_read <= mem_data;
 				sram_oe <= '0';
 				sram_we <= '1';
 				sram_ub <='0';
 				sram_lb <='0';
 				sram_ce <='0';	
-				sig_busy <= '1';
 			elsif ctl_write = '1' then
-				sram_addr <= address;
+				sram_addr <= write_address;
 				mem_data <= sram_data_write;
 				sram_oe <= '-';
-				sram_we <= '0';
+				sram_we <= ctl_we;
 				sram_ub <='0';
 				sram_lb <='0';
 				sram_ce <='0';
-				sig_busy <= '1';
 			else
 				sram_addr <= "00000000000000000000000";
-				sram_data_read <= "0000000000000000";
+				--sram_data_read <= "0000000000000000";
+				mem_data <= "ZZZZZZZZZZZZZZZZ";
 				sram_oe <= '1';
 				sram_we <= '1';
 				sram_adv <='0';
@@ -217,7 +234,6 @@ begin
 				sram_ce <='1';
 				sram_cre <='0';
 				sram_wait <='L';
-				sig_busy <= '0';
 			end if;
 		end if;
 	end if;
@@ -242,20 +258,8 @@ end process;
 	mem_ce <= sram_ce;
 	mem_cre <= sram_cre;
 	mem_wait <= sram_wait;
-
+	done_read <= sig_ctl_d_r;
+	done_write <= sig_ctl_d_w;
 
 
 end Behavioral;
-
-
-
-
-
-
-
-
-
-
-
-
-
