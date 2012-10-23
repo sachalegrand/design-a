@@ -5,44 +5,880 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">H:/12s2/COMP3601/Project/sensor/sensor.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">sleepPulseLengths</arg>&gt; has a width of <arg fmt="%d" index="4">1280</arg> bits but assigned expression is <arg fmt="%d" index="5">40</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">H:/12s2/COMP3601/sensor/sensor.vhd</arg>&quot; line <arg fmt="%d" index="2">130</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">dataPulseLengths</arg>&gt; has a width of <arg fmt="%d" index="4">1280</arg> bits but assigned expression is <arg fmt="%d" index="5">40</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">H:/12s2/COMP3601/Project/sensor/sensor.vhd</arg>&quot; line <arg fmt="%d" index="2">121</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">dataPulseLengths</arg>&gt; has a width of <arg fmt="%d" index="4">1280</arg> bits but assigned expression is <arg fmt="%d" index="5">40</arg>-bit wide.
+<msg type="info" file="Xst" num="1432" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">dataPulseLengths</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">H:/12s2/COMP3601/Project/sensor/sensor.vhd</arg>&quot; line <arg fmt="%d" index="2">317</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;currentState&gt;, &lt;dataIndex&gt;</arg>
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">dataPulseLengths</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">doneCounter</arg>&gt; in unit &lt;<arg fmt="%s" index="2">sensor</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="1432" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">dataPulseLengths</arg>&gt; may be accessed with a negative index, causing simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">dataPulseLengths</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">H:/12s2/COMP3601/sensor/sensor.vhd</arg>&quot; line <arg fmt="%d" index="2">158</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;currentState&gt;</arg>
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">bitValue</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">selPulse</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">temperature</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">temperatureValid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">selectVar</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">tem1&lt;31:8&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">humidity</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">tem0&lt;31:8&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">dataValid</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">humidityValid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">dataPulseLengthsValid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">doneCounter&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">calculatedChecksum</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">checksumValid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">actualChecksum</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_FSM_FFd2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+<msg type="info" file="Xst" num="2117" delta="old" >HDL ADVISOR - Mux Selector &lt;<arg fmt="%s" index="1">currentState</arg>&gt; of Case statement line <arg fmt="%s" index="2">0</arg> was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+	- add an &apos;<arg fmt="%s" index="3">INIT</arg>&apos; attribute on signal &lt;<arg fmt="%s" index="4">currentState</arg>&gt; (optimization is then done without any risk)
+	- use the attribute &apos;<arg fmt="%s" index="5">signal_encoding</arg> <arg fmt="%s" index="6">user</arg>&apos; to avoid onehot optimization
+	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">chkBin0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentState_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_32_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_34_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_33_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_35_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_37_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_36_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_38_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dataPulseLengths_39_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin0/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin1/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin2/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin3/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin4/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin5/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin6/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">chkBin7/bitValue</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">sensor</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

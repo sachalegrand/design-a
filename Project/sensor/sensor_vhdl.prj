@@ -1,2 +1,4 @@
-vhdl work "H:\12s2\COMP3601\Project\sensor\PulseLengthDecoder.vhd"
-vhdl work "H:\12s2\COMP3601\Project\sensor\sensor.vhd"
+vhdl work "H:\12s2\COMP3601\sensor\integer_divider.vhd"
+vhdl work "H:\12s2\COMP3601\sensor\pulse_decoder.vhd"
+vhdl work "H:\12s2\COMP3601\sensor\display.vhd"
+vhdl work "H:\12s2\COMP3601\sensor\sensor.vhd"

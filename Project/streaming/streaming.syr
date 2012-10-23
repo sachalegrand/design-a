@@ -1,0 +1,1583 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: streaming.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "streaming.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "streaming"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-ft256
+
+---- Source Options
+Top Module Name                    : streaming
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "H:/12s2/COMP3601/streaming/integer_divider.vhd" in Library work.
+Architecture behaviour of Entity integer_divider is up to date.
+Compiling vhdl file "H:/12s2/COMP3601/streaming/pulse_decoder.vhd" in Library work.
+Architecture behavioral of Entity pulse_decoder is up to date.
+Compiling vhdl file "H:/12s2/COMP3601/streaming/sensor.vhd" in Library work.
+Architecture behavioral of Entity sensor is up to date.
+Compiling vhdl file "H:/12s2/COMP3601/streaming/display.vhd" in Library work.
+Architecture behavioral of Entity display is up to date.
+Compiling vhdl file "H:/12s2/COMP3601/streaming/streaming.vhd" in Library work.
+Architecture behavioural of Entity streaming is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <streaming> in library <work> (architecture <behavioural>).
+
+Analyzing hierarchy for entity <sensor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <integer_divider> in library <work> (architecture <behaviour>).
+
+Analyzing hierarchy for entity <pulse_decoder> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <streaming> in library <work> (Architecture <behavioural>).
+WARNING:Xst:819 - "H:/12s2/COMP3601/streaming/streaming.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <currentState>
+Entity <streaming> analyzed. Unit <streaming> generated.
+
+Analyzing Entity <sensor> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "H:/12s2/COMP3601/streaming/sensor.vhd" line 136: Width mismatch. <dataPulseLengths> has a width of 1280 bits but assigned expression is 40-bit wide.
+INFO:Xst:1432 - Contents of array <dataPulseLengths> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <dataPulseLengths> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <dataPulseLengths> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <dataPulseLengths> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:819 - "H:/12s2/COMP3601/streaming/sensor.vhd" line 166: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <currentState>
+Entity <sensor> analyzed. Unit <sensor> generated.
+
+Analyzing Entity <integer_divider> in library <work> (Architecture <behaviour>).
+Entity <integer_divider> analyzed. Unit <integer_divider> generated.
+
+Analyzing Entity <pulse_decoder> in library <work> (Architecture <behavioral>).
+Entity <pulse_decoder> analyzed. Unit <pulse_decoder> generated.
+
+Analyzing Entity <display> in library <work> (Architecture <behavioral>).
+Entity <display> analyzed. Unit <display> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <integer_divider>.
+    Related source file is "H:/12s2/COMP3601/streaming/integer_divider.vhd".
+    Found 32-bit register for signal <quotient>.
+    Found 32-bit register for signal <remainder>.
+    Found 1-bit register for signal <done>.
+    Found 32-bit register for signal <numerator>.
+    Found 32-bit adder for signal <numerator$add0000> created at line 42.
+    Found 32-bit adder for signal <numerator$addsub0000> created at line 35.
+    Found 32-bit comparator equal for signal <numerator$cmp_eq0000> created at line 42.
+    Found 32-bit comparator less for signal <numerator$cmp_lt0000> created at line 34.
+    Found 32-bit subtractor for signal <numerator$sub0000> created at line 34.
+    Found 32-bit adder for signal <quotient$addsub0000> created at line 36.
+    Found 32-bit comparator greatequal for signal <remainder$cmp_ge0000> created at line 34.
+    Summary:
+	inferred  97 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <integer_divider> synthesized.
+
+
+Synthesizing Unit <pulse_decoder>.
+    Related source file is "H:/12s2/COMP3601/streaming/pulse_decoder.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <bitValue>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <bitValid$cmp_gt0000> created at line 24.
+    Found 32-bit comparator greater for signal <bitValid$cmp_gt0001> created at line 26.
+    Found 32-bit comparator less for signal <bitValid$cmp_lt0000> created at line 24.
+    Found 32-bit comparator less for signal <bitValid$cmp_lt0001> created at line 26.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <pulse_decoder> synthesized.
+
+
+Synthesizing Unit <sensor>.
+    Related source file is "H:/12s2/COMP3601/streaming/sensor.vhd".
+WARNING:Xst:646 - Signal <dataPulseLengthsValid> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <calculatedChecksum> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <actualChecksum> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <currentState>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <currentState> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <currentState> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <enableState>.
+    Found 1-bit register for signal <doneFlag>.
+    Found 1-bit tristate buffer for signal <owdata>.
+    Found 9-bit register for signal <currentState>.
+    Found 32-bit up counter for signal <dataIndex>.
+    Found 32-bit up counter for signal <dataPulseLengths>.
+    Found 32-bit comparator greater for signal <nextState$cmp_gt0000> created at line 187.
+    Found 32-bit up counter for signal <preparationLength>.
+    Found 32-bit up counter for signal <presenceLength>.
+    Found 32-bit up counter for signal <sendingLength>.
+    Found 32-bit up counter for signal <waitingLength>.
+    Summary:
+	inferred  45 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Tristate(s).
+Unit <sensor> synthesized.
+
+
+Synthesizing Unit <display>.
+    Related source file is "H:/12s2/COMP3601/streaming/display.vhd".
+    Found 4-bit register for signal <an>.
+    Found 32-bit up counter for signal <counter>.
+    Found 32-bit comparator greater for signal <counter$cmp_gt0000> created at line 65.
+    Found 32-bit register for signal <digit>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <display> synthesized.
+
+
+Synthesizing Unit <streaming>.
+    Related source file is "H:/12s2/COMP3601/streaming/streaming.vhd".
+WARNING:Xst:646 - Signal <humidity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <currentState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Power Up State     | initialize                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <enableState>.
+    Found 32-bit up counter for signal <cooldownLength>.
+    Found 32-bit register for signal <initializeLength>.
+    Found 32-bit adder for signal <initializeLength$addsub0000> created at line 33.
+    Found 1-bit register for signal <reset>.
+    Found 32-bit up counter for signal <sensorProcessLength>.
+    Found 1-bit register for signal <start>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <streaming> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 21
+ 32-bit adder                                          : 16
+ 32-bit subtractor                                     : 5
+# Counters                                             : 44
+ 32-bit up counter                                     : 44
+# Registers                                            : 30
+ 1-bit register                                        : 12
+ 32-bit register                                       : 17
+ 9-bit register                                        : 1
+# Latches                                              : 40
+ 1-bit latch                                           : 40
+# Comparators                                          : 177
+ 32-bit comparator equal                               : 5
+ 32-bit comparator greatequal                          : 5
+ 32-bit comparator greater                             : 82
+ 32-bit comparator less                                : 85
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <currentState/FSM> on signal <currentState[1:2]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ initialize    | 00
+ sensorprocess | 01
+ cooldown      | 10
+---------------------------
+WARNING:Xst:1290 - Hierarchical block <caliberateHumidity> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin15> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin14> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin13> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin12> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin11> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin10> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin09> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin08> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin07> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin06> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin05> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin04> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin03> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin02> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin01> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <humBin00> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin7> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin6> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin5> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin4> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin3> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin2> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin1> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <chkBin0> is unconnected in block <sensorMapping>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 21
+ 32-bit adder                                          : 16
+ 32-bit subtractor                                     : 5
+# Counters                                             : 44
+ 32-bit up counter                                     : 44
+# Registers                                            : 565
+ Flip-Flops                                            : 565
+# Latches                                              : 40
+ 1-bit latch                                           : 40
+# Comparators                                          : 177
+ 32-bit comparator equal                               : 5
+ 32-bit comparator greatequal                          : 5
+ 32-bit comparator greater                             : 82
+ 32-bit comparator less                                : 85
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <streaming> ...
+
+Optimizing unit <integer_divider> ...
+
+Optimizing unit <pulse_decoder> ...
+
+Optimizing unit <display> ...
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_15_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_13_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_12_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_14_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_10_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_11_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_8_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_7_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_9_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_6_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_4_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_39_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_5_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_38_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_2_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_3_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_1_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_36_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_37_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_0_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_35_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_33_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_34_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/dataPulseLengths_32_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/done> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/quotient_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/numerator_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_31> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_30> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_29> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_28> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_27> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_26> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_25> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_24> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_23> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_22> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_21> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_20> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_19> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_18> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_17> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_16> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_15> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_14> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_13> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_12> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_11> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_10> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_9> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_8> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_7> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_6> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_5> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_4> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_3> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_2> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_1> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/caliberateHumidity/remainder_0> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin15/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin14/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin13/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin12/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin11/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin10/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin09/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin08/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin07/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin06/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin05/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin04/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin03/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin02/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin01/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/humBin00/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin7/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin6/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin5/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin4/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin3/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin2/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin1/bitValue> of sequential type is unconnected in block <streaming>.
+WARNING:Xst:2677 - Node <sensorMapping/chkBin0/bitValue> of sequential type is unconnected in block <streaming>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block streaming, actual ratio is 46.
+FlipFlop reset has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1111
+ Flip-Flops                                            : 1111
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : streaming.ngr
+Top Level Output File Name         : streaming
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 6444
+#      GND                         : 1
+#      INV                         : 294
+#      LUT1                        : 1018
+#      LUT2                        : 894
+#      LUT3                        : 129
+#      LUT4                        : 627
+#      LUT4_D                      : 4
+#      LUT4_L                      : 3
+#      MUXCY                       : 2280
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 1184
+# FlipFlops/Latches                : 1127
+#      FD                          : 35
+#      FDC                         : 8
+#      FDCE                        : 577
+#      FDE                         : 424
+#      FDPE                        : 1
+#      FDR                         : 32
+#      FDRE                        : 32
+#      FDS                         : 2
+#      LDCP_1                      : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IOBUF                       : 1
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-5 
+
+ Number of Slices:                     1554  out of   3584    43%  
+ Number of Slice Flip Flops:           1127  out of   7168    15%  
+ Number of 4 input LUTs:               2969  out of   7168    41%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    173     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------+-----------------------------------------+-------+
+Clock Signal                                                                               | Clock buffer(FF name)                   | Load  |
+-------------------------------------------------------------------------------------------+-----------------------------------------+-------+
+clock                                                                                      | BUFGP                                   | 1111  |
+sensorMapping/temBin15/bitValue_not0001(sensorMapping/temBin15/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin15/bitValue)| 1     |
+sensorMapping/temBin14/bitValue_not0001(sensorMapping/temBin14/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin14/bitValue)| 1     |
+sensorMapping/temBin13/bitValue_not0001(sensorMapping/temBin13/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin13/bitValue)| 1     |
+sensorMapping/temBin12/bitValue_not0001(sensorMapping/temBin12/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin12/bitValue)| 1     |
+sensorMapping/temBin11/bitValue_not0001(sensorMapping/temBin11/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin11/bitValue)| 1     |
+sensorMapping/temBin10/bitValue_not0001(sensorMapping/temBin10/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin10/bitValue)| 1     |
+sensorMapping/temBin09/bitValue_not0001(sensorMapping/temBin09/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin09/bitValue)| 1     |
+sensorMapping/temBin08/bitValue_not0001(sensorMapping/temBin08/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin08/bitValue)| 1     |
+sensorMapping/temBin07/bitValue_not0001(sensorMapping/temBin07/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin07/bitValue)| 1     |
+sensorMapping/temBin06/bitValue_not0001(sensorMapping/temBin06/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin06/bitValue)| 1     |
+sensorMapping/temBin05/bitValue_not0001(sensorMapping/temBin05/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin05/bitValue)| 1     |
+sensorMapping/temBin04/bitValue_not0001(sensorMapping/temBin04/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin04/bitValue)| 1     |
+sensorMapping/temBin03/bitValue_not0001(sensorMapping/temBin03/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin03/bitValue)| 1     |
+sensorMapping/temBin02/bitValue_not0001(sensorMapping/temBin02/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin02/bitValue)| 1     |
+sensorMapping/temBin01/bitValue_not0001(sensorMapping/temBin01/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin01/bitValue)| 1     |
+sensorMapping/temBin00/bitValue_not0001(sensorMapping/temBin00/bitValue_not0001_wg_cy<7>:O)| NONE(*)(sensorMapping/temBin00/bitValue)| 1     |
+-------------------------------------------------------------------------------------------+-----------------------------------------+-------+
+(*) These 16 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------+------------------------------------------+-------+
+Control Signal                                                                     | Buffer(FF name)                          | Load  |
+-----------------------------------------------------------------------------------+------------------------------------------+-------+
+reset(reset:Q)                                                                     | NONE(sensorMapping/currentState_0)       | 293   |
+reset_1(reset_1:Q)                                                                 | NONE(sensorMapping/dataPulseLengths_23_6)| 293   |
+sensorMapping/temBin00/bitValue_and0000(sensorMapping/temBin00/bitValue_and00001:O)| NONE(sensorMapping/temBin00/bitValue)    | 1     |
+sensorMapping/temBin00/bitValue_and0001(sensorMapping/temBin00/bitValue_and00011:O)| NONE(sensorMapping/temBin00/bitValue)    | 1     |
+sensorMapping/temBin01/bitValue_and0000(sensorMapping/temBin01/bitValue_and00001:O)| NONE(sensorMapping/temBin01/bitValue)    | 1     |
+sensorMapping/temBin01/bitValue_and0001(sensorMapping/temBin01/bitValue_and00011:O)| NONE(sensorMapping/temBin01/bitValue)    | 1     |
+sensorMapping/temBin02/bitValue_and0000(sensorMapping/temBin02/bitValue_and00001:O)| NONE(sensorMapping/temBin02/bitValue)    | 1     |
+sensorMapping/temBin02/bitValue_and0001(sensorMapping/temBin02/bitValue_and00011:O)| NONE(sensorMapping/temBin02/bitValue)    | 1     |
+sensorMapping/temBin03/bitValue_and0000(sensorMapping/temBin03/bitValue_and00001:O)| NONE(sensorMapping/temBin03/bitValue)    | 1     |
+sensorMapping/temBin03/bitValue_and0001(sensorMapping/temBin03/bitValue_and00011:O)| NONE(sensorMapping/temBin03/bitValue)    | 1     |
+sensorMapping/temBin04/bitValue_and0000(sensorMapping/temBin04/bitValue_and00001:O)| NONE(sensorMapping/temBin04/bitValue)    | 1     |
+sensorMapping/temBin04/bitValue_and0001(sensorMapping/temBin04/bitValue_and00011:O)| NONE(sensorMapping/temBin04/bitValue)    | 1     |
+sensorMapping/temBin05/bitValue_and0000(sensorMapping/temBin05/bitValue_and00001:O)| NONE(sensorMapping/temBin05/bitValue)    | 1     |
+sensorMapping/temBin05/bitValue_and0001(sensorMapping/temBin05/bitValue_and00011:O)| NONE(sensorMapping/temBin05/bitValue)    | 1     |
+sensorMapping/temBin06/bitValue_and0000(sensorMapping/temBin06/bitValue_and00001:O)| NONE(sensorMapping/temBin06/bitValue)    | 1     |
+sensorMapping/temBin06/bitValue_and0001(sensorMapping/temBin06/bitValue_and00011:O)| NONE(sensorMapping/temBin06/bitValue)    | 1     |
+sensorMapping/temBin07/bitValue_and0000(sensorMapping/temBin07/bitValue_and00001:O)| NONE(sensorMapping/temBin07/bitValue)    | 1     |
+sensorMapping/temBin07/bitValue_and0001(sensorMapping/temBin07/bitValue_and00011:O)| NONE(sensorMapping/temBin07/bitValue)    | 1     |
+sensorMapping/temBin08/bitValue_and0000(sensorMapping/temBin08/bitValue_and00001:O)| NONE(sensorMapping/temBin08/bitValue)    | 1     |
+sensorMapping/temBin08/bitValue_and0001(sensorMapping/temBin08/bitValue_and00011:O)| NONE(sensorMapping/temBin08/bitValue)    | 1     |
+sensorMapping/temBin09/bitValue_and0000(sensorMapping/temBin09/bitValue_and00001:O)| NONE(sensorMapping/temBin09/bitValue)    | 1     |
+sensorMapping/temBin09/bitValue_and0001(sensorMapping/temBin09/bitValue_and00011:O)| NONE(sensorMapping/temBin09/bitValue)    | 1     |
+sensorMapping/temBin10/bitValue_and0000(sensorMapping/temBin10/bitValue_and00001:O)| NONE(sensorMapping/temBin10/bitValue)    | 1     |
+sensorMapping/temBin10/bitValue_and0001(sensorMapping/temBin10/bitValue_and00011:O)| NONE(sensorMapping/temBin10/bitValue)    | 1     |
+sensorMapping/temBin11/bitValue_and0000(sensorMapping/temBin11/bitValue_and00001:O)| NONE(sensorMapping/temBin11/bitValue)    | 1     |
+sensorMapping/temBin11/bitValue_and0001(sensorMapping/temBin11/bitValue_and00011:O)| NONE(sensorMapping/temBin11/bitValue)    | 1     |
+sensorMapping/temBin12/bitValue_and0000(sensorMapping/temBin12/bitValue_and00001:O)| NONE(sensorMapping/temBin12/bitValue)    | 1     |
+sensorMapping/temBin12/bitValue_and0001(sensorMapping/temBin12/bitValue_and00011:O)| NONE(sensorMapping/temBin12/bitValue)    | 1     |
+sensorMapping/temBin13/bitValue_and0000(sensorMapping/temBin13/bitValue_and00001:O)| NONE(sensorMapping/temBin13/bitValue)    | 1     |
+sensorMapping/temBin13/bitValue_and0001(sensorMapping/temBin13/bitValue_and00011:O)| NONE(sensorMapping/temBin13/bitValue)    | 1     |
+sensorMapping/temBin14/bitValue_and0000(sensorMapping/temBin14/bitValue_and00001:O)| NONE(sensorMapping/temBin14/bitValue)    | 1     |
+sensorMapping/temBin14/bitValue_and0001(sensorMapping/temBin14/bitValue_and00011:O)| NONE(sensorMapping/temBin14/bitValue)    | 1     |
+sensorMapping/temBin15/bitValue_and0000(sensorMapping/temBin15/bitValue_and00001:O)| NONE(sensorMapping/temBin15/bitValue)    | 1     |
+sensorMapping/temBin15/bitValue_and0001(sensorMapping/temBin15/bitValue_and00011:O)| NONE(sensorMapping/temBin15/bitValue)    | 1     |
+-----------------------------------------------------------------------------------+------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.633ns (Maximum Frequency: 94.044MHz)
+   Minimum input arrival time before clock: 2.518ns
+   Maximum output required time after clock: 12.332ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 10.633ns (frequency: 94.044MHz)
+  Total number of paths / destination ports: 1612695 / 2209
+-------------------------------------------------------------------------
+Delay:               10.633ns (Levels of Logic = 36)
+  Source:            sensorMapping/caliberateTemperature/quotient_0 (FF)
+  Destination:       displayTemperature/sep1/remainder_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: sensorMapping/caliberateTemperature/quotient_0 to displayTemperature/sep1/remainder_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.626   1.066  sensorMapping/caliberateTemperature/quotient_0 (sensorMapping/caliberateTemperature/quotient_0)
+     LUT2:I0->O            1   0.479   0.000  displayTemperature/sep1/Msub_numerator_sub0000_lut<0> (displayTemperature/sep1/Msub_numerator_sub0000_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  displayTemperature/sep1/Msub_numerator_sub0000_cy<0> (displayTemperature/sep1/Msub_numerator_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Msub_numerator_sub0000_cy<1> (displayTemperature/sep1/Msub_numerator_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Msub_numerator_sub0000_cy<2> (displayTemperature/sep1/Msub_numerator_sub0000_cy<2>)
+     XORCY:CI->O           2   0.786   1.040  displayTemperature/sep1/Msub_numerator_sub0000_xor<3> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_lut<3>)
+     LUT1:I0->O            1   0.479   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<3>_rt (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<3>_rt)
+     MUXCY:S->O            1   0.435   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<3> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<4> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<5> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<6> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<7> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<8> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<9> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<10> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<11> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<12> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<13> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<14> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<15> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<16> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<17> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<18> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<19> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<20> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<21> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<22> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<23> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<24> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<25> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<26> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<27> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<27>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<28> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<28>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<29> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<29>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<30> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<30>)
+     MUXCY:CI->O           3   0.264   0.830  displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<31> (displayTemperature/sep1/Mcompar_numerator_cmp_lt0000_cy<31>)
+     LUT3:I2->O           33   0.479   1.580  displayTemperature/sep1/remainder_not00011 (displayTemperature/sep1/remainder_not0001)
+     FDE:CE                    0.524          displayTemperature/sep1/remainder_0
+    ----------------------------------------
+    Total                     10.633ns (6.117ns logic, 4.516ns route)
+                                       (57.5% logic, 42.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              2.518ns (Levels of Logic = 2)
+  Source:            owdata (PAD)
+  Destination:       sensorMapping/currentState_3 (FF)
+  Destination Clock: clock rising
+
+  Data Path: owdata to sensorMapping/currentState_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           6   0.715   1.148  owdata_IOBUF (N47)
+     LUT3:I0->O            1   0.479   0.000  sensorMapping/nextState<4>1 (sensorMapping/nextState<4>)
+     FDC:D                     0.176          sensorMapping/currentState_4
+    ----------------------------------------
+    Total                      2.518ns (1.370ns logic, 1.148ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 573 / 12
+-------------------------------------------------------------------------
+Offset:              12.332ns (Levels of Logic = 13)
+  Source:            displayTemperature/digit_25 (FF)
+  Destination:       cathode<0> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: displayTemperature/digit_25 to cathode<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.626   0.976  displayTemperature/digit_25 (displayTemperature/digit_25)
+     LUT4:I0->O            1   0.479   0.000  displayTemperature/ca_cmp_eq00001_wg_lut<0> (displayTemperature/ca_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<0> (displayTemperature/ca_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<1> (displayTemperature/ca_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<2> (displayTemperature/ca_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<3> (displayTemperature/ca_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<4> (displayTemperature/ca_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  displayTemperature/ca_cmp_eq00001_wg_cy<5> (displayTemperature/ca_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O          14   0.264   1.304  displayTemperature/ca_cmp_eq00001_wg_cy<6> (displayTemperature/ca_cmp_eq00001_wg_cy<6>)
+     LUT2:I0->O            1   0.479   0.000  displayTemperature/ca<0>31 (displayTemperature/ca<0>3)
+     MUXF5:I1->O           3   0.314   0.794  displayTemperature/ca<0>3_f5 (displayTemperature/N43)
+     LUT4:I3->O            1   0.479   0.000  displayTemperature/ca<0>841 (displayTemperature/ca<0>84)
+     MUXF5:I1->O           1   0.314   0.681  displayTemperature/ca<0>84_f5 (cathode_0_OBUF)
+     OBUF:I->O                 4.909          cathode_0_OBUF (cathode<0>)
+    ----------------------------------------
+    Total                     12.332ns (8.577ns logic, 3.755ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 28.40 secs
+ 
+--> 
+
+Total memory usage is 225728 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  922 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

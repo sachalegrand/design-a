@@ -1,55 +1,38 @@
-V3 27
-FL H:/12s2/COMP3601/Project/clk_div/clk_div.vhd 2012/08/25.19:02:46 O.61xd
-EN work/clk_div 1346982737 FL H:/12s2/COMP3601/Project/clk_div/clk_div.vhd \
+V3 21
+FL H:/12s2/COMP3601/sensor/display.vhd 2012/10/20.13:17:27 O.61xd
+PH work/display_package 1350974549 FL H:/12s2/COMP3601/sensor/display.vhd \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 PB ieee/std_logic_arith 1308643378 CD display
+EN work/display 1350974550 \
+      FL H:/12s2/COMP3601/sensor/display.vhd PB ieee/STD_LOGIC_UNSIGNED 1308643379 \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/std_logic_arith 1308643378
-AR work/clk_div/Behavioral 1346982738 \
-      FL H:/12s2/COMP3601/Project/clk_div/clk_div.vhd EN work/clk_div 1346982737
-PH work/clk_div_package 1346982739 \
-      FL H:/12s2/COMP3601/Project/clk_div/clk_div.vhd PB ieee/std_logic_1164 1308643377 \
-      PB ieee/NUMERIC_STD 1308643378 CD clk_div
-FL H:/12s2/COMP3601/Project/sensor/decoder.vhd 2012/09/21.23:26:40 O.61xd
-EN work/decoder 1348234003 FL H:/12s2/COMP3601/Project/sensor/decoder.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378
-AR work/decoder/behaviour 1348234004 \
-      FL H:/12s2/COMP3601/Project/sensor/decoder.vhd EN work/decoder 1348234003
-FL H:/12s2/COMP3601/Project/sensor/length_decoder.vhd 2012/09/30.23:21:58 O.61xd
-EN work/length_decoder 1349082296 \
-      FL H:/12s2/COMP3601/Project/sensor/length_decoder.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378
-AR work/length_decoder/behaviour 1349082297 \
-      FL H:/12s2/COMP3601/Project/sensor/length_decoder.vhd \
-      EN work/length_decoder 1349082296
-PH work/length_decoder_package 1349082298 \
-      FL H:/12s2/COMP3601/Project/sensor/length_decoder.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378 CD length_decoder
-FL H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd 2012/10/05.00:41:18 O.61xd
-EN work/PulseLengthDecoder 1349532151 \
-      FL H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378
-AR work/PulseLengthDecoder/behaviour 1349532152 \
-      FL H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd \
-      EN work/PulseLengthDecoder 1349532151
-PH work/PulseLengthDecoderPackage 1349532153 \
-      FL H:/12s2/COMP3601/Project/sensor/PulseLengthDecoder.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378 CD PulseLengthDecoder
-FL H:/12s2/COMP3601/Project/sensor/sensor.vhd 2012/10/07.00:02:24 O.61xd
-EN work/sensor 1349532154 FL H:/12s2/COMP3601/Project/sensor/sensor.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB ieee/std_logic_arith 1308643378 PH work/PulseLengthDecoderPackage 1349532153
-AR work/sensor/behaviour 1349532155 \
-      FL H:/12s2/COMP3601/Project/sensor/sensor.vhd EN work/sensor 1349532154 \
-      CP PulseLengthDecoder
-FL H:/12s2/COMP3601/Project/sensor/timer.vhd 2012/09/10.00:44:07 O.61xd
-EN work/timer 1347628130 FL H:/12s2/COMP3601/Project/sensor/timer.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/timer/Behavioral 1347628131 \
-      FL H:/12s2/COMP3601/Project/sensor/timer.vhd EN work/timer 1347628130
-PH work/timer_package 1347628132 \
-      FL H:/12s2/COMP3601/Project/sensor/timer.vhd PB ieee/std_logic_1164 1308643377 \
-      PB ieee/NUMERIC_STD 1308643378 CD timer
+      PB ieee/std_logic_arith 1308643378 PH work/integer_divider_package 1350974546
+AR work/display/behavioral 1350974551 \
+      FL H:/12s2/COMP3601/sensor/display.vhd EN work/display 1350974550 \
+      CP integer_divider
+FL H:/12s2/COMP3601/sensor/integer_divider.vhd 2012/10/21.13:14:23 O.61xd
+PH work/integer_divider_package 1350974546 \
+      FL H:/12s2/COMP3601/sensor/integer_divider.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 CD integer_divider
+EN work/integer_divider 1350974547 \
+      FL H:/12s2/COMP3601/sensor/integer_divider.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378
+AR work/integer_divider/behaviour 1350974548 \
+      FL H:/12s2/COMP3601/sensor/integer_divider.vhd EN work/integer_divider 1350974547
+FL H:/12s2/COMP3601/sensor/pulse_decoder.vhd 2012/10/22.18:39:43 O.61xd
+PH work/pulse_decoder_package 1350974552 \
+      FL H:/12s2/COMP3601/sensor/pulse_decoder.vhd PB ieee/std_logic_1164 1308643377 \
+      CD pulse_decoder
+EN work/pulse_decoder 1350974553 \
+      FL H:/12s2/COMP3601/sensor/pulse_decoder.vhd PB ieee/std_logic_1164 1308643377
+AR work/pulse_decoder/Behavioral 1350974554 \
+      FL H:/12s2/COMP3601/sensor/pulse_decoder.vhd EN work/pulse_decoder 1350974553
+FL H:/12s2/COMP3601/sensor/sensor.vhd 2012/10/22.19:20:22 O.61xd
+EN work/sensor 1350974555 FL H:/12s2/COMP3601/sensor/sensor.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/STD_LOGIC_SIGNED 1308643379 \
+      PB ieee/NUMERIC_STD 1308643378 PH work/integer_divider_package 1350974546 \
+      PH work/display_package 1350974549 PH work/pulse_decoder_package 1350974552
+AR work/sensor/Behavioral 1350974556 \
+      FL H:/12s2/COMP3601/sensor/sensor.vhd EN work/sensor 1350974555 \
+      CP integer_divider CP display CP pulse_decoder

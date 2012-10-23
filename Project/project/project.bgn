@@ -5,7 +5,7 @@ C:\Xilinx\13.2\ISE_DS\ISE\.
    "project" is an NCD, version 3.2, device xc3s400, package ft256, speed -5
 Opened constraints file project.pcf.
 
-Tue Oct 23 18:03:32 2012
+Tue Oct 23 19:33:33 2012
 
 C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:6 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g DonePin:PullUp -g HswapenPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g DCIUpdateMode:AsRequired -g StartUpClk:JtagClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Match_cycle:Auto -g Security:None -g DonePipe:No -g DriveDone:No project.ncd 
 
@@ -105,15 +105,15 @@ There were 0 CONFIG constraint(s) processed from project.pcf.
 
 
 Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net reset_or0000 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net start_not0001 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net humdLowDown_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net start_or0000 is sourced by
-   a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ca_not0001 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net tempLowUp_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.

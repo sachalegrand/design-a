@@ -1,0 +1,5 @@
+vhdl work "H:\12s2\COMP3601\streaming\pulse_decoder.vhd"
+vhdl work "H:\12s2\COMP3601\streaming\integer_divider.vhd"
+vhdl work "H:\12s2\COMP3601\streaming\sensor.vhd"
+vhdl work "H:\12s2\COMP3601\streaming\display.vhd"
+vhdl work "H:\12s2\COMP3601\streaming\streaming.vhd"

@@ -78,3 +78,14 @@ map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o project_
 par -w -intstyle ise -ol high -t 1 project_map.ncd project.ncd project.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml project.twx project.ncd -o project.twr project.pcf -ucf project.ucf 
 bitgen -intstyle ise -f project.ut project.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/project/project.xst" -ofn "H:/12s2/COMP3601/project/project.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project.ucf -p xc3s400-ft256-5 project.ngc project.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o project_map.ncd project.ngd project.pcf 
+par -w -intstyle ise -ol high -t 1 project_map.ncd project.ncd project.pcf 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/project/project.xst" -ofn "H:/12s2/COMP3601/project/project.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc project.ucf -p xc3s400-ft256-5 project.ngc project.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o project_map.ncd project.ngd project.pcf 
+par -w -intstyle ise -ol high -t 1 project_map.ncd project.ncd project.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml project.twx project.ncd -o project.twr project.pcf -ucf project.ucf 
+bitgen -intstyle ise -f project.ut project.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/project/project.xst" -ofn "H:/12s2/COMP3601/project/project.syr" 

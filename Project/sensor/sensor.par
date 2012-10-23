@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-SAMVIT-NOTEBOOK::  Sun Oct 07 00:03:16 2012
+SAMVIT-NOTEBOOK::  Tue Oct 23 17:43:15 2012
 
 par -w -intstyle ise -ol high -t 1 sensor_map.ncd sensor.ncd sensor.pcf 
 
@@ -18,7 +18,7 @@ WARNING:Security:44 - No license file was found.
        Please run the Xilinx License Configuration Manager
        (xlcm or "Manage Xilinx Licenses")
        to assist in obtaining a license.
-WARNING:Security:42 - Your license support version '2012.10' for WebPack expires in 23 days after which you will not
+WARNING:Security:42 - Your license support version '2012.10' for WebPack expires in 7 days after which you will not
 qualify for Xilinx software updates or new releases.
 
 ----------------------------------------------------------------------
@@ -38,10 +38,10 @@ Device speed data version:  "PRODUCTION 1.39 2011-06-20".
 Device Utilization Summary:
 
    Number of BUFGMUXs                        1 out of 8      12%
-   Number of External IOBs                  16 out of 173     9%
-      Number of LOCed IOBs                  16 out of 16    100%
+   Number of External IOBs                  29 out of 173    16%
+      Number of LOCed IOBs                  29 out of 29    100%
 
-   Number of Slices                       1883 out of 3584   52%
+   Number of Slices                       2411 out of 3584   67%
       Number of SLICEMs                      0 out of 1792    0%
 
 
@@ -54,47 +54,50 @@ Router effort level (-rl):    High
 Starting initial Timing Analysis.  REAL time: 3 secs 
 Finished initial Timing Analysis.  REAL time: 3 secs 
 
-WARNING:Par:288 - The signal selPulse<0>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal selPulse<1>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal selPulse<2>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal selPulse<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal selectVar<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal selectVar<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal selectVar<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal selectVar<3>_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
 Total REAL time at the beginning of Placer: 3 secs 
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ccbddadc) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:8f6ee5cc) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:ccbddadc) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:8f6ee5cc) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ccbddadc) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:8f6ee5cc) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:4532976d) REAL time: 4 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:d8fb9d0c) REAL time: 4 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:4532976d) REAL time: 4 secs 
+Phase 5.36  Local Placement Optimization (Checksum:d8fb9d0c) REAL time: 4 secs 
 
 Phase 6.8  Global Placement
-...........................................
-..
-Phase 6.8  Global Placement (Checksum:e9616958) REAL time: 6 secs 
+........................................................................................
+...
+........................................
+....
+....
+Phase 6.8  Global Placement (Checksum:d543c9b4) REAL time: 12 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:e9616958) REAL time: 6 secs 
+Phase 7.5  Local Placement Optimization (Checksum:d543c9b4) REAL time: 12 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:c521af29) REAL time: 9 secs 
+Phase 8.18  Placement Optimization (Checksum:4cdd2beb) REAL time: 16 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:c521af29) REAL time: 9 secs 
+Phase 9.5  Local Placement Optimization (Checksum:4cdd2beb) REAL time: 16 secs 
 
-Total REAL time to Placer completion: 9 secs 
-Total CPU  time to Placer completion: 9 secs 
+Total REAL time to Placer completion: 16 secs 
+Total CPU  time to Placer completion: 16 secs 
 Writing design to file sensor.ncd
 
 
@@ -102,26 +105,28 @@ Writing design to file sensor.ncd
 Starting Router
 
 
-Phase  1  : 11089 unrouted;      REAL time: 11 secs 
+Phase  1  : 13850 unrouted;      REAL time: 18 secs 
 
-Phase  2  : 10106 unrouted;      REAL time: 11 secs 
+Phase  2  : 12747 unrouted;      REAL time: 18 secs 
 
-Phase  3  : 3163 unrouted;      REAL time: 12 secs 
+Phase  3  : 4610 unrouted;      REAL time: 20 secs 
 
-Phase  4  : 3276 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  4  : 4660 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
 
 Updating file: sensor.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 3 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 3 secs 
 
-Total REAL time to Router completion: 23 secs 
-Total CPU time to Router completion: 22 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 4 secs 
+
+Total REAL time to Router completion: 1 mins 4 secs 
+Total CPU time to Router completion: 1 mins 3 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -139,167 +144,103 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         clock_BUFGP |      BUFGMUX6| No   |  730 |  0.019     |  0.902      |
+|         clock_BUFGP |      BUFGMUX6| No   |  848 |  0.019     |  0.902      |
 +---------------------+--------------+------+------+------------+-------------+
-|chk_bit04/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.241      |
+|temBin09/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.257      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit11/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  0.966      |
+|humBin00/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.949      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit03/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.276      |
+|humBin01/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.766      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit01/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.010      |
+|humBin10/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.035      |
 +---------------------+--------------+------+------+------------+-------------+
-|chk_bit05/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.565      |
+|humBin02/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.991      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit12/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.616      |
+|humBin11/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.796      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit04/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.602      |
+|humBin03/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.259      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit10/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.127      |
+|temBin00/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.231      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit02/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.546      |
+|humBin12/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.528      |
 +---------------------+--------------+------+------+------------+-------------+
-|chk_bit06/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  2.034      |
+|humBin04/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.999      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit13/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.231      |
+|temBin01/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.119      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit05/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.313      |
+|humBin13/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.746      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit11/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.581      |
+|humBin05/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.710      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit03/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.610      |
+|temBin10/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.231      |
 +---------------------+--------------+------+------+------------+-------------+
-|chk_bit07/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.103      |
+|temBin02/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.811      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit14/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  0.755      |
+|humBin14/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.685      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit06/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.562      |
+|humBin06/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.080      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit12/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  0.685      |
+|temBin11/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.769      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit04/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.277      |
+|temBin03/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.922      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit15/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.610      |
+|humBin15/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.240      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit07/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.014      |
+|humBin07/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.685      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit13/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.606      |
+|temBin12/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.394      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit05/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  0.971      |
+|temBin04/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.315      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit08/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.611      |
+|humBin08/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.537      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit14/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  0.971      |
+|temBin13/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.991      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit06/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.599      |
+|temBin05/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.303      |
 +---------------------+--------------+------+------+------------+-------------+
-|temp_bit09/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.626      |
+|humBin09/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.094      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit15/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.320      |
+|temBin14/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.230      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit07/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.513      |
+|temBin06/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.276      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit08/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.080      |
+|temBin15/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.972      |
 +---------------------+--------------+------+------+------------+-------------+
-|hum_bit09/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.410      |
+|temBin07/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  0.769      |
 +---------------------+--------------+------+------+------------+-------------+
-|chk_bit00/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.592      |
-+---------------------+--------------+------+------+------------+-------------+
-|chk_bit01/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.309      |
-+---------------------+--------------+------+------+------------+-------------+
-|temp_bit00/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.165      |
-+---------------------+--------------+------+------+------------+-------------+
-|chk_bit02/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  1.276      |
-+---------------------+--------------+------+------+------------+-------------+
-|temp_bit01/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  0.685      |
-+---------------------+--------------+------+------+------------+-------------+
-|chk_bit03/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  0.685      |
-+---------------------+--------------+------+------+------------+-------------+
-|temp_bit10/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.601      |
-+---------------------+--------------+------+------+------------+-------------+
-|temp_bit02/Mcompar_b |              |      |      |            |             |
-|itValue_cmp_lt0000_c |              |      |      |            |             |
-|                y<9> |         Local|      |    1 |  0.000     |  1.602      |
-+---------------------+--------------+------+------+------------+-------------+
-|hum_bit00/Mcompar_bi |              |      |      |            |             |
-|tValue_cmp_lt0000_cy |              |      |      |            |             |
-|                 <9> |         Local|      |    1 |  0.000     |  0.991      |
+|temBin08/bitValue_no |              |      |      |            |             |
+|               t0001 |         Local|      |    1 |  0.000     |  1.615      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -319,8 +260,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     9.482ns|     N/A|           0
-  ck_BUFGP                                  | HOLD        |     0.815ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|    11.081ns|     N/A|           0
+  ck_BUFGP                                  | HOLD        |     0.819ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -338,10 +279,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 4 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 24 secs 
-Total CPU time to PAR completion: 24 secs 
+Total REAL time to PAR completion: 1 mins 6 secs 
+Total CPU time to PAR completion: 1 mins 5 secs 
 
-Peak Memory Usage:  208 MB
+Peak Memory Usage:  234 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

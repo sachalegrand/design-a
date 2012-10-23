@@ -44,10 +44,10 @@ Setup/Hold to clock clock
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-owdata      |    1.965(R)|    0.194(R)|clock_BUFGP       |   0.000|
-rangeType   |    5.838(R)|   -0.366(R)|clock_BUFGP       |   0.000|
-selectMode  |    3.104(R)|   -0.364(R)|clock_BUFGP       |   0.000|
-setRange    |    2.227(R)|   -0.255(R)|clock_BUFGP       |   0.000|
+owdata      |    2.064(R)|   -0.176(R)|clock_BUFGP       |   0.000|
+rangeType   |    5.266(R)|   -0.638(R)|clock_BUFGP       |   0.000|
+selectMode  |    3.178(R)|   -0.421(R)|clock_BUFGP       |   0.000|
+setRange    |    2.457(R)|   -0.354(R)|clock_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
@@ -55,7 +55,19 @@ Clock clock to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-owdata      |   10.584(R)|clock_BUFGP       |   0.000|
+an<0>       |   12.855(R)|clock_BUFGP       |   0.000|
+an<1>       |   12.424(R)|clock_BUFGP       |   0.000|
+an<2>       |   13.208(R)|clock_BUFGP       |   0.000|
+an<3>       |   12.771(R)|clock_BUFGP       |   0.000|
+ca<0>       |   16.018(R)|clock_BUFGP       |   0.000|
+ca<1>       |   17.004(R)|clock_BUFGP       |   0.000|
+ca<2>       |   16.251(R)|clock_BUFGP       |   0.000|
+ca<3>       |   15.496(R)|clock_BUFGP       |   0.000|
+ca<4>       |   13.762(R)|clock_BUFGP       |   0.000|
+ca<5>       |   16.998(R)|clock_BUFGP       |   0.000|
+ca<6>       |   16.279(R)|clock_BUFGP       |   0.000|
+ca<7>       |   11.017(R)|clock_BUFGP       |   0.000|
+owdata      |   10.286(R)|clock_BUFGP       |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
@@ -63,18 +75,18 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |   11.694|         |         |         |
+clock          |   11.397|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Oct 23 18:03:28 2012 
+Analysis completed Tue Oct 23 19:33:30 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 130 MB
+Peak Memory Usage: 129 MB
 
 
 

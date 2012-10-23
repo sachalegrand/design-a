@@ -1,0 +1,171 @@
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+xst -intstyle ise -ifn "H:/12s2/COMP3601/streaming/streaming.xst" -ofn "H:/12s2/COMP3601/streaming/streaming.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc streaming.ucf -p xc3s400-ft256-5 streaming.ngc streaming.ngd  
+map -intstyle ise -p xc3s400-ft256-5 -cm area -ir off -pr off -c 100 -o streaming_map.ncd streaming.ngd streaming.pcf 
+par -w -intstyle ise -ol high -t 1 streaming_map.ncd streaming.ncd streaming.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml streaming.twx streaming.ncd -o streaming.twr streaming.pcf -ucf streaming.ucf 
+bitgen -intstyle ise -f streaming.ut streaming.ncd 

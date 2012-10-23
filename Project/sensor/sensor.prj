@@ -1,2 +1,4 @@
-vhdl work "PulseLengthDecoder.vhd"
+vhdl work "integer_divider.vhd"
+vhdl work "pulse_decoder.vhd"
+vhdl work "display.vhd"
 vhdl work "sensor.vhd"

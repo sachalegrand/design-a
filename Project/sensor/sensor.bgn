@@ -5,7 +5,7 @@ C:\Xilinx\13.2\ISE_DS\ISE\.
    "sensor" is an NCD, version 3.2, device xc3s400, package ft256, speed -5
 Opened constraints file sensor.pcf.
 
-Sun Oct 07 00:03:53 2012
+Tue Oct 23 17:44:34 2012
 
 C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:6 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g DonePin:PullUp -g HswapenPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g DCIUpdateMode:AsRequired -g StartUpClk:JtagClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Match_cycle:Auto -g Security:None -g DonePipe:No -g DriveDone:No sensor.ncd 
 
@@ -105,13 +105,13 @@ There were 0 CONFIG constraint(s) processed from sensor.pcf.
 
 
 Running DRC.
-WARNING:PhysDesignRules:367 - The signal <selPulse<0>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<0>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<1>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<1>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<2>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<3>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<3>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
@@ -127,7 +127,7 @@ WARNING:Security:44 - No license file was found.
        (xlcm or "Manage Xilinx Licenses")
        to assist in obtaining a license.
 WARNING:Security:42 - Your license support version '2012.10' for WebPack expires
-in 23 days after which you will not qualify for Xilinx software updates or new
+in 7 days after which you will not qualify for Xilinx software updates or new
 releases.
 
 Creating bit map...

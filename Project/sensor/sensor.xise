@@ -17,14 +17,22 @@
   <files>
     <file xil_pn:name="sensor.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
     <file xil_pn:name="sensor.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="PulseLengthDecoder.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="79"/>
+    <file xil_pn:name="integer_divider.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="53"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
+    </file>
+    <file xil_pn:name="display.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="54"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+    </file>
+    <file xil_pn:name="pulse_decoder.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="55"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
   </files>
 
@@ -86,7 +94,6 @@
     <property xil_pn:name="Enable BitStream Compression" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Cyclic Redundancy Checking (CRC)" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Debugging of Serial Mode BitStream" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Enable Hardware Co-Simulation" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Internal Done Pipe" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Message Filtering" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Outputs (Output Events)" xil_pn:value="Default (5)" xil_pn:valueState="default"/>
@@ -128,7 +135,7 @@
     <property xil_pn:name="ISim UUT Instance Name" xil_pn:value="UUT" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|sensor|behaviour" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|sensor|Behavioral" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top File" xil_pn:value="sensor.vhd" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/sensor" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -323,8 +330,8 @@
     <property xil_pn:name="PROP_PostSynthSimTop" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_PostXlateSimTop" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_PreSynthesis" xil_pn:value="PreSynthesis" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2012-09-07T11:34:39" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="30BADEEAED5147B59DE2732A6412DCD8" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2012-10-20T11:57:34" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="B4B19B6FE42B4606B7D6859CD6C5E272" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
   </properties>

@@ -1,5 +1,0 @@
-set -tmpdir "H:/12s2/COMP3601/Project/sensor/xst/projnav.tmp"
-set -xsthdpdir "H:/12s2/COMP3601/Project/sensor/xst"
-elaborate
--ifn decoder.prj
--ifmt mixed

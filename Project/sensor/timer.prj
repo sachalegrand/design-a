@@ -1,2 +1,0 @@
-vhdl work "../clk_div/clk_div.vhd"
-vhdl work "sensor.vhd"

@@ -99,11 +99,11 @@ architecture Behavioral of project is
 				when SnapshotProcessing =>
 					if (doneFlag = '1') then nextState <= SnapshotDone; else nextState <= SnapshotProcessing; end if;
 				when StreamingProcessing =>
-					nextState <= StreamingProcessing;
+					if (doneFlag = '1') then nextState <= StreamingDone; else nextState <= StreamingProcessing; end if;
 				when SnapshotDone =>
 					nextState <= SnapshotDone;
 				when StreamingDone =>
-					nextState <= StreamingDone;
+					nextState <= StreamingProcessing;
 			end case;
 		end process;
 		
@@ -136,12 +136,17 @@ architecture Behavioral of project is
 				an <= temperatureAnode;
 				ca <= temperatureCathode;
 			elsif (currentState = StreamingProcessing) then
-				--
+				an <= temperatureAnode;
+				ca <= temperatureCathode;
+				start <= '1';
+				reset <= '0';
 			elsif (currentState = SnapshotDone) then
 				an <= temperatureAnode;
 				ca <= temperatureCathode;
 			elsif (currentState = StreamingDone) then
-				--
+				an <= temperatureAnode;
+				ca <= temperatureCathode;
+				reset <= '1';
 			else
 				--
 			end if;

@@ -1,17 +1,17 @@
 Release 13.2 Drc O.61xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Sun Oct 07 00:03:53 2012
+Tue Oct 23 17:44:34 2012
 
 drc -z sensor.ncd sensor.pcf
 
-WARNING:PhysDesignRules:367 - The signal <selPulse<0>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<0>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<1>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<1>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<2>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <selPulse<3>_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <selectVar<3>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

@@ -8,7 +8,31 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/display.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/integer_divider.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/mode_display.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/project.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/pulse_decoder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/range_display.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/range_setter.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/sensor.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;H:/12s2/COMP3601/project/temperature_display.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

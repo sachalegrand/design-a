@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-SAMVIT-NOTEBOOK::  Tue Oct 23 18:02:08 2012
+SAMVIT-NOTEBOOK::  Tue Oct 23 19:32:24 2012
 
 par -w -intstyle ise -ol high -t 1 project_map.ncd project.ncd project.pcf 
 
@@ -41,7 +41,7 @@ Device Utilization Summary:
    Number of External IOBs                  21 out of 173    12%
       Number of LOCed IOBs                  21 out of 21    100%
 
-   Number of Slices                       2072 out of 3584   57%
+   Number of Slices                       2075 out of 3584   57%
       Number of SLICEMs                      0 out of 1792    0%
 
 
@@ -60,40 +60,40 @@ Total REAL time at the beginning of Placer: 3 secs
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:b22e58a6) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:d4c4202d) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:b22e58a6) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:d4c4202d) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b22e58a6) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:d4c4202d) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:eed564a3) REAL time: 4 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:e65b72f) REAL time: 4 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:eed564a3) REAL time: 4 secs 
+Phase 5.36  Local Placement Optimization (Checksum:e65b72f) REAL time: 4 secs 
 
 Phase 6.8  Global Placement
-...........................................................................................................................................
-..
-.......................................................................................................................
+.....................................................................................................................
 ...
+.............................................................................................................................
+....
 .....
-Phase 6.8  Global Placement (Checksum:2785366c) REAL time: 11 secs 
+Phase 6.8  Global Placement (Checksum:ec1af823) REAL time: 12 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:2785366c) REAL time: 11 secs 
+Phase 7.5  Local Placement Optimization (Checksum:ec1af823) REAL time: 12 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:dc353929) REAL time: 16 secs 
+Phase 8.18  Placement Optimization (Checksum:db84c747) REAL time: 18 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:dc353929) REAL time: 16 secs 
+Phase 9.5  Local Placement Optimization (Checksum:db84c747) REAL time: 18 secs 
 
-Total REAL time to Placer completion: 16 secs 
-Total CPU  time to Placer completion: 16 secs 
+Total REAL time to Placer completion: 18 secs 
+Total CPU  time to Placer completion: 18 secs 
 Writing design to file project.ncd
 
 
@@ -101,13 +101,13 @@ Writing design to file project.ncd
 Starting Router
 
 
-Phase  1  : 11970 unrouted;      REAL time: 18 secs 
+Phase  1  : 11983 unrouted;      REAL time: 19 secs 
 
-Phase  2  : 10971 unrouted;      REAL time: 18 secs 
+Phase  2  : 11001 unrouted;      REAL time: 20 secs 
 
-Phase  3  : 4017 unrouted;      REAL time: 20 secs 
+Phase  3  : 3955 unrouted;      REAL time: 22 secs 
 
-Phase  4  : 4085 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  4  : 3988 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 29 secs 
 
@@ -115,16 +115,16 @@ Updating file: project.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 32 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 8 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 55 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 55 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
-WARNING:Route:455 - CLK Net:start_or0000 may have excessive skew because 
-      0 CLK pins and 7 NON_CLK pins failed to route using a CLK template.
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 56 secs 
+WARNING:Route:455 - CLK Net:tempLowUp_not0001 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 1 mins 10 secs 
-Total CPU time to Router completion: 1 mins 10 secs 
+Total REAL time to Router completion: 56 secs 
+Total CPU time to Router completion: 56 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -142,63 +142,63 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         clock_BUFGP |      BUFGMUX6| No   |  803 |  0.019     |  0.902      |
+|         clock_BUFGP |      BUFGMUX6| No   |  804 |  0.019     |  0.902      |
 +---------------------+--------------+------+------+------------+-------------+
-| humdLowDown_not0001 |         Local|      |    2 |  0.058     |  1.779      |
+|        reset_or0000 |         Local|      |    2 |  0.065     |  2.536      |
 +---------------------+--------------+------+------+------------+-------------+
-|        start_or0000 |         Local|      |    9 |  0.180     |  2.706      |
-+---------------------+--------------+------+------+------------+-------------+
-|          ca_not0001 |         Local|      |   12 |  0.110     |  2.486      |
+|       start_not0001 |         Local|      |    1 |  0.000     |  1.188      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  0/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.966      |
+|  0/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.635      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  1/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.357      |
+|  1/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.241      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  2/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.419      |
+|  2/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.246      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  0/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.648      |
+|  0/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.921      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  3/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.296      |
+|  3/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.074      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  1/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.537      |
+|  1/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.931      |
 +---------------------+--------------+------+------+------------+-------------+
-|   tempLowUp_not0001 |         Local|      |    3 |  0.083     |  2.621      |
+| humdLowDown_not0001 |         Local|      |    2 |  0.029     |  2.483      |
++---------------------+--------------+------+------+------------+-------------+
+|   tempLowUp_not0001 |         Local|      |    2 |  0.000     |  0.614      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  4/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.779      |
+|  4/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.237      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  2/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.921      |
+|  2/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.286      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  5/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.274      |
+|  5/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.840      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  3/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.276      |
+|  3/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.927      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  6/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.644      |
+|  6/bitValue_not0001 |         Local|      |    1 |  0.000     |  2.012      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  4/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.926      |
+|  4/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.345      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  7/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.931      |
+|  7/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.642      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin1 |              |      |      |            |             |
-|  5/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.965      |
+|  5/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.971      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  8/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.763      |
+|  8/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.521      |
 +---------------------+--------------+------+------+------------+-------------+
 |snapshotMode/temBin0 |              |      |      |            |             |
-|  9/bitValue_not0001 |         Local|      |    1 |  0.000     |  1.582      |
+|  9/bitValue_not0001 |         Local|      |    1 |  0.000     |  0.965      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -218,8 +218,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|    11.694ns|     N/A|           0
-  ck_BUFGP                                  | HOLD        |     0.796ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|    11.397ns|     N/A|           0
+  ck_BUFGP                                  | HOLD        |     0.800ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -235,10 +235,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 1 mins 12 secs 
-Total CPU time to PAR completion: 1 mins 11 secs 
+Total REAL time to PAR completion: 58 secs 
+Total CPU time to PAR completion: 58 secs 
 
-Peak Memory Usage:  231 MB
+Peak Memory Usage:  230 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

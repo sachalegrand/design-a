@@ -3,12 +3,12 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sun Oct 07 00:03:14 2012">
+<application name="pn" timeStamp="Tue Oct 23 17:43:14 2012">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="30BADEEAED5147B59DE2732A6412DCD8" type="project"/>
-<property name="ProjectIteration" value="213" type="project"/>
-<property name="ProjectFile" value="H:/12s2/COMP3601/Project/sensor/sensor.xise" type="project"/>
-<property name="ProjectCreationTimestamp" value="2012-09-07T11:34:39" type="project"/>
+<property name="ProjectID" value="B4B19B6FE42B4606B7D6859CD6C5E272" type="project"/>
+<property name="ProjectIteration" value="25" type="project"/>
+<property name="ProjectFile" value="H:/12s2/COMP3601/sensor/sensor.xise" type="project"/>
+<property name="ProjectCreationTimestamp" value="2012-10-20T11:57:34" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
@@ -22,9 +22,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
 <property name="PROP_UseSmartGuide" value="false" type="design"/>
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
-<property name="PROP_intProjectCreationTimestamp" value="2012-09-07T11:34:39" type="design"/>
-<property name="PROP_intWbtProjectID" value="30BADEEAED5147B59DE2732A6412DCD8" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="213" type="process"/>
+<property name="PROP_intProjectCreationTimestamp" value="2012-10-20T11:57:34" type="design"/>
+<property name="PROP_intWbtProjectID" value="B4B19B6FE42B4606B7D6859CD6C5E272" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="25" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
@@ -38,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-5" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="2" type="source"/>
+<property name="FILE_VHDL" value="4" type="source"/>
 </section>
 </application>
 </document>
