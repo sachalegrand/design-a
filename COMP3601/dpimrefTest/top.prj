@@ -1,3 +1,4 @@
+vhdl work "mem_filler.vhd"
 vhdl work "memory.vhd"
 vhdl work "dpimref.vhd"
 vhdl work "top.vhd"

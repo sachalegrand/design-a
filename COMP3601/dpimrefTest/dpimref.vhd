@@ -39,11 +39,7 @@
 --		pwait		- transfer synchronization (described in reference manual
 --						as WAIT)
 --		rgSwt		- switch inputs from the DIO4
---		ldb			- led gate signal for the DIO4
---		rgBtn		- button inputs from the DIO4
---		btn			- button on system board (D2SB or D2FT)
---		led			- led on the system board
---		
+
 ----------------------------------------------------------------------------
 -- Revision History:
 --  06/09/2004(GeneA): created
@@ -69,12 +65,22 @@ entity dpimref is
 			dstb 	: in std_logic;
 			pwr 	: in std_logic;
 			pwait 	: out std_logic;
+			data_from_mem : in std_logic_vector(15 downto 0);
+			addr_to_mem : out std_logic_vector(22 downto 0);
+			mem_read_enable : out std_logic;
+			mem_done_read : in std_logic;
+			stream_mode : out std_logic;
+			snap_mode : out std_logic;
+			alarm_setup : out std_logic;
+			alarm_temp_min_data : out std_logic_vector(15 downto 0);
+			alarm_temp_max_data : out std_logic_vector(15 downto 0);
+			alarm_hum_min_data : out std_logic_vector(15 downto 0);
+			alarm_hum_max_data : out std_logic_vector(15 downto 0);
+			--testing signals
+			mem_write_enable : in std_logic; 
+			mem_fill_counter : in std_logic_vector (7 downto 0);
 			rgSwt	: in std_logic_vector(7 downto 0);
-			rgBtn	: in std_logic_vector(4 downto 0);
-			rgLeds : out std_logic_vector(7 downto 0); -- testing purpose
-			btn		: in std_logic	;
-			ldg		: out std_logic;
-			led		: out std_logic
+			rgLeds : out std_logic_vector(7 downto 0)
 			);
 end dpimref;
 
@@ -132,72 +138,90 @@ architecture Behavioral of dpimref is
 	signal	busEppIn	: std_logic_vector(7 downto 0);
 	signal	busEppData	: std_logic_vector(7 downto 0);
 
-
-
 	-- Registers
 	signal	regEppAdr	: std_logic_vector(3 downto 0);
 	signal	regData0	: std_logic_vector(7 downto 0);
 	signal	regData1	: std_logic_vector(7 downto 0);
-   signal  regData2	: std_logic_vector(7 downto 0);
-   signal  regData3	: std_logic_vector(7 downto 0);
-   signal  regData4	: std_logic_vector(7 downto 0);
+   signal  	regData2	: std_logic_vector(7 downto 0);
+   signal  	regData3	: std_logic_vector(7 downto 0);
+   signal  	regData4	: std_logic_vector(7 downto 0);
 	signal	regData5	: std_logic_vector(7 downto 0);
 	signal	regData6	: std_logic_vector(7 downto 0);
 	signal	regData7	: std_logic_vector(7 downto 0);
 	
-	signal	regDataFromComp0	: std_logic_vector(7 downto 0);
-	signal	regDataFromComp1	: std_logic_vector(7 downto 0);
-   signal  	regDataFromComp2	: std_logic_vector(7 downto 0);
-   signal  	regDataFromComp3	: std_logic_vector(7 downto 0);
-   signal  	regDataFromComp4	: std_logic_vector(7 downto 0);
-	signal	regDataFromComp5	: std_logic_vector(7 downto 0);
-	signal	regDataFromComp6	: std_logic_vector(7 downto 0);
-	signal	regDataFromComp7	: std_logic_vector(7 downto 0);
+	signal	regDataFromComp0	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromComp1	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromComp2	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromComp3	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromComp4	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromComp5	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromComp6	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromComp7	: std_logic_vector(7 downto 0) := "00000000";
 
-	signal	regDataFromBoard0	: std_logic_vector(7 downto 0);
-	signal	regDataFromBoard1	: std_logic_vector(7 downto 0);
-   signal  	regDataFromBoard2	: std_logic_vector(7 downto 0);
-   signal  	regDataFromBoard3	: std_logic_vector(7 downto 0);
-   signal  	regDataFromBoard4	: std_logic_vector(7 downto 0);
-	signal	regDataFromBoard5	: std_logic_vector(7 downto 0);
-	signal	regDataFromBoard6	: std_logic_vector(7 downto 0);
-	signal	regDataFromBoard7	: std_logic_vector(7 downto 0);	
-	
-	signal	cntr		: std_logic_vector(23 downto 0); 
+	signal	regDataFromBoard0	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromBoard1	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromBoard2	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromBoard3	: std_logic_vector(7 downto 0) := "00000000";
+   signal  	regDataFromBoard4	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromBoard5	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromBoard6	: std_logic_vector(7 downto 0) := "00000000";
+	signal	regDataFromBoard7	: std_logic_vector(7 downto 0) := "00000000";	
 
 	-- USB protocol various flags
 	signal isSnapRequest : std_logic;
 	signal isStreamRequest : std_logic;
 	signal isAlarmRequest : std_logic;
-	signal isUpdateFromBoard : std_logic;
-	signal isBoardWriting : std_logic;	
-	signal isCompWriting : std_logic; -- Writing busy flags	
+	signal isCompMaster : std_logic; -- Writing busy flags	
 	signal isCompWaitingData : std_logic; -- the computer sets this flag to announce it has received what it wanted
 
+--	signal sig_alarm_temp_min : std_logic_vector(15 downto 0) := "0000000000000000";
+--	signal sig_alarm_temp_max : std_logic_vector(15 downto 0) := "0000000000000000";
+--	signal sig_alarm_hum_min : std_logic_vector(15 downto 0) := "0000000000000000";
+--	signal sig_alarm_hum_max : std_logic_vector(15 downto 0) := "0000000000000000";
 
-	-- Testing signals
-	signal tempDataLow : std_logic_vector(7 downto 0);
-	signal tempDataHigh : std_logic_vector(7 downto 0);
-	signal humDataLow : std_logic_vector(7 downto 0);
-	signal humDataHigh : std_logic_vector(7 downto 0);
-	signal timeDataLow : std_logic_vector(7 downto 0);
-	signal timeDataHigh : std_logic_vector(7 downto 0);
+--test
+	signal sig_alarm_temp_min : std_logic_vector(15 downto 0) := "00010000"&"00000001";
+	signal sig_alarm_temp_max : std_logic_vector(15 downto 0) := "00001000"&"00010000";
+	signal sig_alarm_hum_min : std_logic_vector(15 downto 0) := "00100000"&"00001000";
+	signal sig_alarm_hum_max : std_logic_vector(15 downto 0) := "00010000"&"00010000";
 	
+	signal isAlStopRequest : std_logic;
+	signal isAlSuppRequest : std_logic;
+	signal isAlTempMin : std_logic;
+	signal isAlTempMax : std_logic;
+	signal isAlHumMin : std_logic;
+	signal isAlHumMax : std_logic;
+
+
+	
+	-- States of the Memory Reading FSM
+	constant stReady : std_logic :='0';
+	constant stMemRead : std_logic := '1';
+
+	signal	stCur		: std_logic := stReady;
+	signal	stNext	: std_logic;
+
+	-- States of the Alarm Information Receiving Informations
+--	constant stAlReady : std_logic_vector(2 downto 0) := "000";
+--	constant stAlTempMin : std_logic_vector(2 downto 0) := "001";
+--	constant stAlTempMax : std_logic_vector(2 downto 0) := "010";	
+--	constant stAlHumMin : std_logic_vector(2 downto 0) := "011";
+--	constant stAlHumMax : std_logic_vector(2 downto 0) := "100";	
+--	
+--	signal	stAlCur		: std_logic_vector(2 downto 0) := stAlReady;
+--	signal	stAlNext	: std_logic_vector(2 downto 0);
+
+	signal sig_data_from_mem : std_logic_vector(15 downto 0);
+	
+	signal sig_mem_read_enable : std_logic;
+	
+	signal my_addr :std_logic_vector (22 downto 0);
+	signal last_mem_addr : std_logic_vector(15 downto 0) := conv_std_logic_vector(65535, 16);
 ------------------------------------------------------------------------
 -- Module Implementation
 ------------------------------------------------------------------------
-
 begin
- 
-	-- testing signals
-	tempDataLow <= "00000101";
-	tempDataHigh <= "00000001";
-	humDataLow <= "00010001";
-	humDataHigh <= "00000011";
-	timeDataLow <= "00001101";
-	timeDataHigh <= "00011000";
-
-
+	
     ------------------------------------------------------------------------
 	-- Map basic status and control signals
     ------------------------------------------------------------------------
@@ -208,6 +232,7 @@ begin
 	ctlEppDstb <= dstb;
 	ctlEppWr   <= pwr;
 	pwait      <= ctlEppWait;	-- drive WAIT from state machine output
+
 
 	-- Data bus direction control. The internal input data bus always
 	-- gets the port data bus. The port data bus drives the internal
@@ -220,17 +245,18 @@ begin
 	-- Select either address or data onto the internal output data bus.
 	busEppOut <= "0000" & regEppAdr when ctlEppAstb = '0' else busEppData;
 
-	ldg <= '1';
-
 	-- comp or board busy flag
-	isCompWriting <= regData0(7);
-	--isBoardWriting
-	isCompWaitingData <= regData0(5);
-	--isUpdateFromBoard
+	isCompMaster <= regDataFromComp0(7);
+	isCompWaitingData <= regDataFromComp0(5);
 	
-	isAlarmRequest <= regData0(2);
-	isStreamRequest <= regData0(1);
-	isSnapRequest <= regData0(0);
+	isAlarmRequest <= regDataFromComp0(2);
+	isAlTempMin <= regDataFromComp1(7);
+	isAlTempMax <= regDataFromComp1(6);
+	isAlHumMin <= regDataFromComp1(5);
+	isAlHumMax <= regDataFromComp1(4);
+	
+	isStreamRequest <= regDataFromComp0(1);
+	isSnapRequest <= regDataFromComp0(0);
 
 	-- Assign regData registers according to comp or board writing to them
 	regData0 <= regDataFromComp0 when isCompWaitingData = '0' else
@@ -241,9 +267,9 @@ begin
 					regDataFromBoard2;
 	regData3 <= regDataFromComp3 when isCompWaitingData = '0' else
 					regDataFromBoard3;
-	regData4 <= regDataFromComp4 when isCompWaitingData = '0' else
+	regData4 <= regDataFromComp4 when isCompWaitingData = '1' else
 					regDataFromBoard4;	
-	regData5 <= regDataFromComp5 when isCompWaitingData = '0' else
+	regData5 <= regDataFromComp5 when isCompWaitingData = '1' else
 					regDataFromBoard5;
 	regData6 <= regDataFromComp6 when isCompWaitingData = '0' else
 					regDataFromBoard6;
@@ -260,38 +286,101 @@ begin
 					regData6 when regEppAdr = "0110" else
 					regData7 when regEppAdr = "0111" else
 					rgSwt    when regEppAdr = "1000" else
-					"000" & rgBtn when regEppAdr = "1001" else
 					"00000000";
 
+process (clkMain)
+begin
+		if clkMain = '1' and clkMain'Event then
+				stCur <= stNext;
+		end if;
+end process;
+
+
+process(stCur, stNext, mem_done_read)
+begin
+	case stCur is 
+		when stReady =>
+			stNext <= stMemRead;
+		when stMemRead =>
+			if mem_done_read = '1' then
+				stNext <= stReady;
+			else
+				stNext <= stMemRead;
+			end if;
+		when others =>
+			stNext <= stReady;
+	end case;
+end process;
+
+
+	my_addr <= conv_std_logic_vector(0, 7) & regDataFromComp4 & regDataFromComp5;	
+	regDataFromBoard4 <= last_mem_addr(15 downto 8);
+	regDataFromBoard5 <= last_mem_addr(7 downto 0);
+	sig_data_from_mem <= data_from_mem;
+
+
+process(clkMain)
+begin
+
+	if clkMain'event and clkMain ='1' then
+		if stCur = stMemRead then	
+--			regDataFromBoard2 <= sig_data_from_mem(15 downto 8);
+--			regDataFromBoard3 <= sig_data_from_mem(7 downto 0);
+			addr_to_mem <= my_addr;
+			sig_mem_read_enable <= '1';
+		else 
+			sig_mem_read_enable <= '0';
+			
+		end if;
+	end if;
+
+end process;
 
    ------------------------------------------------------------------------
 	-- USB Protocol Implementation Processes
    ------------------------------------------------------------------------
-
-	process (isCompWriting, isCompWaitingData)
+	process (isCompMaster, isCompWaitingData, isAlarmRequest, isAlTempMin, isAlTempMax, isAlHumMin, isAlHumMax)
 	begin
-		if  isCompWriting = '1' and isCompWaitingData = '1' then
---			if isTempData = '1' then
---				regDataFromBoard2 <= tempDataHigh;
---				regDataFromBoard3 <= tempDataLow;
---			elsif isHumData = '1' then
---				regDataFromBoard2 <= humDataHigh;
---				regDataFromBoard3 <= humDataLow;
---			elsif isTimeData = '1' then
---				regDataFromBoard2 <= timeDataHigh;
---				regDataFromBoard3 <= timeDataLow;
---			else
---				regDataFromBoard2 <= regDataFromComp2;
---				regDataFromBoard3 <= regDataFromComp3;
---			end if;		
-
+		if isCompMaster = '1' then
+			if isCompWaitingData = '1' then
+				if isAlTempMin = '1' then
+					regDataFromBoard2 <= sig_alarm_temp_min(15 downto 8);
+					regDataFromBoard3 <= sig_alarm_temp_min(7 downto 0);
+				elsif isAlTempMax = '1' then
+					regDataFromBoard2 <= sig_alarm_temp_max(15 downto 8);
+					regDataFromBoard3 <= sig_alarm_temp_max(7 downto 0);
+				elsif isAlHumMin = '1' then
+					regDataFromBoard2 <= sig_alarm_hum_min(15 downto 8);
+					regDataFromBoard3 <= sig_alarm_hum_min(7 downto 0);
+				elsif isAlHumMax = '1' then
+					regDataFromBoard2 <= sig_alarm_hum_max(15 downto 8);
+					regDataFromBoard3 <= sig_alarm_hum_max(7 downto 0);
+				else 
+					regDataFromBoard2 <= sig_data_from_mem(15 downto 8);
+					regDataFromBoard3 <= sig_data_from_mem(7 downto 0);
+				end if;
+			else 
+				if isAlarmRequest = '1' then
+					if isAlTempMin = '1' then
+						sig_alarm_temp_min <= regDataFromComp2 & regDataFromComp3;
+					elsif isAlTempMax = '1' then
+						sig_alarm_temp_max <= regDataFromComp2 & regDataFromComp3;
+					elsif isAlHumMin = '1' then
+						sig_alarm_hum_min <= regDataFromComp2 & regDataFromComp3;
+					elsif isAlHumMax = '1' then
+						sig_alarm_hum_max <= regDataFromComp2 & regDataFromComp3;
+					end if;
+				end if;
+			end if;
+			isAlStopRequest <= regDataFromComp1(0);
+			isAlSuppRequest <= regDataFromComp1(1);
 		else
-
-
+			--sig alarm comes from board alarm
+			
+			
+			
 		end if;
 	end process;
-
-
 
 
    ------------------------------------------------------------------------
@@ -487,45 +576,42 @@ begin
 				end if;
 			end if;
 		end process;
-
-
-	
-	
 	
 	-- led testing
 	process 
 	begin
-		case rgSwt is
-			when "00000001" => rgLeds <= regData0;
-			when "00000010" => rgLeds <= regData1;
-			when "00000100" => rgLeds <= regData2;
-			when "00001000" => rgLeds <= regData3;
-			when "00010000" => rgLeds <= regData4;
-			when "00100000" => rgLeds <= regData5;
-			when "01000000" => rgLeds <= regData6;
-			when "10000000" => rgLeds <= regData7;
-			when others => rgLeds <= "00000000";
+	case rgSwt is
+		when "00000001" => rgLeds <= regData0;
+		when "00000010" => rgLeds <= regData1;
+		when "00000100" => rgLeds <= regData2;
+		when "00001000" => rgLeds <= regData3;
+		when "00010000" => rgLeds <= regData4;
+		when "00100000" => rgLeds <= regData5;
+		when "01000000" => rgLeds <= regData6;
+		when "10000000" => rgLeds <= regData7;
+		when "11000000" => rgLeds <= sig_alarm_temp_min(15 downto 8);
+		when "01100000" => rgLeds <= sig_alarm_temp_min(7 downto 0);
+		when "00011000" => rgLeds <= sig_alarm_temp_max(15 downto 8);
+		when "00001100" => rgLeds <= sig_alarm_temp_max(7 downto 0);
+		when "00000110" => rgLeds <= sig_alarm_hum_min(15 downto 8);
+		when "00000011" => rgLeds <= sig_alarm_hum_min(7 downto 0);
+		when "10000001" => rgLeds <= sig_alarm_hum_max(15 downto 8);
+		when "10000010" => rgLeds <= sig_alarm_hum_max(7 downto 0);
+		when others => rgLeds <= sig_mem_read_enable & isCompWaitingData & "000000";
 	end case;
 	end process;
-	
-	
 
-	------------------------------------------------------------------------
-    -- Gate array configuration verification logic
-	------------------------------------------------------------------------
-	-- This logic will flash the led on the gate array. This is to verify
-	-- that the gate array is properly configured for the test. This is a
-	-- simple way to verify that the gate array actually got configured.
-
- 	led <= btn or cntr(23);
-
-	process (clkMain)
-		begin
-			if clkMain = '1' and clkMain'Event then
-				cntr <= cntr + 1;
-			end if;
-		end process;
-
-----------------------------------------------------------------------------
+--rgLeds <= mem_write_enable & sig_data_from_mem (6 downto 0);
+--rgLeds <= mem_write_enable & mem_fill_counter (6 downto 0);
+--rgLeds <=regDataFromBoard2 ;
+--rgLeds <= sig_data_from_mem(7 downto 0);
+	mem_read_enable  <= 	sig_mem_read_enable;
+	stream_mode <= isStreamRequest;
+	snap_mode <= isSnapRequest;
+	alarm_setup <= isAlarmRequest;
+	alarm_temp_min_data <= sig_alarm_temp_min;
+	alarm_temp_max_data <= sig_alarm_temp_max;
+	alarm_hum_min_data <= sig_alarm_hum_min;
+	alarm_hum_max_data <= sig_alarm_hum_max;
 
 end Behavioral;

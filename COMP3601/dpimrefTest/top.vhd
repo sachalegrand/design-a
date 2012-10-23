@@ -66,19 +66,29 @@ architecture Structural of top is
 -- USB communications component
 component dpimref
     Port (
-				mclk 	: in std_logic;
-				pdb		: inout std_logic_vector(7 downto 0);
-				astb 	: in std_logic;
-				dstb 	: in std_logic;
-				pwr 	: in std_logic;
-				pwait 	: out std_logic;
-				rgSwt	: in std_logic_vector(7 downto 0); -- testing
-				rgBtn	: in std_logic_vector(4 downto 0);
-				rgLeds : out std_logic_vector(7 downto 0); -- testing purpose
-				btn		: in std_logic;
-				ldg		: out std_logic;
-				led		: out std_logic
-	);
+			mclk 	: in std_logic;
+			pdb		: inout std_logic_vector(7 downto 0);
+			astb 	: in std_logic;
+			dstb 	: in std_logic;
+			pwr 	: in std_logic;
+			pwait 	: out std_logic;
+			data_from_mem : in std_logic_vector(15 downto 0);
+			addr_to_mem : out std_logic_vector(22 downto 0);
+			mem_read_enable : out std_logic;
+			mem_done_read : in std_logic;
+			stream_mode : out std_logic;
+			snap_mode : out std_logic;
+			alarm_setup : out std_logic;
+			alarm_temp_min_data : out std_logic_vector(15 downto 0);
+			alarm_temp_max_data : out std_logic_vector(15 downto 0);
+			alarm_hum_min_data : out std_logic_vector(15 downto 0);
+			alarm_hum_max_data : out std_logic_vector(15 downto 0);
+			--testing signals
+			mem_write_enable : in std_logic; 
+			mem_fill_counter : in std_logic_vector (7 downto 0);
+			rgSwt	: in std_logic_vector(7 downto 0);
+			rgLeds : out std_logic_vector(7 downto 0)
+			);
 end component;
 
 
@@ -88,12 +98,14 @@ component memory is
 		Port (
 				clk 		: in std_logic;
 				reset 	: in std_logic;
-				address	: in std_logic_vector (22 downto 0);
+				read_address	: in std_logic_vector (22 downto 0);
+				write_address  : in std_logic_vector (22 downto 0);
 				read_enable : in std_logic;
 				write_enable : in std_logic;
 				data_in			: in std_logic_vector(15 downto 0);
 				data_out 		: out std_logic_vector(15 downto 0);
-				busy_flag		: out std_logic;
+				done_read		: out std_logic;
+				done_write		: out std_logic;
 				mem_address 	: out std_logic_vector(22 downto 0);
 				mem_data		: inout std_logic_vector (15 downto 0);
 				mem_oe			: out std_logic;
@@ -109,12 +121,23 @@ component memory is
 end component;
 
 
+component mem_filler is
+    Port ( clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           data_to_mem : out  STD_LOGIC_VECTOR (15 downto 0);
+           waddr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+			  mem_write_enable : out std_logic;
+			  mem_fill_counter : out std_logic_vector (7 downto 0);
+           mem_done_write : in  STD_LOGIC);
+end component;
+
 -- component used to test memory operations
 --component mem_tester is
 --    Port ( clk : in  STD_LOGIC;
 --           reset : in  STD_LOGIC;
 --           data_to_mem : out  STD_LOGIC_VECTOR (15 downto 0);
---           addr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+--           raddr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
+--			  waddr_to_mem : out  STD_LOGIC_VECTOR (22 downto 0);
 --           data_to_leds : out  STD_LOGIC_VECTOR (7 downto 0);
 --           data_from_mem : in  STD_LOGIC_VECTOR (15 downto 0);
 --			  mem_read_enable : out std_logic;
@@ -128,12 +151,33 @@ end component;
 	signal sig_pbs : std_logic_vector(4 downto 0);
 	signal sig_ldg : std_logic;
 	signal sig_led : std_logic;
-	signal sig_mem_address : std_logic_vector(22 downto 0);
+	signal sig_mem_read_address : std_logic_vector(22 downto 0);
 	signal sig_mem_read_enable : std_logic;
+	signal sig_mem_write_address : std_logic_vector(22 downto 0);
 	signal sig_mem_write_enable : std_logic;
 	signal sig_mem_data_in			: std_logic_vector(15 downto 0);
 	signal sig_mem_data_out 		: std_logic_vector(15 downto 0);
-	signal sig_mem_busy	:std_logic;
+	signal sig_mem_done_r : std_logic;
+	signal sig_mem_done_w : std_logic;	
+	
+	signal sig_stream_mode : std_logic;
+	signal sig_snap_mode : std_logic;
+	signal sig_alarm_setup :  std_logic;
+	signal sig_alarm_temp_min_data : std_logic_vector(15 downto 0);
+	signal sig_alarm_temp_max_data : std_logic_vector(15 downto 0);
+	signal sig_alarm_hum_min_data : std_logic_vector(15 downto 0);
+	signal sig_alarm_hum_max_data : std_logic_vector(15 downto 0);
+	
+	
+	
+	--fakes
+	
+	signal sig_mem_fill_counter : std_logic_vector(7 downto 0);
+--	signal sig_mem_data_out2 		: std_logic_vector(15 downto 0);
+--	signal sig_mem_read_address2 : std_logic_vector(22 downto 0);
+--	signal sig_mem_read_enable2 : std_logic;
+--	signal sig_ledss : std_logic_vector(7 downto 0);
+
 	
 begin	
 --	par_wait <= '0'; 
@@ -146,23 +190,35 @@ begin
                 dstb     => par_dst,
                 pwr   => par_wr,
 					 pwait => par_wait,
+					 data_from_mem =>sig_mem_data_out,
+					 addr_to_mem => sig_mem_read_address,
+					 mem_read_enable =>sig_mem_read_enable,
+					 mem_done_read => sig_mem_done_r,
+					 stream_mode => sig_stream_mode,
+					 snap_mode => sig_snap_mode,
+					 alarm_setup => sig_alarm_setup,
+					 alarm_temp_min_data => sig_alarm_temp_min_data,
+					 alarm_temp_max_data =>sig_alarm_temp_max_data,
+					 alarm_hum_min_data => sig_alarm_hum_min_data,
+					 alarm_hum_max_data =>sig_alarm_hum_max_data,
+					 --testing only
+					 mem_write_enable => sig_mem_write_enable,
+					 mem_fill_counter => sig_mem_fill_counter,
 					 rgSwt => switches,
-					 rgBtn => sig_pbs,
-					 rgLeds => leds,
-					 btn => switches(0),
-					 ldg => sig_ldg,
-					 led => sig_led
+					 rgLeds => leds
 		);
 	 
 	my_memory : memory
 		port map (	clk => clkT,
 						reset => sig_pbs(0), -- reset = push button 0
-						address	=>	sig_mem_address,
+						read_address	=>	sig_mem_read_address,
+						write_address => sig_mem_write_address,
 						read_enable => sig_mem_read_enable,
 						write_enable => sig_mem_write_enable,
 						data_in	=> sig_mem_data_in,		
 						data_out => sig_mem_data_out,
-						busy_flag => sig_mem_busy,
+						done_read => sig_mem_done_r,
+						done_write => sig_mem_done_w,
 						mem_address => mem_addr,
 						mem_data	=> mem_data,
 						mem_oe => mt_oe,
@@ -176,11 +232,25 @@ begin
 						mem_wait => mt_wait							
 		);
 	 
+	 
+	 my_memory_filler : mem_filler
+		port map (
+					clk =>clkT,
+					reset =>sig_pbs(0),
+					data_to_mem => sig_mem_data_in,
+					waddr_to_mem => sig_mem_write_address,
+					mem_write_enable =>sig_mem_write_enable,
+					mem_fill_counter => sig_mem_fill_counter,
+					mem_done_write => sig_mem_done_w
+		);
+	 
+	 
 --	 my_memory_tester : mem_tester
 --		port map (	clk => clkT,
 --						reset => sig_pbs(0),
 --						data_to_mem => sig_mem_data_in,
---						addr_to_mem => sig_mem_address,
+--						raddr_to_mem => sig_mem_read_address,
+--						waddr_to_mem => sig_mem_write_address,
 --						data_to_leds => leds,
 --						data_from_mem => sig_mem_data_out,
 --						mem_read_enable => sig_mem_read_enable,
