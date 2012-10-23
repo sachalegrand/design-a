@@ -1,0 +1,91 @@
+V3 50
+FL H:/12s2/COMP3601/project/display.vhd 2012/10/22.21:04:00 O.61xd
+PH work/display_package 1350975685 FL H:/12s2/COMP3601/project/display.vhd \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 PB ieee/std_logic_arith 1308643378 CD display
+EN work/display 1350975686 \
+      FL H:/12s2/COMP3601/project/display.vhd PB ieee/STD_LOGIC_UNSIGNED 1308643379 \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/std_logic_arith 1308643378 PH work/integer_divider_package 1350975679
+AR work/display/behavioral 1350975687 \
+      FL H:/12s2/COMP3601/project/display.vhd EN work/display 1350975686 \
+      CP integer_divider
+FL H:/12s2/COMP3601/project/integer_divider.vhd 2012/10/22.20:06:24 O.61xd
+PH work/integer_divider_package 1350975679 \
+      FL H:/12s2/COMP3601/project/integer_divider.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 CD integer_divider
+EN work/integer_divider 1350975680 \
+      FL H:/12s2/COMP3601/project/integer_divider.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378
+AR work/integer_divider/behaviour 1350975681 \
+      FL H:/12s2/COMP3601/project/integer_divider.vhd EN work/integer_divider 1350975680
+FL H:/12s2/COMP3601/project/mode_display.vhd 2012/10/22.21:44:29 O.61xd
+PH work/mode_display_package 1350975688 \
+      FL H:/12s2/COMP3601/project/mode_display.vhd PB ieee/std_logic_1164 1308643377 \
+      CD mode_display
+EN work/mode_display 1350975689 \
+      FL H:/12s2/COMP3601/project/mode_display.vhd PB ieee/std_logic_1164 1308643377
+AR work/mode_display/Behavioral 1350975690 \
+      FL H:/12s2/COMP3601/project/mode_display.vhd EN work/mode_display 1350975689
+FL H:/12s2/COMP3601/project/project.vhd 2012/10/23.17:59:21 O.61xd
+EN work/project 1350975703 FL H:/12s2/COMP3601/project/project.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/NUMERIC_STD 1308643378 \
+      PH work/display_package 1350975685 PH work/mode_display_package 1350975688 \
+      PH work/range_display_package 1350975691 PH work/range_setter_package 1350975694 \
+      PH work/temperature_display_package 1350975700 PH work/sensor_package 1350975697
+AR work/project/Behavioral 1350975704 \
+      FL H:/12s2/COMP3601/project/project.vhd EN work/project 1350975703 \
+      CP mode_display CP range_display CP range_setter CP sensor \
+      CP temperature_display
+FL H:/12s2/COMP3601/project/pulse_decoder.vhd 2012/10/23.16:58:22 O.61xd
+PH work/pulse_decoder_package 1350975682 \
+      FL H:/12s2/COMP3601/project/pulse_decoder.vhd PB ieee/std_logic_1164 1308643377 \
+      CD pulse_decoder
+EN work/pulse_decoder 1350975683 \
+      FL H:/12s2/COMP3601/project/pulse_decoder.vhd PB ieee/std_logic_1164 1308643377
+AR work/pulse_decoder/Behavioral 1350975684 \
+      FL H:/12s2/COMP3601/project/pulse_decoder.vhd EN work/pulse_decoder 1350975683
+FL H:/12s2/COMP3601/project/range_display.vhd 2012/10/22.22:50:34 O.61xd
+PH work/range_display_package 1350975691 \
+      FL H:/12s2/COMP3601/project/range_display.vhd PB ieee/std_logic_1164 1308643377 \
+      CD range_display
+EN work/range_display 1350975692 \
+      FL H:/12s2/COMP3601/project/range_display.vhd PB ieee/std_logic_1164 1308643377 \
+      PH work/integer_divider_package 1350975679
+AR work/range_display/Behavioral 1350975693 \
+      FL H:/12s2/COMP3601/project/range_display.vhd EN work/range_display 1350975692 \
+      CP integer_divider
+FL H:/12s2/COMP3601/project/range_setter.vhd 2012/10/23.16:41:12 O.61xd
+PH work/range_setter_package 1350975694 \
+      FL H:/12s2/COMP3601/project/range_setter.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 PB ieee/std_logic_arith 1308643378 \
+      CD range_setter
+EN work/range_setter 1350975695 \
+      FL H:/12s2/COMP3601/project/range_setter.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/NUMERIC_STD 1308643378 PB ieee/std_logic_arith 1308643378
+AR work/range_setter/Behavioral 1350975696 \
+      FL H:/12s2/COMP3601/project/range_setter.vhd EN work/range_setter 1350975695
+FL H:/12s2/COMP3601/project/sensor.vhd 2012/10/23.18:00:58 O.61xd
+PH work/sensor_package 1350975697 FL H:/12s2/COMP3601/project/sensor.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/STD_LOGIC_SIGNED 1308643379 \
+      PB ieee/NUMERIC_STD 1308643378 CD sensor
+EN work/sensor 1350975698 \
+      FL H:/12s2/COMP3601/project/sensor.vhd PB ieee/std_logic_1164 1308643377 \
+      PB ieee/std_logic_arith 1308643378 PB ieee/STD_LOGIC_UNSIGNED 1308643379 \
+      PB ieee/STD_LOGIC_SIGNED 1308643379 PB ieee/NUMERIC_STD 1308643378 \
+      PH work/integer_divider_package 1350975679 PH work/pulse_decoder_package 1350975682
+AR work/sensor/Behavioral 1350975699 \
+      FL H:/12s2/COMP3601/project/sensor.vhd EN work/sensor 1350975698 \
+      CP integer_divider CP pulse_decoder
+FL H:/12s2/COMP3601/project/temperature_display.vhd 2012/10/23.17:31:09 O.61xd
+PH work/temperature_display_package 1350975700 \
+      FL H:/12s2/COMP3601/project/temperature_display.vhd PB ieee/std_logic_1164 1308643377 \
+      CD temperature_display
+EN work/temperature_display 1350975701 \
+      FL H:/12s2/COMP3601/project/temperature_display.vhd PB ieee/std_logic_1164 1308643377 \
+      PH work/integer_divider_package 1350975679
+AR work/temperature_display/behavioral 1350975702 \
+      FL H:/12s2/COMP3601/project/temperature_display.vhd \
+      EN work/temperature_display 1350975701 CP integer_divider
